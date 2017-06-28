@@ -46,7 +46,6 @@
                             </connections>
                         </containerView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.99513711819999995" blue="0.18925767230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="X3e-0G-9xF" firstAttribute="leading" secondItem="Jy0-iJ-RS9" secondAttribute="leading" id="CMP-Qs-KRM"/>
                         <constraint firstAttribute="trailing" secondItem="X3e-0G-9xF" secondAttribute="trailing" id="XZz-0Z-GuW"/>
@@ -116,20 +115,7 @@
                     <view key="view" contentMode="scaleToFill" id="j6H-4J-S9V">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS0-ht-N4d">
-                                <rect key="frame" x="489" y="369" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="showCalendar:" destination="PhQ-eH-hQT" eventType="touchUpInside" id="gwq-zh-jLw"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="sS0-ht-N4d" firstAttribute="centerY" secondItem="j6H-4J-S9V" secondAttribute="centerY" id="QMZ-7C-QJj"/>
-                            <constraint firstItem="sS0-ht-N4d" firstAttribute="centerX" secondItem="j6H-4J-S9V" secondAttribute="centerX" id="cay-cV-mGI"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U14-Xz-QtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
