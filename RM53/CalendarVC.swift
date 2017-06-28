@@ -3,21 +3,15 @@ import SSCalendar
 
 class CalendarVC: UIViewController {
     
-    @IBAction func showCalendar(_ sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         SSStyles.applyNavigationBarStyles()
         
-        let monthlyViewController = SSCalendarMonthlyViewController(events: generateEvents())
-        //let navigationController = UINavigationController(rootViewController: monthlyViewController!)
-        //navigationController.navigationBar.isTranslucent = false
-        self.present(monthlyViewController!, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        let monthlyViewController = SSCalendarMonthlyViewController(events: generateEvents())
-        //let navigationController = UINavigationController(rootViewController: monthlyViewController!)
-        self.view.addSubview((monthlyViewController?.view)!)
-        self.present(monthlyViewController!, animated: true, completion: nil)
-        
+        let annualViewController = SSCalendarAnnualViewController(events: generateEvents())
+        let navigationController = UINavigationController(rootViewController: annualViewController!)
+        navigationController.navigationBar.isTranslucent = false
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     fileprivate func generateEvents() -> [SSEvent] {
