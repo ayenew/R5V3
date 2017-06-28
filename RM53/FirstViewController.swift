@@ -10,6 +10,7 @@ import UIKit
 import PieCharts
 
 class FirstViewController: UIViewController {
+    @IBOutlet weak var calendarContainer: UIView!
     @IBOutlet var rmCalendarView: UIView!
     @IBOutlet var rmChartBookChart: UIView!
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class FirstViewController: UIViewController {
         let chartView:ChartView = chartVC.view as! ChartView
         chartView.frame = rmChartBookChart.frame
         rmChartBookChart.addSubview(chartView)
+        rmCalendarView.addSubview(calendarContainer)
     }
 }
 

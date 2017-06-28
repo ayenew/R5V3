@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CalendarVC-->
+        <!--SampleVC-->
         <scene sceneID="h9I-eE-yCp">
             <objects>
-                <viewController storyboardIdentifier="Calendar_SID" id="QUk-qU-v8H" customClass="CalendarVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar_SID" id="QUk-qU-v8H" customClass="SampleVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pAx-s2-gxf"/>
                         <viewControllerLayoutGuide type="bottom" id="abF-7F-DVT"/>

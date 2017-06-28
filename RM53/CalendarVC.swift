@@ -5,13 +5,34 @@ class CalendarVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        SSStyles.applyNavigationBarStyles()
-        
-        let annualViewController = SSCalendarAnnualViewController(events: generateEvents())
+//        view.backgroundColor = UIColor.red
+//        SSStyles.applyNavigationBarStyles()
+//        
+//        let annualViewController = SSCalendarAnnualViewController(events: generateEvents())
+//        let navigationController = UINavigationController(rootViewController: annualViewController!)
+//        navigationController.navigationBar.isTranslucent = false
+//        self.present(navigationController, animated: true, completion: nil)
+        let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-        self.present(navigationController, animated: true, completion: nil)
+        
+        self.addChildViewController(navigationController)
+        self.view.addSubview(navigationController.view)
+        navigationController.view.frame = self.view.frame
+    }
+    
+    
+    @IBAction func showCalendar(_ sender: UIButton) {
+        SSStyles.applyNavigationBarStyles()
+        
+        let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
+        let navigationController = UINavigationController(rootViewController: annualViewController!)
+        navigationController.navigationBar.isTranslucent = false
+        
+        self.addChildViewController(navigationController)
+        self.view.addSubview(navigationController.view)
+        navigationController.view.frame = self.view.frame
+        //self.present(navigationController, animated: true, completion: nil)
     }
     
     fileprivate func generateEvents() -> [SSEvent] {

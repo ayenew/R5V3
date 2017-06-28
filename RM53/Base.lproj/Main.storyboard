@@ -24,6 +24,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="calendarContainer" destination="X3e-0G-9xF" id="KVA-Ix-lzJ"/>
                         <outlet property="rmCalendarView" destination="Jy0-iJ-RS9" id="MYL-9A-pn9"/>
                         <outlet property="rmChartBookChart" destination="Nbo-IF-oBC" id="YsC-Ff-oix"/>
                     </connections>
@@ -37,10 +38,24 @@
                 <view contentMode="scaleToFill" id="Jy0-iJ-RS9">
                     <rect key="frame" x="0.0" y="0.0" width="326" height="365"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3e-0G-9xF">
+                            <rect key="frame" x="0.0" y="0.0" width="326" height="365"/>
+                            <connections>
+                                <segue destination="PhQ-eH-hQT" kind="embed" id="Hu3-IL-A5f"/>
+                            </connections>
+                        </containerView>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="0.99513711819999995" blue="0.18925767230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="X3e-0G-9xF" firstAttribute="leading" secondItem="Jy0-iJ-RS9" secondAttribute="leading" id="CMP-Qs-KRM"/>
+                        <constraint firstAttribute="trailing" secondItem="X3e-0G-9xF" secondAttribute="trailing" id="XZz-0Z-GuW"/>
+                        <constraint firstAttribute="bottom" secondItem="X3e-0G-9xF" secondAttribute="bottom" id="whj-Db-VNA"/>
+                        <constraint firstItem="X3e-0G-9xF" firstAttribute="top" secondItem="Jy0-iJ-RS9" secondAttribute="top" id="xkf-hZ-6ND"/>
+                    </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="698" y="-310"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -59,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="120" y="905"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -78,20 +93,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="v9D-5T-0PI">
-            <objects>
-                <viewController id="Ytx-mj-W6U" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jA3-Vy-D6e">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eJe-10-sBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="-3629" y="196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VLZ-W6-hKa">
@@ -105,6 +107,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCR-2t-nW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="179" y="-1359"/>
+        </scene>
+        <!--CalendarVC-->
+        <scene sceneID="NLP-uo-U7a">
+            <objects>
+                <viewController id="PhQ-eH-hQT" customClass="CalendarVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j6H-4J-S9V">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS0-ht-N4d">
+                                <rect key="frame" x="489" y="369" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showCalendar:" destination="PhQ-eH-hQT" eventType="touchUpInside" id="gwq-zh-jLw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sS0-ht-N4d" firstAttribute="centerY" secondItem="j6H-4J-S9V" secondAttribute="centerY" id="QMZ-7C-QJj"/>
+                            <constraint firstItem="sS0-ht-N4d" firstAttribute="centerX" secondItem="j6H-4J-S9V" secondAttribute="centerX" id="cay-cV-mGI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U14-Xz-QtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571" y="-76"/>
         </scene>
     </scenes>
     <resources>
