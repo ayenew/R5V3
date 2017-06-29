@@ -20,9 +20,9 @@ class FirstViewController: UIViewController {
         view.addSubview(rmChartBookChart)
         view.addSubview(rmCalendarView)
         view.addSubview(rmOpportunityView)
-        rmChartBookChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.width/3, height: self.view.frame.height/2)
-        rmCalendarView.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width/3, height: self.view.frame.height/2)
-        rmOpportunityView.frame = CGRect(x: 0, y: self.view.frame.height/2, width: 2 * self.view.frame.width/3, height: self.view.frame.height/2)
+        rmChartBookChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.width/3-4, height: self.view.frame.height/2)
+        rmCalendarView.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width/3-4, height: self.view.frame.height/2)
+        rmOpportunityView.frame = CGRect(x: self.view.frame.width/3, y: self.view.frame.height/2, width: 2 * self.view.frame.width/3, height: self.view.frame.height/2 - 50)
         let chartVC = ChartVC(nibName:"ChartVC",bundle: nil) 
         let chartView:ChartView = chartVC.view as! ChartView
         chartView.frame = rmChartBookChart.frame
