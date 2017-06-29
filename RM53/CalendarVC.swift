@@ -18,7 +18,7 @@ class CalendarVC: UIViewController {
         annualViewController?.view.alpha = 0.7
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = UIColor.gray
+        navigationController.navigationBar.barTintColor = UIColor(red: 242255.0, green: 242/255.0, blue: 242/255.0, alpha: 1)
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame
