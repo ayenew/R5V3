@@ -9,7 +9,7 @@
 import UIKit
 import PieCharts
 
-class ChartVC: UIViewController, PieChartDelegate {
+class ChartVC2: UIViewController, PieChartDelegate {
     
     @IBOutlet weak var totalRevenue: UILabel!
     @IBOutlet weak var chartView: PieChart!
@@ -79,7 +79,7 @@ class ChartVC: UIViewController, PieChartDelegate {
 //        print(newModel)
         //let models = newModel
         let models = [
-            PieSliceModel(value: 45.6e3, color: colors[0], name: "Deposit"),
+            PieSliceModel(value: 6.6e3, color: colors[0], name: "cccccc"),
             PieSliceModel(value: 55e3, color: colors[1], name: "TM"),
             PieSliceModel(value: 30e3, color: colors[2], name: "Credit"),
             PieSliceModel(value: 20e3, color: colors[3], name: "Cap Market"),
@@ -135,6 +135,33 @@ class ChartVC: UIViewController, PieChartDelegate {
 }
 
 
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
 
+extension UIColor {
+    static func randomColor() -> UIColor {
+        return UIColor(red: .random(), green: .random(), blue: .random(), alpha: 1.0)
+    }
+}
+
+var AssociatedObjectHandle: UInt8 = 0
+
+extension PieSliceModel {
+    var name:String {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedObjectHandle) as! String
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    public convenience init(value: Double, color: UIColor, name: String?) {
+                self.init(value: value, color: color)
+                self.name = name!
+            }
+}
 
 
