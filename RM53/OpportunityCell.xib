@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,8 +16,50 @@
             <rect key="frame" x="0.0" y="0.0" width="797" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="797" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="797" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relationship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlN-gB-Ec2">
+                        <rect key="frame" x="8" y="11" width="173" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="173" id="QKe-2l-4Yr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Closed Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-kx-Wln">
+                        <rect key="frame" x="418" y="11" width="147" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-Lk-qgS">
+                        <rect key="frame" x="679" y="11" width="61" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7k-Rf-glu">
+                        <rect key="frame" x="229" y="11" width="106" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="106" id="3HA-lZ-ary"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ApL-kx-Wln" firstAttribute="leading" secondItem="E7k-Rf-glu" secondAttribute="trailing" constant="83" id="8WR-Xz-EmX"/>
+                    <constraint firstItem="ZlN-gB-Ec2" firstAttribute="baseline" secondItem="E7k-Rf-glu" secondAttribute="baseline" id="DGZ-zi-5FI"/>
+                    <constraint firstItem="E7k-Rf-glu" firstAttribute="baseline" secondItem="ApL-kx-Wln" secondAttribute="baseline" id="HX5-5r-8Is"/>
+                    <constraint firstItem="ZlN-gB-Ec2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LdW-s4-u2b"/>
+                    <constraint firstItem="ZlN-gB-Ec2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vmr-D3-ad8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5sX-Lk-qgS" secondAttribute="trailing" constant="49" id="Ydc-uh-B6W"/>
+                    <constraint firstItem="E7k-Rf-glu" firstAttribute="leading" secondItem="ZlN-gB-Ec2" secondAttribute="trailing" constant="48" id="avM-Xa-rSc"/>
+                    <constraint firstItem="ApL-kx-Wln" firstAttribute="baseline" secondItem="5sX-Lk-qgS" secondAttribute="baseline" id="nFa-fh-Fl9"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="331.5" y="54"/>
         </tableViewCell>

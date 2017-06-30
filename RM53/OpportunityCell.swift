@@ -9,6 +9,10 @@
 import UIKit
 
 class OpportunityCell: UITableViewCell {
+    @IBOutlet weak var relationship: UILabel!
+    @IBOutlet weak var salesStage: UILabel!
+    @IBOutlet weak var targetDate: UILabel!
+    @IBOutlet weak var balance: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
