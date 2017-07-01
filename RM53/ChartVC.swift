@@ -31,13 +31,19 @@ class ChartVC: UIViewController, PieChartDelegate {
         ]
     fileprivate var currentColorIndex = 0
     
+    @IBOutlet weak var chart2View: PieChart!
     
+    @IBOutlet weak var total2: UILabel!
     override func viewDidAppear(_ animated: Bool) {
         
         //chartView.layers = [createPlainTextLayer(), createTextWithLinesLayer()]
         chartView.layers = [createPlainTextLayer()]
         chartView.delegate = self
         chartView.models = createModels() // order is important - models have to be set at the end
+        
+        chart2View.layers = [createPlainTextLayer()]
+        chart2View.delegate = self
+        chart2View.models = createModels2()
     }
     
     // MARK: - PieChartDelegate
@@ -91,6 +97,53 @@ class ChartVC: UIViewController, PieChartDelegate {
         }
         
         totalRevenue.text = "$\(total/1000)k"
+        
+        currentColorIndex = models.count
+        return models
+    }
+    
+    fileprivate func createModels2() -> [PieSliceModel] {
+        //        var newModel = [PieSliceModel]()
+        //        let path = Bundle.main.path(forResource: "BookTotal", ofType: "json")
+        //        do {
+        //            let jsonData = try NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
+        //            do {
+        //                let jsonResult: [[String:Any]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String:Any]]
+        //                for i in 0..<jsonResult.count {
+        //                    let value = jsonResult[i]["value"]
+        //                    let name = jsonResult[i]["name"]
+        //                    switch name as! String {
+        //                        case "Deposit":
+        //                          let model = PieSliceModel(value: value as! Double, color: colors[0])
+        //                         newModel.append(model)
+        //                      case "TM":
+        //                        let model = PieSliceModel(value: value as! Double, color: colors[1])
+        //                        newModel.append( model)
+        //                     default:
+        //                        break
+        //                    }
+        //                }
+        //            } catch{
+        //
+        //            }
+        //        }catch{
+        //
+        //        }
+        //        print(newModel)
+        //let models = newModel
+        let models = [
+            PieSliceModel(value: 80e3, color: colors[0], name: "Deposit"),
+            PieSliceModel(value: 62e3, color: colors[1], name: "TM"),
+            PieSliceModel(value: 50e3, color: colors[2], name: "Credit"),
+            PieSliceModel(value: 40e3, color: colors[3], name: "Cap Market"),
+            PieSliceModel(value: 20e3, color: colors[4], name: "Non Commercial"),
+            ]
+        var total = 0.0
+        for model in models {
+            total += model.value
+        }
+        
+        total2.text = "$\(total/1000)k"
         
         currentColorIndex = models.count
         return models

@@ -43,9 +43,15 @@
                         <outlet property="rmChart2" destination="hI7-mx-PCu" id="gRk-op-vx2"/>
                         <outlet property="rmChartBookChart" destination="Nbo-IF-oBC" id="YsC-Ff-oix"/>
                         <outlet property="rmOpportunityView" destination="AyC-9h-Wfg" id="mug-92-gl9"/>
+                        <outlet property="secondChart" destination="5GD-33-WRh" id="JCV-6A-wOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="5GD-33-WRh">
+                    <rect key="frame" x="0.0" y="0.0" width="363" height="374"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.98728865389999998" green="0.61491399879999997" blue="0.1212544921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" id="Nbo-IF-oBC">
                     <rect key="frame" x="0.0" y="0.0" width="315" height="370"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
