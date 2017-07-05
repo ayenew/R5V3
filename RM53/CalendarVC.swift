@@ -8,11 +8,7 @@ class CalendarVC: UIViewController {
         self.view.backgroundColor = UIColor.lightGray
 //        view.backgroundColor = UIColor.red
 //        SSStyles.applyNavigationBarStyles()
-//        
-//        let annualViewController = SSCalendarAnnualViewController(events: generateEvents())
-//        let navigationController = UINavigationController(rootViewController: annualViewController!)
-//        navigationController.navigationBar.isTranslucent = false
-//        self.present(navigationController, animated: true, completion: nil)
+        
         SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
@@ -26,8 +22,6 @@ class CalendarVC: UIViewController {
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame
-        
-        
     }
     
     
@@ -46,8 +40,8 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        for year in 2016...2021 {
-            for _ in 1...200 {
+        for year in 2016...2017 {
+            for _ in 1...3 {
                 events.append(generateEvent(year));
             }
         }
@@ -55,14 +49,16 @@ class CalendarVC: UIViewController {
     }
     
     fileprivate func generateEvent(_ year: Int) -> SSEvent {
-        let month = Int(arc4random_uniform(12)) + 1
-        let day = Int(arc4random_uniform(28)) + 1
-        
+        //let month = Int(arc4random_uniform(12)) + 1
+        //let day = Int(arc4random_uniform(28)) + 1
+        let year = 2017
+        let month = 07
+        let day = 07
         let event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "09:00"
-        event.name = "Example Event"
-        event.desc = "Details of the event"
+        event.name = "Meet CFO of X Company at his Office"
+        event.desc = "To give introduction"
         
         return event
     }
