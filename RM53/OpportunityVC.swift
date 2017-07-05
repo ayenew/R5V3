@@ -24,7 +24,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
-            return 5
+            return 8
         }
         if section == 1 {
             return 1
