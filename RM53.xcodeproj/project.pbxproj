@@ -12,17 +12,10 @@
 		538E8BFA1F0313010003D939 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8BF91F0313010003D939 /* ChartView.swift */; };
 		538E8C061F0323470003D939 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C051F0323470003D939 /* CalendarVC.swift */; };
 		538E8C0A1F0343570003D939 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538E8C091F0343560003D939 /* Calendar.storyboard */; };
-		538E8C0E1F03529D0003D939 /* SampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C0D1F03529D0003D939 /* SampleVC.swift */; };
 		538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C111F03E8F40003D939 /* OpportunityVC.swift */; };
 		538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C131F04A34B0003D939 /* OpportunityCell.swift */; };
 		538E8C161F04A34B0003D939 /* OpportunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538E8C141F04A34B0003D939 /* OpportunityCell.xib */; };
 		538E8C181F0540F40003D939 /* BookTotal.json in Resources */ = {isa = PBXBuildFile; fileRef = 538E8C171F0540F40003D939 /* BookTotal.json */; };
-		538E8C1B1F05C39C0003D939 /* ChartVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538E8C191F05C39C0003D939 /* ChartVC2.xib */; };
-		538E8C1C1F05C39C0003D939 /* ChartVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C1A1F05C39C0003D939 /* ChartVC2.swift */; };
-		538E8C1E1F05C9AB0003D939 /* ChartView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C1D1F05C9AB0003D939 /* ChartView2.swift */; };
-		538E8C211F05D0B70003D939 /* ChartV3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C1F1F05D0B70003D939 /* ChartV3VC.swift */; };
-		538E8C221F05D0B70003D939 /* ChartV3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538E8C201F05D0B70003D939 /* ChartV3VC.xib */; };
-		538E8C241F05D1130003D939 /* ChartView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C231F05D1130003D939 /* ChartView3.swift */; };
 		538E8C261F05EF7C0003D939 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8C251F05EF7C0003D939 /* Extensions.swift */; };
 		539589551F030D2E00F8ED56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539589541F030D2E00F8ED56 /* AppDelegate.swift */; };
 		539589571F030D2E00F8ED56 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539589561F030D2E00F8ED56 /* FirstViewController.swift */; };
@@ -40,17 +33,10 @@
 		538E8BF91F0313010003D939 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		538E8C051F0323470003D939 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		538E8C091F0343560003D939 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
-		538E8C0D1F03529D0003D939 /* SampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleVC.swift; sourceTree = "<group>"; };
 		538E8C111F03E8F40003D939 /* OpportunityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityVC.swift; sourceTree = "<group>"; };
 		538E8C131F04A34B0003D939 /* OpportunityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityCell.swift; sourceTree = "<group>"; };
 		538E8C141F04A34B0003D939 /* OpportunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityCell.xib; sourceTree = "<group>"; };
 		538E8C171F0540F40003D939 /* BookTotal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BookTotal.json; sourceTree = "<group>"; };
-		538E8C191F05C39C0003D939 /* ChartVC2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartVC2.xib; sourceTree = "<group>"; };
-		538E8C1A1F05C39C0003D939 /* ChartVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC2.swift; sourceTree = "<group>"; };
-		538E8C1D1F05C9AB0003D939 /* ChartView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView2.swift; sourceTree = "<group>"; };
-		538E8C1F1F05D0B70003D939 /* ChartV3VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartV3VC.swift; sourceTree = "<group>"; };
-		538E8C201F05D0B70003D939 /* ChartV3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartV3VC.xib; sourceTree = "<group>"; };
-		538E8C231F05D1130003D939 /* ChartView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView3.swift; sourceTree = "<group>"; };
 		538E8C251F05EF7C0003D939 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		539589511F030D2E00F8ED56 /* RM53.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM53.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539589541F030D2E00F8ED56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,32 +83,73 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
-				538E8C1D1F05C9AB0003D939 /* ChartView2.swift */,
-				538E8C191F05C39C0003D939 /* ChartVC2.xib */,
-				538E8C1A1F05C39C0003D939 /* ChartVC2.swift */,
+				53F8B7211F115E0A000F47F2 /* Utilities */,
+				53F8B7201F115DFD000F47F2 /* Model */,
+				53F8B71F1F115DD5000F47F2 /* Opportunities */,
+				53F8B71E1F115DB8000F47F2 /* Controllers */,
+				53F8B71D1F115DA5000F47F2 /* Calendar */,
+				53F8B71C1F115D95000F47F2 /* Chart */,
 				539589541F030D2E00F8ED56 /* AppDelegate.swift */,
-				539589561F030D2E00F8ED56 /* FirstViewController.swift */,
-				539589581F030D2E00F8ED56 /* SecondViewController.swift */,
 				5395895A1F030D2E00F8ED56 /* Main.storyboard */,
 				5395895D1F030D2F00F8ED56 /* Assets.xcassets */,
 				5395895F1F030D2F00F8ED56 /* LaunchScreen.storyboard */,
 				539589621F030D2F00F8ED56 /* Info.plist */,
+			);
+			path = RM53;
+			sourceTree = "<group>";
+		};
+		53F8B71C1F115D95000F47F2 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
 				538E8BF51F03109B0003D939 /* ChartVC.swift */,
 				538E8BF61F03109B0003D939 /* ChartVC.xib */,
 				538E8BF91F0313010003D939 /* ChartView.swift */,
+			);
+			name = Chart;
+			sourceTree = "<group>";
+		};
+		53F8B71D1F115DA5000F47F2 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
 				538E8C051F0323470003D939 /* CalendarVC.swift */,
 				538E8C091F0343560003D939 /* Calendar.storyboard */,
-				538E8C0D1F03529D0003D939 /* SampleVC.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		53F8B71E1F115DB8000F47F2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				539589561F030D2E00F8ED56 /* FirstViewController.swift */,
+				539589581F030D2E00F8ED56 /* SecondViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		53F8B71F1F115DD5000F47F2 /* Opportunities */ = {
+			isa = PBXGroup;
+			children = (
 				538E8C111F03E8F40003D939 /* OpportunityVC.swift */,
 				538E8C131F04A34B0003D939 /* OpportunityCell.swift */,
 				538E8C141F04A34B0003D939 /* OpportunityCell.xib */,
+			);
+			name = Opportunities;
+			sourceTree = "<group>";
+		};
+		53F8B7201F115DFD000F47F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				538E8C171F0540F40003D939 /* BookTotal.json */,
-				538E8C1F1F05D0B70003D939 /* ChartV3VC.swift */,
-				538E8C201F05D0B70003D939 /* ChartV3VC.xib */,
-				538E8C231F05D1130003D939 /* ChartView3.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53F8B7211F115E0A000F47F2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
 				538E8C251F05EF7C0003D939 /* Extensions.swift */,
 			);
-			path = RM53;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		71A16FD7048FE0595BA6646A /* Frameworks */ = {
@@ -204,10 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538E8C221F05D0B70003D939 /* ChartV3VC.xib in Resources */,
 				539589611F030D2F00F8ED56 /* LaunchScreen.storyboard in Resources */,
 				5395895E1F030D2F00F8ED56 /* Assets.xcassets in Resources */,
-				538E8C1B1F05C39C0003D939 /* ChartVC2.xib in Resources */,
 				538E8C181F0540F40003D939 /* BookTotal.json in Resources */,
 				5395895C1F030D2E00F8ED56 /* Main.storyboard in Resources */,
 				538E8C0A1F0343570003D939 /* Calendar.storyboard in Resources */,
@@ -273,17 +298,12 @@
 			files = (
 				539589591F030D2E00F8ED56 /* SecondViewController.swift in Sources */,
 				539589551F030D2E00F8ED56 /* AppDelegate.swift in Sources */,
-				538E8C211F05D0B70003D939 /* ChartV3VC.swift in Sources */,
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* FirstViewController.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
 				538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */,
-				538E8C1C1F05C39C0003D939 /* ChartVC2.swift in Sources */,
 				538E8BFA1F0313010003D939 /* ChartView.swift in Sources */,
-				538E8C241F05D1130003D939 /* ChartView3.swift in Sources */,
-				538E8C1E1F05C9AB0003D939 /* ChartView2.swift in Sources */,
 				538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */,
-				538E8C0E1F03529D0003D939 /* SampleVC.swift in Sources */,
 				538E8C261F05EF7C0003D939 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

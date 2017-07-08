@@ -10,14 +10,13 @@ import UIKit
 
 class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate {
     var opportunities : [[String:String]] = [
-        ["relationship":"ODW Logistics","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
-        ["relationship":"ODW Logistics","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
+        ["relationship":"ABC Consulting","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
+        ["relationship":"GEF PLC","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
         ["relationship":"ODW Logistics","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
         ["relationship":"ODW Logistics","targetDate":"09/30/2017", "salesStage":"02-Opportunity", "balance":"$7,800"],
         ["relationship":"ODW Logistics","targetDate":"10/30/2017", "salesStage":"02-Opportunity", "balance":"$17,600"],
         ["relationship":"ODW Logistics","targetDate":"11/30/2017", "salesStage":"02-Opportunity", "balance":"$17,300"],
-        ["relationship":"ODW Logistics","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$71,500"],
-        ["relationship":"ODW Logistics","targetDate":"05/30/2017", "salesStage":"02-Opportunity", "balance":"$75,500"]
+        ["relationship":"ODW Logistics","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$71,500"]
     ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -84,7 +83,9 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
 
         let backView = alertController.view.subviews.last?.subviews.last
         backView?.layer.cornerRadius = 10.0
-        backView?.backgroundColor = UIColor.orange
+        backView?.clipsToBounds = true
+        backView?.layer.masksToBounds = true
+        //backView?.backgroundColor = UIColor.orange
         
         let titleString  = "Edit Opportunity"
         var titleMutableString = NSMutableAttributedString()

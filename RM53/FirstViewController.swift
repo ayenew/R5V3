@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var mainBar: UINavigationBar!
     @IBOutlet weak var collectionView: UIView!
     @IBOutlet weak var alertView: UIView!
-    @IBOutlet var rmChart2: UIView!
+    @IBOutlet var notificationView: UIView!
     @IBOutlet weak var opportunityContainer: UIView!
     @IBOutlet var rmOpportunityView: UIView!
     @IBOutlet weak var calendarContainer: UIView!
@@ -28,12 +28,12 @@ class FirstViewController: UIViewController {
         view.addSubview(rmChartBookChart)
         view.addSubview(rmCalendarView)
         view.addSubview(rmOpportunityView)
-        view.addSubview(rmChart2)
+        view.addSubview(notificationView)
         
         rmChartBookChart.frame = CGRect(x: 4, y: 24, width: self.view.frame.width/3-12, height: self.view.frame.height-4)
         rmCalendarView.frame = CGRect(x: self.view.frame.width/3, y: 48, width: self.view.frame.width/3, height: self.view.frame.height/2-4)
         rmOpportunityView.frame = CGRect(x: self.view.frame.width/3, y: self.view.frame.height/2 + 48, width: 2 * self.view.frame.width/3-8, height: self.view.frame.height/2 - 47)
-         rmChart2.frame = CGRect(x: 2 * self.view.frame.width/3, y: 45, width: self.view.frame.width/3-4, height: self.view.frame.height/2-2)
+         notificationView.frame = CGRect(x: 2 * self.view.frame.width/3, y: 45, width: self.view.frame.width/3-4, height: self.view.frame.height/2-2)
         
         let chartVC = ChartVC(nibName:"ChartVC",bundle: nil) 
         let chartView:ChartView = chartVC.view as! ChartView
@@ -44,7 +44,6 @@ class FirstViewController: UIViewController {
         
         self.alertView.dropShadow()
         self.collectionView.dropShadow()
-       // self.view.backgroundColor = UIColor.lightText
     }
 }
 
