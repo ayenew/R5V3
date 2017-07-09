@@ -51,6 +51,9 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             cell.targetDate.text = opportunities[indexPath.row]["targetDate"]
             cell.salesStage.text = opportunities[indexPath.row]["salesStage"]
             cell.balance.text = opportunities[indexPath.row]["balance"]
+            if indexPath.row % 2 == 0 {
+                cell.backgroundColor = UIColor.white
+            }
             return cell
         }
         if indexPath.section == 1{
@@ -67,7 +70,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let edit = UITableViewRowAction(style: .normal, title: "Edit Opportunity") { action, index in
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
             let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
             self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,index:indexPath.row)

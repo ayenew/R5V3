@@ -6,7 +6,7 @@ class CalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
-        SSStyles.applyNavigationBarStyles()
+       // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
         annualViewController?.view.alpha = 0.7
@@ -18,13 +18,14 @@ class CalendarVC: UIViewController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame
     }
     
     @IBAction func showCalendar(_ sender: UIButton) {
-        SSStyles.applyNavigationBarStyles()
+       // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
         let navigationController = UINavigationController(rootViewController: annualViewController!)
@@ -37,27 +38,46 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        for year in 2016...2017 {
-            for _ in 1...3 {
-                events.append(generateEvent(year));
-            }
-        }
+        let year = 2017; let month = 07; let day = 11
+        var event = SSEvent()
+        event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
+        event.startTime = "09:00"
+        event.name = "Meet CFO of ABC Consulting at his Office"
+        event.desc = "First Round Metting"
+        events.append(event)
+   
+        event = SSEvent()
+        event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
+        event.startTime = "11:00"
+        event.name = "Meet CEO of DEF Logistics"
+        event.desc = "Discuss Business Opportunities"
+        events.append(event)
         return events
     }
     
-    fileprivate func generateEvent(_ year: Int) -> SSEvent {
-        //let month = Int(arc4random_uniform(12)) + 1
-        //let day = Int(arc4random_uniform(28)) + 1
-        let year = 2017
-        let month = 07
-        let day = 11
-        let event = SSEvent()
-        event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
-        event.startTime = "09:00"
-        event.name = "Meet CFO of X Company at his Office"
-        event.desc = "To give introduction"
-        
-        return event
-    }
+//    fileprivate func generateEvents() -> [SSEvent] {
+//        var events: [SSEvent] = []
+//        for year in 2016...2017 {
+//            for _ in 1...3 {
+//                events.append(generateEvent(year));
+//            }
+//        }
+//        return events
+//    }
+//    
+//    fileprivate func generateEvent(_ year: Int) -> SSEvent {
+//        //let month = Int(arc4random_uniform(12)) + 1
+//        //let day = Int(arc4random_uniform(28)) + 1
+//        let year = 2017
+//        let month = 07
+//        let day = 11
+//        let event = SSEvent()
+//        event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
+//        event.startTime = "09:00"
+//        event.name = "Meet CFO of X Company at his Office"
+//        event.desc = "To give introduction"
+//        
+//        return event
+//    }
     
 }
