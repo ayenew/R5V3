@@ -13,10 +13,10 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         ["relationship":"ABC Consulting","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
         ["relationship":"GEF PLC","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
         ["relationship":"ODW Logistics","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"ODW Logistics","targetDate":"09/30/2017", "salesStage":"02-Opportunity", "balance":"$7,800"],
+        ["relationship":"TCS","targetDate":"09/30/2017", "salesStage":"02-Opportunity", "balance":"$7,800"],
         ["relationship":"ODW Logistics","targetDate":"10/30/2017", "salesStage":"02-Opportunity", "balance":"$17,600"],
-        ["relationship":"ODW Logistics","targetDate":"11/30/2017", "salesStage":"02-Opportunity", "balance":"$17,300"],
-        ["relationship":"ODW Logistics","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$71,500"]
+        ["relationship":"EFG Sales","targetDate":"11/30/2017", "salesStage":"02-Opportunity", "balance":"$17,300"],
+        ["relationship":"CDE Textile","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$71,500"]
     ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -60,6 +60,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier2)
             cell?.textLabel?.text = "Show More"
             cell?.textLabel?.textColor = color
+            cell?.textLabel?.textAlignment = .center
             return cell!
         }
         
@@ -69,7 +70,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
     
         
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
+        if indexPath.section == 0 {
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
             let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
@@ -78,29 +79,25 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         edit.backgroundColor = UIColor.orange
         
         return [edit]
-        
+        }
+        return nil
     }
     
     func editButtonTapped(text1:String, text2: String, index:Int){
-        let alertController = UIAlertController(title: "Edit Opportunity", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Edit Opportunity", message: "Enter the new Target Date & Sales Stage", preferredStyle: .alert)
 
-        let backView = alertController.view.subviews.last?.subviews.last
-        backView?.layer.cornerRadius = 10.0
-        backView?.clipsToBounds = true
-        backView?.layer.masksToBounds = true
+//        let backView = alertController.view.subviews.last?.subviews.last
+//        backView?.layer.cornerRadius = 00.0
+//        backView?.clipsToBounds = true
+//        backView?.layer.masksToBounds = true
+//        backView?.backgroundColor = UIColor.clear
         //backView?.backgroundColor = UIColor.orange
         
         let titleString  = "Edit Opportunity"
         var titleMutableString = NSMutableAttributedString()
-        titleMutableString = NSMutableAttributedString(string: titleString as String, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 18.0)!])
+        titleMutableString = NSMutableAttributedString(string: titleString as String, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next", size: 18.0)!])
         titleMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSRange(location:0,length:titleString.characters.count))
         alertController.setValue(titleMutableString, forKey: "attributedTitle")
-        
-//        let message  = "Edit Open Opportunity"
-//        var messageMutableString = NSMutableAttributedString()
-//        messageMutableString = NSMutableAttributedString(string: message as String, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 18.0)!])
-//        messageMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSRange(location:0,length:message.characters.count))
-//        alertController.setValue(messageMutableString, forKey: "attributedMessage")
         
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
             alert -> Void in
@@ -116,17 +113,22 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             (action : UIAlertAction!) -> Void in
             
         })
-        
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = text1
+            textField.textColor = UIColor.blue
+            textField.borderStyle = .roundedRect
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = text2
+            textField.textColor = UIColor.blue
+            textField.borderStyle = .roundedRect
         }
         
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
-        
+        alertController.view.layer.cornerRadius = 12.0
+        alertController.view.backgroundColor = UIColor.darkGray
+        alertController.view.layer.masksToBounds = true
         self.present(alertController, animated: true, completion: nil)
     }
 
