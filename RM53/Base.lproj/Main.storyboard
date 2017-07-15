@@ -219,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="1107"/>
+            <point key="canvasLocation" x="-1192" y="1020"/>
         </scene>
         <!--Relationship-->
         <scene sceneID="O9w-eV-4Ep">
@@ -355,6 +355,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92933040860000005" green="0.92946392300000003" blue="0.92930108310000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="balance" destination="SyV-PI-HeT" id="FEk-zm-Dw3"/>
                                             <outlet property="relationship" destination="Syb-7R-TIP" id="GUI-Ut-yPV"/>
@@ -379,6 +380,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92869230359999999" green="0.92869230359999999" blue="0.92869230359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

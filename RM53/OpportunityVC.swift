@@ -14,9 +14,6 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         ["relationship":"GEF PLC","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
         ["relationship":"ODW Logistics","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
         ["relationship":"TCS","targetDate":"09/30/2017", "salesStage":"02-Opportunity", "balance":"$7,800"],
-        ["relationship":"ODW Logistics","targetDate":"10/30/2017", "salesStage":"02-Opportunity", "balance":"$17,600"],
-        ["relationship":"EFG Sales","targetDate":"11/30/2017", "salesStage":"02-Opportunity", "balance":"$17,300"],
-        ["relationship":"CDE Textile","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$71,500"]
     ]
     
     @IBOutlet weak var tableView: UITableView!
