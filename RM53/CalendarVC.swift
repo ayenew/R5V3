@@ -5,7 +5,8 @@ class CalendarVC: UIViewController {
     var annualViewController: SSCalendarMonthlyViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.lightGray
+        //self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor(red: 108/255.0, green: 77/255.0, blue: 231/255.0, alpha: 1)
        // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
