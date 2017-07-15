@@ -57,34 +57,6 @@ class ChartVC: UIViewController, PieChartDelegate {
     
     
     fileprivate func createModels() -> [PieSliceModel] {
-//        var newModel = [PieSliceModel]()
-//        let path = Bundle.main.path(forResource: "BookTotal", ofType: "json")
-//        do {
-//            let jsonData = try NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
-//            do {
-//                let jsonResult: [[String:Any]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String:Any]]
-//                for i in 0..<jsonResult.count {
-//                    let value = jsonResult[i]["value"]
-//                    let name = jsonResult[i]["name"]
-//                    switch name as! String {
-//                        case "Deposit":
-//                          let model = PieSliceModel(value: value as! Double, color: colors[0])
-//                         newModel.append(model)
-//                      case "TM":
-//                        let model = PieSliceModel(value: value as! Double, color: colors[1])
-//                        newModel.append( model)
-//                     default:
-//                        break
-//                    }
-//                }
-//            } catch{
-//                
-//            }
-//        }catch{
-//            
-//        }
-//        print(newModel)
-        //let models = newModel
         let models = [
             PieSliceModel(value: 45.6e3, color: colors[0], name: "Deposit"),
             PieSliceModel(value: 55e3, color: colors[1], name: "TM"),
@@ -104,34 +76,6 @@ class ChartVC: UIViewController, PieChartDelegate {
     }
     
     fileprivate func createModels2() -> [PieSliceModel] {
-        //        var newModel = [PieSliceModel]()
-        //        let path = Bundle.main.path(forResource: "BookTotal", ofType: "json")
-        //        do {
-        //            let jsonData = try NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
-        //            do {
-        //                let jsonResult: [[String:Any]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String:Any]]
-        //                for i in 0..<jsonResult.count {
-        //                    let value = jsonResult[i]["value"]
-        //                    let name = jsonResult[i]["name"]
-        //                    switch name as! String {
-        //                        case "Deposit":
-        //                          let model = PieSliceModel(value: value as! Double, color: colors[0])
-        //                         newModel.append(model)
-        //                      case "TM":
-        //                        let model = PieSliceModel(value: value as! Double, color: colors[1])
-        //                        newModel.append( model)
-        //                     default:
-        //                        break
-        //                    }
-        //                }
-        //            } catch{
-        //
-        //            }
-        //        }catch{
-        //
-        //        }
-        //        print(newModel)
-        //let models = newModel
         let models = [
             PieSliceModel(value: 80e3, color: colors[5], name: "Deposit"),
             PieSliceModel(value: 62e3, color: colors[6], name: "TM"),
@@ -171,21 +115,6 @@ class ChartVC: UIViewController, PieChartDelegate {
         textLayer.settings = textLayerSettings
         return textLayer
     }
-    
-//    fileprivate func createTextWithLinesLayer() -> PieLineTextLayer {
-//        let lineTextLayer = PieLineTextLayer()
-//        var lineTextLayerSettings = PieLineTextLayerSettings()
-//        lineTextLayerSettings.lineColor = UIColor.lightGray
-//        let formatter = NumberFormatter()
-//        formatter.maximumFractionDigits = 1
-//        lineTextLayerSettings.label.font = UIFont.systemFont(ofSize: 14)
-//        lineTextLayerSettings.label.textGenerator = {slice in
-//            return formatter.string(from: slice.data.model.value as NSNumber).map{"\($0)"} ?? ""
-//        }
-//        
-//        lineTextLayer.settings = lineTextLayerSettings
-//        return lineTextLayer
-//    }
 }
 
 extension CGFloat {

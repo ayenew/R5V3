@@ -9,7 +9,7 @@
 import UIKit
 import PieCharts
 
-class FirstViewController: UIViewController {
+class DashboardViewController: UIViewController {
     
     @IBOutlet weak var mainBar: UINavigationBar!
     @IBOutlet weak var collectionView: UIView!
