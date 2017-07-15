@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities : [[String:String]] = [
         ["relationship":"ABC Consulting","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
         ["relationship":"GEF PLC","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
@@ -65,7 +65,6 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         }
         
         return UITableViewCell()
-      
     }
     
         
@@ -74,7 +73,8 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
             let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
-            self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,index:indexPath.row)
+            let editableItem3 = self.opportunities[indexPath.row]["balance"]
+            self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
         }
         edit.backgroundColor = UIColor.orange
         
@@ -83,17 +83,10 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         return nil
     }
     
-    func editButtonTapped(text1:String, text2: String, index:Int){
-        let alertController = UIAlertController(title: "Edit Opportunity", message: "Enter the new Target Date & Sales Stage", preferredStyle: .alert)
-
-//        let backView = alertController.view.subviews.last?.subviews.last
-//        backView?.layer.cornerRadius = 00.0
-//        backView?.clipsToBounds = true
-//        backView?.layer.masksToBounds = true
-//        backView?.backgroundColor = UIColor.clear
-        //backView?.backgroundColor = UIColor.orange
+    func editButtonTapped(text1:String, text2: String, text3: String, index:Int){
+        let alertController = UIAlertController(title: "Enter the new Target Date & Sales Stage", message: "", preferredStyle: .alert)
         
-        let titleString  = "Edit Opportunity"
+        let titleString  = "Enter the new Target Date Sales Stage and/or Balance"
         var titleMutableString = NSMutableAttributedString()
         titleMutableString = NSMutableAttributedString(string: titleString as String, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next", size: 18.0)!])
         titleMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSRange(location:0,length:titleString.characters.count))
@@ -104,8 +97,10 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
+            let thirdTextField = alertController.textFields![1] as UITextField
             self.opportunities[index]["targetDate"] = firstTextField.text!
             self.opportunities[index]["salesStage"] = secondTextField.text!
+            self.opportunities[index]["balance"] = thirdTextField.text!
             self.tableView.reloadData()
         })
         
@@ -117,11 +112,23 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             textField.placeholder = text1
             textField.textColor = UIColor.blue
             textField.borderStyle = .roundedRect
+            textField.delegate = self
+            textField.tag = 1000
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = text2
             textField.textColor = UIColor.blue
             textField.borderStyle = .roundedRect
+            textField.delegate = self
+            textField.tag = 2000
+        }
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = text3
+            textField.textColor = UIColor.blue
+            textField.borderStyle = .roundedRect
+            textField.delegate = self
+            textField.tag = 3000
         }
         
         alertController.addAction(saveAction)
@@ -131,6 +138,14 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         alertController.view.layer.masksToBounds = true
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField.tag == 1000 || textField.tag == 2000 || textField.tag == 3000{
+            textField.tag = 0
+            return false
+        } else{
+            return true
+        }
+    }
     
 }

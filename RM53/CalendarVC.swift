@@ -24,9 +24,7 @@ class CalendarVC: UIViewController {
         navigationController.view.frame = self.view.frame
     }
     
-    @IBAction func showCalendar(_ sender: UIButton) {
-       // SSStyles.applyNavigationBarStyles()
-        
+    @IBAction func showCalendar(_ sender: UIButton) {        
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
@@ -38,7 +36,7 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        let year = 2017; let month = 07; let day = 11
+        var year = 2017; var month = 07; var day = 16
         var event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "09:00"
@@ -52,6 +50,16 @@ class CalendarVC: UIViewController {
         event.name = "Meet CEO of DEF Logistics"
         event.desc = "Discuss Business Opportunities"
         events.append(event)
+        
+        year = 2017; month = 07; day = 14
+        event = SSEvent()
+        event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
+        event.startTime = "09:00"
+        event.name = "Meeting CFO of ABC Consulting at his Office"
+        event.desc = "Follow up Round Meeting"
+        events.append(event)
+
+        
         return events
     }
     
