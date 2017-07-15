@@ -15,44 +15,36 @@ class RelationshipTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
-        self.title = "Relationships"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1)
+        self.title = "Companies"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collapseDetailViewController = false
-       // performSegue(withIdentifier: "show_detail_segue_id", sender: self)
+        performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "show_detail_segue_id" {
-//            var detailViewController: DetailViewController!
-//            
-//            if let detailNavigationController = segue.destination as? UINavigationController {
-//                
-//                detailViewController = detailNavigationController.topViewController as! DetailViewController
-//                detailViewController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-//                detailViewController.navigationItem.leftItemsSupplementBackButton = true
-//            } else {
-//                detailViewController = segue.destination as! DetailViewController
-//            }
-//            if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-//                let company = relationshipRepo[selectedRowIndexPath.row]
-//                detailViewController.company = company
-//                detailViewController.pageTitle = relationshipRepo[selectedRowIndexPath.row]["name"] as! String
-//                detailViewController.indexNumber = selectedRowIndexPath.row
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "show_detail_segue_id" {
+            let vc = segue.destination as!  UINavigationController
+            let targetController = vc.topViewController as! RelationshipDetailViewController
+            if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
+                targetController.name = relationshipRepo[selectedRowIndexPath.row]["name"] as! String
+            }
+        }
+    }
     
     // MARK: - Table view data source
     
@@ -83,8 +75,8 @@ class RelationshipTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        collapseDetailViewController = false
-        //performSegue(withIdentifier: "show_detail_segue_id", sender: self)
+        //collapseDetailViewController = false
+        performSegue(withIdentifier: "show_detail_segue_id", sender: self)
     }
     
 }

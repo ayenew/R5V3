@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  RelationshipDetailViewController.swift
 //  RM53
 //
 //  Created by Ayu on 7/15/17.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class RelationshipDetailViewController: UIViewController {
+    var name: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        self.navigationItem.title = name
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

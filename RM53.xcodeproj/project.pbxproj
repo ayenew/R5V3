@@ -12,6 +12,7 @@
 		533DFA961F1A6924004EC44F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA951F1A6924004EC44F /* Repo.swift */; };
 		533DFA981F1A6942004EC44F /* Company.json in Resources */ = {isa = PBXBuildFile; fileRef = 533DFA971F1A6942004EC44F /* Company.json */; };
 		533DFAB31F1A704C004EC44F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFAB21F1A704C004EC44F /* DetailViewController.swift */; };
+		533DFAB51F1A963F004EC44F /* RelationshipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */; };
 		538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8BF51F03109B0003D939 /* ChartVC.swift */; };
 		538E8BF81F03109B0003D939 /* ChartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538E8BF61F03109B0003D939 /* ChartVC.xib */; };
 		538E8BFA1F0313010003D939 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8BF91F0313010003D939 /* ChartView.swift */; };
@@ -37,6 +38,7 @@
 		533DFA951F1A6924004EC44F /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		533DFA971F1A6942004EC44F /* Company.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Company.json; sourceTree = "<group>"; };
 		533DFAB21F1A704C004EC44F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipDetailViewController.swift; sourceTree = "<group>"; };
 		538E8BF51F03109B0003D939 /* ChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		538E8BF61F03109B0003D939 /* ChartVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartVC.xib; sourceTree = "<group>"; };
 		538E8BF91F0313010003D939 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				533DFAB21F1A704C004EC44F /* DetailViewController.swift */,
+				533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */,
 			);
 			name = Details;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				538E8BFA1F0313010003D939 /* ChartView.swift in Sources */,
 				538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */,
 				533DFA961F1A6924004EC44F /* Repo.swift in Sources */,
+				533DFAB51F1A963F004EC44F /* RelationshipDetailViewController.swift in Sources */,
 				538E8C261F05EF7C0003D939 /* Extensions.swift in Sources */,
 				533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */,
 			);
