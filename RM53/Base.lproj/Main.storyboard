@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Relationship-->
+        <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="DashboardViewController" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Relationship" image="first" selectedImage="relationship" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" selectedImage="dashboard" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="alertView" destination="KM5-Hl-a4X" id="JKL-QK-AvP"/>
                         <outlet property="calendarContainer" destination="X3e-0G-9xF" id="KVA-Ix-lzJ"/>
@@ -202,7 +202,7 @@
             </objects>
             <point key="canvasLocation" x="-104.296875" y="240.625"/>
         </scene>
-        <!--Notifications-->
+        <!--View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
@@ -213,13 +213,22 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC4-cw-fYQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Meetings" id="7JG-0P-lLp"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70081049200000001" green="0.58649045229999996" blue="0.47724157569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="second" selectedImage="meeting" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="6cS-Py-AML"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1192" y="1020"/>
+            <point key="canvasLocation" x="256.0546875" y="1019.53125"/>
         </scene>
         <!--Relationship-->
         <scene sceneID="O9w-eV-4Ep">
@@ -230,6 +239,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qk-er-ITS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1515" y="657"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xCJ-6d-PiO">
+            <objects>
+                <viewController id="6AX-Te-aAK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dg0-zl-IHo"/>
+                        <viewControllerLayoutGuide type="bottom" id="oHC-Zz-xsx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eiJ-0v-rRR">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G51-kc-ZxI">
+                                <rect key="frame" x="-20" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Notifications" id="C8q-r0-kHg"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98728865389999998" green="0.61491399879999997" blue="0.1212544921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1TU-NJ-qTJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dg1-7r-E4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154.8828125" y="1002.34375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -244,7 +281,8 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="e7s-0b-SSS" kind="relationship" relationship="viewControllers" id="0OL-fl-PFU"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="wfW-M6-D87" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Q6k-Lg-1Jl" kind="relationship" relationship="viewControllers" id="T4Y-En-TWp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -267,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U14-Xz-QtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104" y="995"/>
+            <point key="canvasLocation" x="1344.140625" y="994.53125"/>
         </scene>
         <!--OpportunityVC-->
         <scene sceneID="Vyc-6U-Xcn">
@@ -400,13 +438,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpj-FA-umF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="705"/>
+            <point key="canvasLocation" x="2524.21875" y="704.6875"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="i2a-zH-Fte">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q6k-Lg-1Jl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notification" image="notifications" selectedImage="notifications" id="X76-wg-kAm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ofj-i3-fCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6AX-Te-aAK" kind="relationship" relationship="rootViewController" id="99y-Zc-xGQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAG-iD-GUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1879.1015624999998" y="1002.34375"/>
+        </scene>
+        <!--Meetings-->
+        <scene sceneID="CFu-I6-agx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfW-M6-D87" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meetings" image="meeting" selectedImage="meeting" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G99-Pb-wyl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="g8G-XP-Tk4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mb8-vO-Q3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468.16406249999994" y="1019.53125"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="dashboard" width="25" height="25"/>
         <image name="meeting" width="25" height="25"/>
-        <image name="relationship" width="25" height="25"/>
-        <image name="second" width="30" height="30"/>
+        <image name="notifications" width="32" height="32"/>
     </resources>
 </document>

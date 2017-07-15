@@ -65,7 +65,8 @@ class RelationshipTableViewController: UITableViewController {
         } else {
             cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
             cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
-            cell.imageView?.image = UIImage(named: "business")
+            cell.imageView?.image = UIImage(named: "business")?.withRenderingMode(.alwaysTemplate)
+            cell.imageView?.tintColor = UIColor.blue
         }
         
         return cell

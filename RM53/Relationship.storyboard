@@ -87,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="-3076" y="1824"/>
         </scene>
-        <!--Item-->
+        <!--Relationship-->
         <scene sceneID="awk-zA-NAe">
             <objects>
                 <splitViewController id="WoQ-7D-gqo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="relationship" selectedImage="relationship" id="Am6-8z-RJv"/>
+                    <tabBarItem key="tabBarItem" title="Relationship" image="relationship" selectedImage="relationship" id="Am6-8z-RJv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Epk-SV-AsV" kind="relationship" relationship="masterViewController" id="mgx-Ii-qsO"/>
@@ -171,6 +171,6 @@
         <image name="relationship" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NaX-jQ-zn9"/>
+        <segue reference="d4y-jb-FCR"/>
     </inferredMetricsTieBreakers>
 </document>
