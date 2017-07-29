@@ -24,6 +24,7 @@ class RelationshipTableViewController: UITableViewController {
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
@@ -84,9 +85,9 @@ class RelationshipTableViewController: UITableViewController {
 
 extension RelationshipTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-        // self.filteredCompany = relationshipRepo.filter({
-        // nil != $0.name.range(of:searchController.searchBar.text!)
-        // })
+//         self.filteredCompany = relationshipRepo.filter({
+//         nil != $0.name.range(of:searchController.searchBar.text!)
+//         })
         tableView.reloadData()
     }
     
