@@ -23,12 +23,25 @@ class RelationshipDetailViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var contactsViewController: ContactsViewController = {
+    private lazy var companyOpportunityViewController: CompanyOpportunityViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Relationship", bundle: Bundle.main)
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "CompanyOpportunityViewController") as! CompanyOpportunityViewController
+        
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
+    
+    private lazy var productViewController: ProductViewController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Relationship", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -59,9 +72,8 @@ class RelationshipDetailViewController: UIViewController {
         // Configure Segmented Control
         segmentedControl.removeAllSegments()
         segmentedControl.insertSegment(withTitle: "Company Overview", at: 0, animated: false)
-        segmentedControl.insertSegment(withTitle: "Contacts", at: 1, animated: false)
-        segmentedControl.insertSegment(withTitle: "Open Opportunities", at: 2, animated: false)
-        segmentedControl.insertSegment(withTitle: "Product Information", at: 3, animated: false)
+        segmentedControl.insertSegment(withTitle: "Open Opportunities", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "Product Information", at: 2, animated: false)
         segmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
         
         // Select First Segment
@@ -74,12 +86,20 @@ class RelationshipDetailViewController: UIViewController {
     
     private func updateView() {
         if segmentedControl.selectedSegmentIndex == 0 {
+            remove(asChildViewController: productViewController)
+            remove(asChildViewController: companyOpportunityViewController)
+            add(asChildViewController: overviewViewController)
+            updateOverviewOverview()
+        } else if segmentedControl.selectedSegmentIndex == 1 {
             remove(asChildViewController: overviewViewController)
-            add(asChildViewController: contactsViewController)
+            remove(asChildViewController: productViewController)
+            add(asChildViewController: companyOpportunityViewController)
             updateOverviewOverview()
         } else {
-            remove(asChildViewController: contactsViewController)
-            add(asChildViewController: overviewViewController)
+            remove(asChildViewController: overviewViewController)
+            remove(asChildViewController: companyOpportunityViewController)
+            add(asChildViewController: productViewController)
+            updateOverviewOverview()
         }
     }
     
@@ -110,7 +130,7 @@ class RelationshipDetailViewController: UIViewController {
     }
 
     func updateOverviewOverview(){
-        overviewViewController.name = self.name
+       // overviewViewController.name = self.name
     }
     /*
     // MARK: - Navigation

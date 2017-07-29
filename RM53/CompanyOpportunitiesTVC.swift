@@ -9,6 +9,8 @@
 import UIKit
 
 class CompanyOpportunitiesTVC: UITableViewController {
+    @IBOutlet weak var nameLbl: UILabel!
+    var name: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
