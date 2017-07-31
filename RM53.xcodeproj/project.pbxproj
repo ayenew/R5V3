@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530A902B1F2E816200876A58 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530A90291F2E816200876A58 /* ContactCell.swift */; };
+		530A902C1F2E816200876A58 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530A902A1F2E816200876A58 /* ContactCell.xib */; };
 		5338AF981F1A637900A27EF3 /* Relationship.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5338AF971F1A637900A27EF3 /* Relationship.storyboard */; };
 		533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA931F1A68F2004EC44F /* RelationshipTableViewController.swift */; };
 		533DFA961F1A6924004EC44F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA951F1A6924004EC44F /* Repo.swift */; };
@@ -32,11 +34,18 @@
 		53F3A9721F2BF14700B8C5CD /* CompanyOpportunitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A9711F2BF14700B8C5CD /* CompanyOpportunitiesTVC.swift */; };
 		53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A9751F2CFA6E00B8C5CD /* ProductViewController.swift */; };
 		53F3A97C1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A97B1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift */; };
+		53F3A97E1F2E61F900B8C5CD /* OverViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A97D1F2E61F900B8C5CD /* OverViewTVC.swift */; };
+		53F3A9801F2E620900B8C5CD /* ContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A97F1F2E620900B8C5CD /* ContactTVC.swift */; };
+		53F3A9821F2E667D00B8C5CD /* OverviewContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A9811F2E667D00B8C5CD /* OverviewContainerVC.swift */; };
+		53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A9831F2E69F700B8C5CD /* OverViewCell.swift */; };
+		53F3A9861F2E69F700B8C5CD /* OverViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3A9841F2E69F700B8C5CD /* OverViewCell.xib */; };
 		AA0B4D2FDDA308B25D1F7033 /* Pods_RM53.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EDA4428F0588C73B8D7AE /* Pods_RM53.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D8D518C034D34B1DC0B16A8 /* Pods-RM53.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RM53.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RM53/Pods-RM53.debug.xcconfig"; sourceTree = "<group>"; };
+		530A90291F2E816200876A58 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		530A902A1F2E816200876A58 /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		5338AF971F1A637900A27EF3 /* Relationship.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Relationship.storyboard; sourceTree = "<group>"; };
 		533DFA931F1A68F2004EC44F /* RelationshipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTableViewController.swift; sourceTree = "<group>"; };
 		533DFA951F1A6924004EC44F /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -64,6 +73,11 @@
 		53F3A9711F2BF14700B8C5CD /* CompanyOpportunitiesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyOpportunitiesTVC.swift; sourceTree = "<group>"; };
 		53F3A9751F2CFA6E00B8C5CD /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		53F3A97B1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyOpportunityViewController.swift; sourceTree = "<group>"; };
+		53F3A97D1F2E61F900B8C5CD /* OverViewTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTVC.swift; sourceTree = "<group>"; };
+		53F3A97F1F2E620900B8C5CD /* ContactTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTVC.swift; sourceTree = "<group>"; };
+		53F3A9811F2E667D00B8C5CD /* OverviewContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewContainerVC.swift; sourceTree = "<group>"; };
+		53F3A9831F2E69F700B8C5CD /* OverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewCell.swift; sourceTree = "<group>"; };
+		53F3A9841F2E69F700B8C5CD /* OverViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverViewCell.xib; sourceTree = "<group>"; };
 		87724EF87B947CFF4A2ABD94 /* Pods-RM53.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RM53.release.xcconfig"; path = "Pods/Target Support Files/Pods-RM53/Pods-RM53.release.xcconfig"; sourceTree = "<group>"; };
 		ED3EDA4428F0588C73B8D7AE /* Pods_RM53.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RM53.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5338AF971F1A637900A27EF3 /* Relationship.storyboard */,
+				53F3A97D1F2E61F900B8C5CD /* OverViewTVC.swift */,
 				533DFA971F1A6942004EC44F /* Company.json */,
 				533DFA931F1A68F2004EC44F /* RelationshipTableViewController.swift */,
 				533DFA951F1A6924004EC44F /* Repo.swift */,
@@ -138,6 +153,12 @@
 				53F3A9711F2BF14700B8C5CD /* CompanyOpportunitiesTVC.swift */,
 				53F3A9751F2CFA6E00B8C5CD /* ProductViewController.swift */,
 				53F3A97B1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift */,
+				53F3A97F1F2E620900B8C5CD /* ContactTVC.swift */,
+				53F3A9811F2E667D00B8C5CD /* OverviewContainerVC.swift */,
+				53F3A9831F2E69F700B8C5CD /* OverViewCell.swift */,
+				53F3A9841F2E69F700B8C5CD /* OverViewCell.xib */,
+				530A90291F2E816200876A58 /* ContactCell.swift */,
+				530A902A1F2E816200876A58 /* ContactCell.xib */,
 			);
 			name = Relationship;
 			sourceTree = "<group>";
@@ -276,11 +297,13 @@
 			files = (
 				5338AF981F1A637900A27EF3 /* Relationship.storyboard in Resources */,
 				539589611F030D2F00F8ED56 /* LaunchScreen.storyboard in Resources */,
+				53F3A9861F2E69F700B8C5CD /* OverViewCell.xib in Resources */,
 				5395895E1F030D2F00F8ED56 /* Assets.xcassets in Resources */,
 				533DFA981F1A6942004EC44F /* Company.json in Resources */,
 				538E8C181F0540F40003D939 /* BookTotal.json in Resources */,
 				5395895C1F030D2E00F8ED56 /* Main.storyboard in Resources */,
 				538E8C0A1F0343570003D939 /* Calendar.storyboard in Resources */,
+				530A902C1F2E816200876A58 /* ContactCell.xib in Resources */,
 				538E8BF81F03109B0003D939 /* ChartVC.xib in Resources */,
 				538E8C161F04A34B0003D939 /* OpportunityCell.xib in Resources */,
 			);
@@ -345,13 +368,18 @@
 				53F3A9721F2BF14700B8C5CD /* CompanyOpportunitiesTVC.swift in Sources */,
 				539589551F030D2E00F8ED56 /* AppDelegate.swift in Sources */,
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
+				53F3A9821F2E667D00B8C5CD /* OverviewContainerVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* DashboardViewController.swift in Sources */,
 				53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */,
+				53F3A9801F2E620900B8C5CD /* ContactTVC.swift in Sources */,
+				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
 				538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */,
 				538E8BFA1F0313010003D939 /* ChartView.swift in Sources */,
+				530A902B1F2E816200876A58 /* ContactCell.swift in Sources */,
 				538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */,
 				533DFA961F1A6924004EC44F /* Repo.swift in Sources */,
+				53F3A97E1F2E61F900B8C5CD /* OverViewTVC.swift in Sources */,
 				53F3A9701F2BF12300B8C5CD /* OverviewViewController.swift in Sources */,
 				533DFAB51F1A963F004EC44F /* RelationshipDetailViewController.swift in Sources */,
 				538E8C261F05EF7C0003D939 /* Extensions.swift in Sources */,

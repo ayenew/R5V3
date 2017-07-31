@@ -37,6 +37,8 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
 //        DispatchQueue.main.async {
 //            var frame = self.tableView.frame
 //            frame.size.height = self.tableView.contentSize.height
@@ -112,6 +114,39 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("did select:      \(indexPath.row)  ")
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if tableView == self.tableView {
+            return true
+        }
+        if tableView == self.tableView1 {
+            return true
+        }
+       return true
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }else{
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        self.tableView.setEditing(editing, animated: animated)
+        self.tableView1.setEditing(editing, animated: animated)
+        super.setEditing(editing, animated: animated)
+    }
+
     
     
     

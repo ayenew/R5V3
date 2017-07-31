@@ -10,12 +10,14 @@ import UIKit
 
 class RelationshipDetailViewController: UIViewController {
     
-    private lazy var overviewViewController: OverviewViewController = {
+    private lazy var overviewViewController: OverviewContainerVC = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Relationship", bundle: Bundle.main)
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "OverviewViewController") as! OverviewViewController
+       // var viewController = storyboard.instantiateViewController(withIdentifier: "OverviewViewController") as! OverviewViewController
+        
+        var viewController = storyboard.instantiateViewController(withIdentifier: "OverviewViewController") as! OverviewContainerVC
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
