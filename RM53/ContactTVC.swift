@@ -24,6 +24,7 @@ class ContactTVC: UITableViewController {
          self.navigationItem.title = "Company Overview"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +50,14 @@ class ContactTVC: UITableViewController {
         let item = contacts[indexPath.row]
         cell.name.text = item["name"]
         cell.address.text = item["address"]
+        if indexPath.row % 2 != 0 {
+            cell.backgroundColor = UIColor.groupTableViewBackground
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return 50
     }
     
 

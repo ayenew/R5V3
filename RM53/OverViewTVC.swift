@@ -20,6 +20,7 @@ class OverViewTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         // navigationController?.navigationBar.barTintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 0.3)
         navigationController?.navigationBar.barTintColor = UIColor(red: 51/255.0, green: 74/255.0, blue: 157/255.0, alpha: 0.2)
          self.navigationItem.title = "Contacts"
@@ -27,6 +28,15 @@ class OverViewTVC: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.tableView.tableFooterView = UIView()
+    }
+    
+    func addItem(){
+        let item = ["Name": "ABC Relationship","FirstName":"John","LastName":"Doe","Cell":"202-202-2000","Work":"210-210-2000"]
+        company.append(item)
+        let indexPath = IndexPath(row: company.count-1, section: 0)
+        //tableView.beginUpdates()
+        //self.tableView.insertRows(at: [indexPath], with: .automatic)
+        //tableView.endUpdates()
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,8 +94,10 @@ class OverViewTVC: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //company.remove(at: indexPath.row)
+            //tableView.beginUpdates()
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.endUpdates()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

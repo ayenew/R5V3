@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,6 +60,12 @@
                     <constraint firstItem="ApL-kx-Wln" firstAttribute="baseline" secondItem="5sX-Lk-qgS" secondAttribute="baseline" id="nFa-fh-Fl9"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="balance" destination="5sX-Lk-qgS" id="9S1-A8-Yme"/>
+                <outlet property="relationship" destination="ZlN-gB-Ec2" id="bHo-bJ-biJ"/>
+                <outlet property="salesStage" destination="E7k-Rf-glu" id="E2x-9r-EDq"/>
+                <outlet property="targetDate" destination="ApL-kx-Wln" id="Asz-ik-XU5"/>
+            </connections>
             <point key="canvasLocation" x="331.5" y="71"/>
         </tableViewCell>
     </objects>

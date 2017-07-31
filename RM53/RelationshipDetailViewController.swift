@@ -25,12 +25,12 @@ class RelationshipDetailViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var companyOpportunityViewController: CompanyOpportunityViewController = {
+    private lazy var companyOpportunityViewController: UINavigationController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Relationship", bundle: Bundle.main)
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "CompanyOpportunityViewController") as! CompanyOpportunityViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "CompanyOpportunityViewController") as! UINavigationController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -38,12 +38,12 @@ class RelationshipDetailViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var productViewController: ProductViewController = {
+    private lazy var productViewController: UINavigationController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Relationship", bundle: Bundle.main)
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ProductViewController") as! UINavigationController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
