@@ -23,7 +23,8 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.mainBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        //self.mainBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        self.mainBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         UIApplication.shared.statusBarStyle = .lightContent
         self.mainBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         view.addSubview(rmChartBookChart)
@@ -32,7 +33,7 @@ class DashboardViewController: UIViewController {
         view.addSubview(notificationView)
         
         rmChartBookChart.frame = CGRect(x: 4, y: 24, width: self.view.frame.width/3-12, height: self.view.frame.height-26)
-        rmCalendarView.frame = CGRect(x: self.view.frame.width/3, y: 48, width: self.view.frame.width/3, height: self.view.frame.height/2-4)
+        rmCalendarView.frame = CGRect(x: self.view.frame.width/3, y: 48, width: self.view.frame.width/3, height: self.view.frame.height/2-8)
         rmOpportunityView.frame = CGRect(x: self.view.frame.width/3, y: self.view.frame.height/2 + 48, width: 2 * self.view.frame.width/3-8, height: self.view.frame.height/2 - 47)
         notificationView.frame = CGRect(x: 2 * self.view.frame.width/3, y: 45, width: self.view.frame.width/3-4, height: self.view.frame.height/2-2)
         

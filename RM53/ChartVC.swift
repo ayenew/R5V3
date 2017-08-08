@@ -15,11 +15,11 @@ class ChartVC: UIViewController, PieChartDelegate {
     @IBOutlet weak var chartView: PieChart!
     let PieSliceModelWithName: [String:PieSliceModel] = [String:PieSliceModel]()
     
-    fileprivate static let alpha: CGFloat = 0.7
+    fileprivate static let alpha: CGFloat = 0.5
     let colors = [
         UIColor.yellow.withAlphaComponent(alpha),
         UIColor.green.withAlphaComponent(alpha),
-        UIColor.purple.withAlphaComponent(alpha),
+        UIColor.orange.withAlphaComponent(alpha),
         UIColor.cyan.withAlphaComponent(alpha),
         UIColor.darkGray.withAlphaComponent(alpha),
         UIColor.red.withAlphaComponent(alpha),
@@ -77,11 +77,11 @@ class ChartVC: UIViewController, PieChartDelegate {
     
     fileprivate func createModels2() -> [PieSliceModel] {
         let models = [
-            PieSliceModel(value: 80e3, color: colors[5], name: "Deposit"),
-            PieSliceModel(value: 62e3, color: colors[6], name: "TM"),
-            PieSliceModel(value: 50e3, color: colors[7], name: "Credit"),
-            PieSliceModel(value: 40e3, color: colors[8], name: "Cap Market"),
-            PieSliceModel(value: 20e3, color: colors[9], name: "Non Commercial"),
+            PieSliceModel(value: 80e3, color: colors[0], name: "Deposit"),
+            PieSliceModel(value: 62e3, color: colors[1], name: "TM"),
+            PieSliceModel(value: 50e3, color: colors[2], name: "Credit"),
+            PieSliceModel(value: 40e3, color: colors[3], name: "Cap Market"),
+            PieSliceModel(value: 20e3, color: colors[4], name: "Non Commercial"),
             ]
         var total = 0.0
         for model in models {

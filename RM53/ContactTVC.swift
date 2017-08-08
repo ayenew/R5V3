@@ -17,14 +17,21 @@ class ContactTVC: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+         //self.navigationItem.rightBarButtonItem = self.editButtonItem
          //navigationController?.navigationBar.barTintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 0.3)
-        navigationController?.navigationBar.barTintColor = UIColor(red: 51/255.0, green: 74/255.0, blue: 157/255.0, alpha: 0.2)
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
+        self.navigationItem.rightBarButtonItems = [self.editButtonItem,addButton]
+        //navigationController?.navigationBar.barTintColor = UIColor(red: 51/255.0, green: 74/255.0, blue: 157/255.0, alpha: 0.2)
+        navigationController?.navigationBar.barTintColor = UIColor.lightGray
         self.tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "cell1")
          self.navigationItem.title = "Company Overview"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)]
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
         self.tableView.tableFooterView = UIView()
+    }
+    
+    func addItem(){
+        
     }
 
     override func didReceiveMemoryWarning() {

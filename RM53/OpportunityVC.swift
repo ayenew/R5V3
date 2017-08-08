@@ -10,20 +10,27 @@ import UIKit
 
 class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities : [[String:String]] = [
-        ["relationship":"ABC Consulting","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
-        ["relationship":"GEF PLC","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
-        ["relationship":"ODW Logistics","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"TCS","targetDate":"09/30/2017", "salesStage":"02-Opportunity", "balance":"$7,800"],
+        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
+        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"]
     ]
     
     @IBOutlet weak var tableView: UITableView!
-    let cellIdentifier1 = "opportunityCell1"
-    let cellIdentifier2 = "opportunityCell1"
+    let cellIdentifier1 = "opportunityCell"
+    let cellIdentifier2 = "opportunityCell2"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         tableView.isScrollEnabled = false
+        self.tableView.register(UINib(nibName: "OpportunityCell", bundle: nil), forCellReuseIdentifier: cellIdentifier1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.flashScrollIndicators()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,9 +55,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             cell.targetDate.text = opportunities[indexPath.row]["targetDate"]
             cell.salesStage.text = opportunities[indexPath.row]["salesStage"]
             cell.balance.text = opportunities[indexPath.row]["balance"]
-            if indexPath.row % 2 == 0 {
-                cell.backgroundColor = UIColor.white
-            }
+            cell.backgroundColor = UIColor.white
             return cell
         }
         if indexPath.section == 1{
@@ -86,7 +91,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         let titleString  = "Enter the new Target Date Sales Stage and/or Balance"
         var titleMutableString = NSMutableAttributedString()
         titleMutableString = NSMutableAttributedString(string: titleString as String, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next", size: 18.0)!])
-        titleMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSRange(location:0,length:titleString.characters.count))
+        titleMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 44/255.0, green: 82/255.0, blue: 231/255.0, alpha: 1), range: NSRange(location:0,length:titleString.characters.count))
         alertController.setValue(titleMutableString, forKey: "attributedTitle")
         
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {

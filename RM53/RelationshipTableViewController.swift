@@ -19,7 +19,7 @@ class RelationshipTableViewController: UITableViewController {
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
         self.title = "Companies"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         searchController.searchResultsUpdater = self
@@ -27,14 +27,15 @@ class RelationshipTableViewController: UITableViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        searchController.searchBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collapseDetailViewController = false
-        performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
+        //performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
+        performSegue(withIdentifier: "show_detail_segue_id", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,6 +44,8 @@ class RelationshipTableViewController: UITableViewController {
             let targetController = vc.topViewController as! RelationshipDetailViewController
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
                 targetController.name = relationshipRepo[selectedRowIndexPath.row]["name"] as! String
+            } else{
+                targetController.name = relationshipRepo[0]["name"] as! String
             }
         }
     }
@@ -66,8 +69,8 @@ class RelationshipTableViewController: UITableViewController {
         } else {
             cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
             cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
-            cell.imageView?.image = UIImage(named: "business")?.withRenderingMode(.alwaysTemplate)
-            cell.imageView?.tintColor = UIColor.blue
+            //cell.imageView?.image = UIImage(named: "business")?.withRenderingMode(.alwaysTemplate)
+            //cell.imageView?.tintColor = UIColor.blue
         }
         
         return cell

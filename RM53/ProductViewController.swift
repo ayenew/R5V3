@@ -16,11 +16,11 @@ class ProductViewController: UIViewController , PieChartDelegate {
     @IBOutlet weak var chartView: PieChart!
     let PieSliceModelWithName: [String:PieSliceModel] = [String:PieSliceModel]()
     
-    fileprivate static let alpha: CGFloat = 0.7
+    fileprivate static let alpha: CGFloat = 0.5
     let colors = [
         UIColor.yellow.withAlphaComponent(alpha),
         UIColor.green.withAlphaComponent(alpha),
-        UIColor.purple.withAlphaComponent(alpha),
+        UIColor.orange.withAlphaComponent(alpha),
         UIColor.cyan.withAlphaComponent(alpha),
         UIColor.darkGray.withAlphaComponent(alpha),
         UIColor.red.withAlphaComponent(alpha),
@@ -48,13 +48,13 @@ class ProductViewController: UIViewController , PieChartDelegate {
         chartView.delegate = self
         chartView.models = createModels() // order is important - models have to be set at the end
         
-        chartView2.layers = [createPlainTextLayer()]
-        chartView2.delegate = self
-        chartView2.models = createModels2()
-        
-        chartView.layers = [createPlainTextLayer()]
-        chartView.delegate = self
-        chartView.models = createModels()
+//        chartView2.layers = [createPlainTextLayer()]
+//        chartView2.delegate = self
+//        chartView2.models = createModels2()
+//        
+//        chartView.layers = [createPlainTextLayer()]
+//        chartView.delegate = self
+//        chartView.models = createModels()
     }
     
     // MARK: - PieChartDelegate
@@ -68,11 +68,10 @@ class ProductViewController: UIViewController , PieChartDelegate {
     
     fileprivate func createModels() -> [PieSliceModel] {
         let models = [
-            PieSliceModel(value: 45.6e3, color: colors[4], name: "Deposit"),
-            PieSliceModel(value: 55e3, color: colors[5], name: "TM"),
-            PieSliceModel(value: 30e3, color: colors[6], name: "Credit"),
-            PieSliceModel(value: 20e3, color: colors[7], name: "Cap Market"),
-            PieSliceModel(value: 10e3, color: colors[8], name: "Non Commercial"),
+            PieSliceModel(value: 45.6e3, color: colors[0], name: "TM Exposure"),
+            PieSliceModel(value: 55e3, color: colors[1], name: "CM Exposure"),
+            PieSliceModel(value: 30e3, color: colors[2], name: "Credit Exposure"),
+            PieSliceModel(value: 20e3, color: colors[3], name: "Deposit Exposure"),
             ]
         var total = 0.0
         for model in models {
@@ -84,29 +83,8 @@ class ProductViewController: UIViewController , PieChartDelegate {
         currentColorIndex = models.count
         return models
     }
-    
-    fileprivate func createModels2() -> [PieSliceModel] {
-        let models = [
-            PieSliceModel(value: 20e2, color: colors[4], name: "Deposit"),
-            PieSliceModel(value: 30e3, color: colors[5], name: "TM"),
-            PieSliceModel(value: 40e3, color: colors[6], name: "Credit"),
-            PieSliceModel(value: 50e3, color: colors[7], name: "Cap Market"),
-            PieSliceModel(value: 60e3, color: colors[8], name: "Non Commercial"),
-            ]
-        var total = 0.0
-        for model in models {
-            total += model.value
-        }
-        
-        //totalRevenue.text = "$\(total/1000)k"
-        
-        currentColorIndex = models.count
-        return models
-    }
-    
-    
-    
-        
+
+
     
     
     // MARK: - Layers

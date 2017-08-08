@@ -6,7 +6,7 @@ class CalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.lightGray
-        self.view.backgroundColor = UIColor(red: 108/255.0, green: 77/255.0, blue: 231/255.0, alpha: 1)
+        self.view.backgroundColor = UIColor.white
        // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
@@ -17,9 +17,9 @@ class CalendarVC: UIViewController {
          annualViewController?.startingIndexPath = NSIndexPath(item: 0, section: month-1) as IndexPath!
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
-        navigationController.navigationBar.tintColor = UIColor.white
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+       navigationController.navigationBar.barTintColor = UIColor.groupTableViewBackground
+        navigationController.navigationBar.tintColor = UIColor.black
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame
@@ -37,7 +37,7 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        var year = 2017; var month = 07; var day = 16
+        var year = 2017; var month = 08; var day = 03
         var event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "09:00"
@@ -52,7 +52,7 @@ class CalendarVC: UIViewController {
         event.desc = "Discuss Business Opportunities"
         events.append(event)
         
-        year = 2017; month = 07; day = 14
+        year = 2017; month = 8; day = 05
         event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "09:00"
