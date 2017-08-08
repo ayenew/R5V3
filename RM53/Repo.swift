@@ -8,6 +8,7 @@
 
 import Foundation
 var relationshipRepo = [[String:Any]]()
+var meetingsRepo = [[String:Any]]()
 struct Repo {
     
     static func loadCompanyInfo(){
@@ -29,6 +30,28 @@ struct Repo {
                         c["callFrequency"] = aCompany["callFrequency"] as! [String:Any]
                         c["depositBalance"] = aCompany["depositBalance"] as! [String:Any]
                         relationshipRepo.append(c)
+                    }
+                } catch {}
+            } catch {}
+        }
+    }
+    
+    static func loadMeetingsInfo(){
+        if let path = Bundle.main.path(forResource: "Meetings", ofType: "json") {
+            do {
+                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                do {
+                    let jsonResult: [String:[[String:Any]]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[[String:Any]]]
+                    
+                    let meetingsArray : [[String:Any]] = jsonResult["meetings"]! as [[String:Any]]
+                    for aMeeting in meetingsArray {
+                        var c = [String:Any]()
+                        c["name"] = aMeeting["name"] as! String
+                        c["date"] = aMeeting["date"] as! String
+                        c["reason"] = aMeeting["reason"] as! String
+                        c["company"] = aMeeting["company"] as! String
+                        c["details"] = aMeeting["details"] as! String
+                        meetingsRepo.append(c)
                     }
                 } catch {}
             } catch {}

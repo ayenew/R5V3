@@ -1,0 +1,18 @@
+{
+    "meetings": [{
+                 "name": "MPW Industrial Service",
+                 "date": "06/30/2017",
+                 "reason": "Service",
+                 "details": "Meet with Dana to reciew account set ups. Need to ",
+                 "company": "MPW Industrial Service"
+                 },
+                 {
+                 "name": "MPW Industrial Service",
+                 "date": "07/06/2017",
+                 "reason": "Strategic, COI/Referal",
+                 "details": "New billing software and customer portal. To follow",
+                 "company": "MPW /industrial Service"
+                 }
+                 
+                 ]
+}

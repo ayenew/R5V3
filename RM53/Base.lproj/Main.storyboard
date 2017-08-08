@@ -300,35 +300,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-104.296875" y="240.625"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC4-cw-fYQ">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Meetings" id="7JG-0P-lLp"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.70081049200000001" green="0.58649045229999996" blue="0.47724157569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6cS-Py-AML"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-553" y="1797"/>
+            <point key="canvasLocation" x="-592" y="241"/>
         </scene>
         <!--Relationship-->
         <scene sceneID="O9w-eV-4Ep">
@@ -381,8 +353,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="e7s-0b-SSS" kind="relationship" relationship="viewControllers" id="0OL-fl-PFU"/>
-                        <segue destination="wfW-M6-D87" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Q6k-Lg-1Jl" kind="relationship" relationship="viewControllers" id="T4Y-En-TWp"/>
+                        <segue destination="ah2-yD-RPE" kind="relationship" relationship="viewControllers" id="N2D-ek-ldY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -517,7 +488,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nfB-YQ-f3q">
-                                                    <rect key="frame" x="176" y="0.0" width="672" height="79.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="994" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -556,48 +527,18 @@
             </objects>
             <point key="canvasLocation" x="660.9375" y="391.40625"/>
         </scene>
-        <!--Notification-->
-        <scene sceneID="i2a-zH-Fte">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q6k-Lg-1Jl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notification" image="notifications" selectedImage="notifications" id="X76-wg-kAm"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ofj-i3-fCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6AX-Te-aAK" kind="relationship" relationship="rootViewController" id="99y-Zc-xGQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iAG-iD-GUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1969" y="1080"/>
-        </scene>
         <!--Meetings-->
-        <scene sceneID="CFu-I6-agx">
+        <scene sceneID="YDE-vs-7Q6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfW-M6-D87" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meetings" image="meeting" selectedImage="meeting" id="cPa-gy-q4n"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G99-Pb-wyl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="g8G-XP-Tk4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mb8-vO-Q3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Meetings" id="ah2-yD-RPE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pdn-hR-buX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7RG-n2-9Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552" y="1080"/>
+            <point key="canvasLocation" x="-1165" y="1223"/>
         </scene>
     </scenes>
     <resources>
         <image name="dashboard" width="25" height="25"/>
-        <image name="meeting" width="25" height="25"/>
-        <image name="notifications" width="32" height="32"/>
     </resources>
 </document>
