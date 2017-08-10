@@ -9,7 +9,7 @@ class MeetingsTableViewController: UITableViewController {
     
     fileprivate let CellIdentifier = "relationshipCell"
     let searchController = UISearchController(searchResultsController: nil)
-    var filteredMeetings = [Meeting]()
+    var filteredMeetings = [[String:Any]]()
     var collapseDetailViewController: Bool  = true
     
     
@@ -63,8 +63,8 @@ class MeetingsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as UITableViewCell
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = filteredMeetings[indexPath.row].name
-            cell.detailTextLabel?.text = filteredMeetings[indexPath.row].date
+            cell.textLabel?.text = filteredMeetings[indexPath.row]["company"] as! String
+            cell.detailTextLabel?.text = filteredMeetings[indexPath.row]["date"] as! String 
         } else {
             cell.textLabel?.text = meetingsRepo[indexPath.row]["company"] as! String?
             cell.detailTextLabel?.text = meetingsRepo[indexPath.row]["date"] as! String?
@@ -85,9 +85,9 @@ class MeetingsTableViewController: UITableViewController {
 
 extension MeetingsTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-//         self.filteredCompany = relationshipRepo.filter({
-//         nil != $0.name.range(of:searchController.searchBar.text!)
-//         })
+        self.filteredMeetings = meetingsRepo.filter({
+            nil != ($0["company"] as! String).lowercased().range(of:searchController.searchBar.text!.lowercased())
+        })
         tableView.reloadData()
     }
     

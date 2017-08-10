@@ -24,10 +24,50 @@
                  },
                  {
                  "company": "Builders Plus Inc.",
-                 "callPlaneName":"06/14/2017 Specialized Srvice",
+                 "callPlaneName":"Strategic with CFO",
                  "date": "08/01/2017",
-                 "reason": "Strategic with CFO",
+                 "reason": "Strategic",
                  "details": "Talk with Justin and Mark - our ACH solution too expensive. Also do not think need ECL",
+                 
+                 },
+                 {
+                 "company": "KALI R NANDI",
+                 "callPlaneName":"06/14/2017 Specialized Service",
+                 "date": "08/01/2017",
+                 "reason": "Strategic",
+                 "details": "",
+                 
+                 },
+                 {
+                 "company": "Partha Nandi",
+                 "callPlaneName":"August 15th  Meeting",
+                 "date": "08/15/2017",
+                 "reason": "Strategic",
+                 "details": "",
+                 
+                 },
+                 {
+                 "company": "Cellular Connection",
+                 "callPlaneName":"Recurring Payment Issue",
+                 "date": "08/17/2017",
+                 "reason": "Service",
+                 "details": "",
+                 
+                 },
+                 {
+                 "company": "CarDon and Associates",
+                 "callPlaneName":"08/18/2017 CarDon and Associate",
+                 "date": "08/18/2017",
+                 "reason": "Service, Strategic",
+                 "details": "",
+                 
+                 },
+                 {
+                 "company": "Omega Marble & Granite",
+                 "callPlaneName":"08/20/2017 Omega Marble & Gra",
+                 "date": "08/20/2017",
+                 "reason": "Strategic",
+                 "details": "",
                  
                  }
                  

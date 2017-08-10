@@ -25,53 +25,5 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RM53/RelationshipDetailViewController.swift"
-            timestampString = "524017607.546455"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "updatePrimaryContact(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RM53.RelationshipDetailViewController.updatePrimaryContact (__ObjC.NSNotification) -&gt; ()"
-                  moduleName = "RM53"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ayu/Desktop/RM53_All/RM53_Final/RM53/RM53/RelationshipDetailViewController.swift"
-                  timestampString = "524017862.362183"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RM53.RelationshipDetailViewController.updatePrimaryContact (__ObjC.NSNotification) -&gt; ()"
-                  moduleName = "RM53"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ayu/Desktop/RM53_All/RM53_Final/RM53/RM53/RelationshipDetailViewController.swift"
-                  timestampString = "524017862.36575"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "327">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

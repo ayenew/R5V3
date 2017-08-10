@@ -9,7 +9,7 @@ class RelationshipTableViewController: UITableViewController {
     
     fileprivate let CellIdentifier = "relationshipCell"
     let searchController = UISearchController(searchResultsController: nil)
-    var filteredCompany = [Company]()
+    var filteredCompany = [[String:Any]]()
     var collapseDetailViewController: Bool  = true
     
     
@@ -63,8 +63,8 @@ class RelationshipTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as UITableViewCell
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = filteredCompany[indexPath.row].name
-            cell.detailTextLabel?.text = filteredCompany[indexPath.row].address
+            cell.textLabel?.text = filteredCompany[indexPath.row]["name"] as! String?
+            cell.detailTextLabel?.text = filteredCompany[indexPath.row]["address"] as! String?
         } else {
             cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
             cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
@@ -84,9 +84,9 @@ class RelationshipTableViewController: UITableViewController {
 
 extension RelationshipTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-//         self.filteredCompany = relationshipRepo.filter({
-//         //nil != $0.name.range(of:searchController.searchBar.text!)
-//         })
+        self.filteredCompany = relationshipRepo.filter({
+            nil != ($0["name"] as! String).lowercased().range(of:searchController.searchBar.text!.lowercased())
+        })
         tableView.reloadData()
     }
     

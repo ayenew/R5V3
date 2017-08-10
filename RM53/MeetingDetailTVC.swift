@@ -16,6 +16,10 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
     
     @IBOutlet weak var callReportLbl: UITextView!
     @IBOutlet weak var detailLbl: UILabel!
+    
+    var saveButton: UIBarButtonItem!
+    var addButton: UIBarButtonItem!
+    var editButton: UIBarButtonItem!
     var isCellHidden = true
     var isCallReportActive = true
     var meetings = [String: String]()
@@ -27,11 +31,11 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationItem.title = meetings["company"]
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        let saveButton = UIBarButtonItem(image: UIImage(named: "save2"), style: .plain, target: self, action: #selector(saveItem))
+        saveButton = UIBarButtonItem(image: UIImage(named: "save2"), style: .plain, target: self, action: #selector(saveItem))
         
-        let addButton = UIBarButtonItem(image: UIImage(named: "add2"), style: .plain, target: self, action: #selector(addItem))
+        addButton = UIBarButtonItem(image: UIImage(named: "add2"), style: .plain, target: self, action: #selector(addItem))
         
-         let editButton = UIBarButtonItem(image: UIImage(named: "edit2"), style: .plain, target: self, action: #selector(editItem))
+         editButton = UIBarButtonItem(image: UIImage(named: "edit2"), style: .plain, target: self, action: #selector(editItem))
         
         //let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         //let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
@@ -39,6 +43,12 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         //let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editItem))
         if callReportLbl.text != "" {
             isCellHidden = false
+            saveButton.isEnabled = true
+            editButton.isEnabled = true
+        } else{
+            isCellHidden = true
+            saveButton.isEnabled = false
+            editButton.isEnabled = false
         }
         self.navigationItem.rightBarButtonItems = [editButton,addButton,saveButton]
         self.tableView.tableFooterView = UIView()
@@ -58,6 +68,8 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         isCellHidden = false
         isCallReportActive = true
         callReportLbl.isEditable = true
+        saveButton.isEnabled = true
+        editButton.isEnabled = true
         tableView.beginUpdates()
         tableView.endUpdates()
     }
@@ -66,9 +78,13 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         if callReportLbl.text == "" {
             isCellHidden = true
             isCallReportActive = false
+            saveButton.isEnabled = false
+            editButton.isEnabled = false
         } else{
             isCellHidden = false
             isCallReportActive = false
+            saveButton.isEnabled = true
+            editButton.isEnabled = true
         }
         
         callReportLbl.isEditable = false
