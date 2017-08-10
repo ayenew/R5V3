@@ -10,7 +10,7 @@ import UIKit
 import PieCharts
 
 class ProductViewController: UIViewController , PieChartDelegate {
-
+    var productModel = [String:Double]()
     @IBOutlet weak var chartView3: PieChart!
     @IBOutlet weak var chartView2: PieChart!
     @IBOutlet weak var chartView: PieChart!
@@ -43,18 +43,9 @@ class ProductViewController: UIViewController , PieChartDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        //chartView.layers = [createPlainTextLayer(), createTextWithLinesLayer()]
         chartView.layers = [createPlainTextLayer()]
         chartView.delegate = self
         chartView.models = createModels() // order is important - models have to be set at the end
-        
-//        chartView2.layers = [createPlainTextLayer()]
-//        chartView2.delegate = self
-//        chartView2.models = createModels2()
-//        
-//        chartView.layers = [createPlainTextLayer()]
-//        chartView.delegate = self
-//        chartView.models = createModels()
     }
     
     // MARK: - PieChartDelegate
@@ -68,10 +59,10 @@ class ProductViewController: UIViewController , PieChartDelegate {
     
     fileprivate func createModels() -> [PieSliceModel] {
         let models = [
-            PieSliceModel(value: 45.6e3, color: colors[0], name: "TM Exposure"),
-            PieSliceModel(value: 55e3, color: colors[1], name: "CM Exposure"),
-            PieSliceModel(value: 30e3, color: colors[2], name: "Credit Exposure"),
-            PieSliceModel(value: 20e3, color: colors[3], name: "Deposit Exposure"),
+            PieSliceModel(value: productModel["tmExposure"]!, color: colors[0], name: "TM Exposure"),
+            PieSliceModel(value: productModel["cmExposure"]!, color: colors[1], name: "CM Exposure"),
+            PieSliceModel(value: productModel["crExposure"]!, color: colors[2], name: "Credit Exposure"),
+            PieSliceModel(value: productModel["deExposure"]!, color: colors[3], name: "Deposit Exposure"),
             ]
         var total = 0.0
         for model in models {

@@ -34,7 +34,6 @@ class RelationshipTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collapseDetailViewController = false
-        //performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
         performSegue(withIdentifier: "show_detail_segue_id", sender: self)
     }
     
@@ -43,9 +42,9 @@ class RelationshipTableViewController: UITableViewController {
             let vc = segue.destination as!  UINavigationController
             let targetController = vc.topViewController as! RelationshipDetailViewController
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-                targetController.name = relationshipRepo[selectedRowIndexPath.row]["name"] as! String
+                 targetController.relationship = relationshipRepo[selectedRowIndexPath.row]
             } else{
-                targetController.name = relationshipRepo[0]["name"] as! String
+                targetController.relationship = relationshipRepo[0]
             }
         }
     }
@@ -69,14 +68,11 @@ class RelationshipTableViewController: UITableViewController {
         } else {
             cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
             cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
-            //cell.imageView?.image = UIImage(named: "business")?.withRenderingMode(.alwaysTemplate)
-            //cell.imageView?.tintColor = UIColor.blue
         }
         
         return cell
     }
     
-    // MARK: Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -89,7 +85,7 @@ class RelationshipTableViewController: UITableViewController {
 extension RelationshipTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
 //         self.filteredCompany = relationshipRepo.filter({
-//         nil != $0.name.range(of:searchController.searchBar.text!)
+//         //nil != $0.name.range(of:searchController.searchBar.text!)
 //         })
         tableView.reloadData()
     }

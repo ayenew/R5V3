@@ -15,6 +15,8 @@
 		533DFA981F1A6942004EC44F /* Company.json in Resources */ = {isa = PBXBuildFile; fileRef = 533DFA971F1A6942004EC44F /* Company.json */; };
 		533DFAB31F1A704C004EC44F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFAB21F1A704C004EC44F /* DetailViewController.swift */; };
 		533DFAB51F1A963F004EC44F /* RelationshipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */; };
+		5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */; };
+		534546111F3B922400855CFF /* DataEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534546101F3B922400855CFF /* DataEntry.storyboard */; };
 		53705B711F3A655900018B85 /* MeetingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53705B6F1F3A655900018B85 /* MeetingsTableViewController.swift */; };
 		53705B721F3A655900018B85 /* MeetingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53705B701F3A655900018B85 /* MeetingsDetailViewController.swift */; };
 		538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E8BF51F03109B0003D939 /* ChartVC.swift */; };
@@ -57,6 +59,8 @@
 		533DFA971F1A6942004EC44F /* Company.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Company.json; sourceTree = "<group>"; };
 		533DFAB21F1A704C004EC44F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipDetailViewController.swift; sourceTree = "<group>"; };
+		5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntryVC.swift; sourceTree = "<group>"; };
+		534546101F3B922400855CFF /* DataEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataEntry.storyboard; sourceTree = "<group>"; };
 		53705B6F1F3A655900018B85 /* MeetingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingsTableViewController.swift; sourceTree = "<group>"; };
 		53705B701F3A655900018B85 /* MeetingsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingsDetailViewController.swift; sourceTree = "<group>"; };
 		538E8BF51F03109B0003D939 /* ChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				533DFAB21F1A704C004EC44F /* DetailViewController.swift */,
+				534546101F3B922400855CFF /* DataEntry.storyboard */,
 			);
 			name = Details;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				5395895D1F030D2F00F8ED56 /* Assets.xcassets */,
 				5395895F1F030D2F00F8ED56 /* LaunchScreen.storyboard */,
 				539589621F030D2F00F8ED56 /* Info.plist */,
+				5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */,
 			);
 			path = RM53;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				538E8C0A1F0343570003D939 /* Calendar.storyboard in Resources */,
 				530A902C1F2E816200876A58 /* ContactCell.xib in Resources */,
 				538E8BF81F03109B0003D939 /* ChartVC.xib in Resources */,
+				534546111F3B922400855CFF /* DataEntry.storyboard in Resources */,
 				53F5C46F1F3A5FAD0058CC2A /* Meetings.storyboard in Resources */,
 				538E8C161F04A34B0003D939 /* OpportunityCell.xib in Resources */,
 			);
@@ -402,6 +409,7 @@
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
 				53F3A9821F2E667D00B8C5CD /* OverviewContainerVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* DashboardViewController.swift in Sources */,
+				5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */,
 				53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */,
 				53F3A9801F2E620900B8C5CD /* ContactTVC.swift in Sources */,
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,

@@ -39,16 +39,6 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-//        DispatchQueue.main.async {
-//            var frame = self.tableView.frame
-//            frame.size.height = self.tableView.contentSize.height
-//            self.tableView.frame = frame
-//            
-//            var frame1 = self.tableView1.frame
-//            frame1.size.height = self.tableView1.contentSize.height
-//            self.tableView1.frame = frame1
-//        }
-        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

@@ -23,12 +23,9 @@ struct Repo {
                         var c = [String:Any]()
                         c["name"] = aCompany["name"] as! String
                         c["address"] = aCompany["address"] as! String
-                        c["zip"] = aCompany["zip"] as! String
-                        c["notifications"] = aCompany["notifications"] as! [String:Any]
-                        c["alerts"] = aCompany["alerts"] as! [String:Any]
-                        c["depositRevenue"] = aCompany["depositRevenue"] as! [String:Any]
-                        c["callFrequency"] = aCompany["callFrequency"] as! [String:Any]
-                        c["depositBalance"] = aCompany["depositBalance"] as! [String:Any]
+                        c["contact"] = aCompany["contact"] as! [[String:String]]
+                        c["product"] = aCompany["product"] as! [String:Any]
+                        c["opportunity"] = aCompany["opportunity"] as! [[String:String]]
                         relationshipRepo.append(c)
                     }
                 } catch {}

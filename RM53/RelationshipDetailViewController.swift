@@ -12,7 +12,13 @@ class RelationshipDetailViewController: UIViewController {
     @IBOutlet var addressView: UIView!
     @IBOutlet var chartView: UIView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var primaryContact: UILabel!
     
+    @IBOutlet weak var secondaryPhone: UILabel!
+    @IBOutlet weak var companyPhone: UILabel!
+    
+    @IBOutlet weak var address: UILabel!
+    var relationship = [String:Any]()
     var name: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +28,46 @@ class RelationshipDetailViewController: UIViewController {
         let chartView:ChartView = chartVC.view as! ChartView
         chartView.frame = addressView.frame
         chartView.dropShadow()
-        navigationItem.title = name
+        navigationItem.title = (relationship["name"] as! String)
+        let contact = relationship["contact"] as! [[String:String]]
+        let primaryContact = contact[0]
+        let lastName = primaryContact["lastName"]!
+        let firstName = primaryContact["firstName"]!
+        let firstPhone = primaryContact["cellPhone"]
+        let secondPhone = primaryContact["secondPhone"]
+        self.primaryContact.text = "\(lastName),\(firstName)"
+        self.companyPhone.text = firstPhone
+        self.secondaryPhone.text = secondPhone
+        self.address.text = (relationship["address"] as! String)
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePrimaryContact), name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil)
         
     }
     
-
+    func updatePrimaryContact(_ notification: NSNotification) {
+        
+        if let contact = notification.userInfo as? [String:String] {
+            let firstName = contact["firstName"]!
+            let lastName = contact["lastName"]!
+            self.primaryContact.text = "\(String(describing: lastName)),\(String(describing: firstName))"
+            self.companyPhone.text = contact["cellPhone"]!
+            self.secondaryPhone.text = contact["secondPhone"]!
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
+        if segue.identifier == "chartVC" {
+            let chartVC = segue.destination as! ProductViewController
+            chartVC.productModel = relationship["product"] as! [String : Double]
+        }
+        if segue.identifier == "ProductVC" {
+            let contactNavVC = segue.destination as! UINavigationController
+            let contactVC = contactNavVC.topViewController as! OverViewTVC
+            contactVC.contacts = relationship["contact"] as! [[String : String]]
+        }
+        if segue.identifier == "OpportunityVC" {
+            let opportunityNavVC = segue.destination as! UINavigationController
+            let opportunityVC = opportunityNavVC.topViewController as! CompanyOpportunityViewController
+            opportunityVC.opportunities = relationship["opportunity"] as! [[String : String]]
+        }
     }
 
 

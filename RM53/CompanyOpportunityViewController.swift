@@ -10,14 +10,15 @@ import UIKit
 //import PieCharts
 
 class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
-    var opportunities : [[String:String]] = [
-        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
-        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"]
-    ]
+//    var opportunities : [[String:String]] = [
+//        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
+//        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
+//        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
+//        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
+//        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"]
+//    ]
     
+    var opportunities = [[String:String]]()
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier1 = "cell"
@@ -55,7 +56,7 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
         //let color: UIColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
         //if indexPath.section == 0{
             let cell: OpportunityCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1) as! OpportunityCell
-            cell.relationship.text = opportunities[indexPath.row]["relationship"]
+            cell.relationship.text = opportunities[indexPath.row]["name"]
             cell.targetDate.text = opportunities[indexPath.row]["targetDate"]
             cell.salesStage.text = opportunities[indexPath.row]["salesStage"]
             cell.balance.text = opportunities[indexPath.row]["balance"]
