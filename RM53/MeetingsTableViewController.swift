@@ -34,18 +34,17 @@ class MeetingsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collapseDetailViewController = false
-        //performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
         performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show_detail_segue_id_1" {
             let vc = segue.destination as!  UINavigationController
-            let targetController = vc.topViewController as! MeetingsDetailViewController
+            let targetController = vc.topViewController as! MeetingDetailTVC
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-                targetController.name = meetingsRepo[selectedRowIndexPath.row]["name"] as! String
+                targetController.meetings = meetingsRepo[selectedRowIndexPath.row] as! [String:String]
             } else{
-                targetController.name = meetingsRepo[0]["name"] as! String
+                targetController.meetings = meetingsRepo[0] as! [String:String]
             }
         }
     }
@@ -67,7 +66,7 @@ class MeetingsTableViewController: UITableViewController {
             cell.textLabel?.text = filteredMeetings[indexPath.row].name
             cell.detailTextLabel?.text = filteredMeetings[indexPath.row].date
         } else {
-            cell.textLabel?.text = meetingsRepo[indexPath.row]["name"] as! String?
+            cell.textLabel?.text = meetingsRepo[indexPath.row]["company"] as! String?
             cell.detailTextLabel?.text = meetingsRepo[indexPath.row]["date"] as! String?
         }
         

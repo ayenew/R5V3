@@ -43,10 +43,10 @@ struct Repo {
                     let meetingsArray : [[String:Any]] = jsonResult["meetings"]! as [[String:Any]]
                     for aMeeting in meetingsArray {
                         var c = [String:Any]()
-                        c["name"] = aMeeting["name"] as! String
+                        c["company"] = aMeeting["company"] as! String
+                        c["callPlaneName"] = aMeeting["callPlaneName"] as! String
                         c["date"] = aMeeting["date"] as! String
                         c["reason"] = aMeeting["reason"] as! String
-                        c["company"] = aMeeting["company"] as! String
                         c["details"] = aMeeting["details"] as! String
                         meetingsRepo.append(c)
                     }
