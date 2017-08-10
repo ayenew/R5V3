@@ -4,15 +4,31 @@
                  "callPlaneName": "06/30/2017 MPW Industrial Service",
                  "date": "06/30/2017",
                  "reason": "Service",
-                 "details": "Meet with Dana to reciew account set ups. Need to "
+                 "details": "Meet with Dana to reciew account set ups. Need to change signers and close two accounts. The BCBS activity will grow quickly.Follow up in November to review to see if should change to analyzed account type. alos discussed CC for T & E and how can automate and streamline the process."
                  },
                  {
                  "company": "MPW Industrial Service",
                  "callPlaneName":"07/06/2017 MPW Industrial Service",
                  "date": "07/06/2017",
                  "reason": "Strategic, COI/Referal",
-                 "details": "New billing software and customer portal. To follow",
+                 "details": "New billing software and customer portal. To follow up with pricing via email to Brian",
 
+                 },
+                 {
+                 "company": "Premier Health Partners",
+                 "callPlaneName":"Introduction",
+                 "date": "07/15/2017",
+                 "reason": "Strategic",
+                 "details": "Met with Bob to discuss 401k and benchmark capabilities. Meeting with American funds rep next week and interested in pursuing a benchmark report. also interested in MAB.",
+                 
+                 },
+                 {
+                 "company": "Builders Plus Inc.",
+                 "callPlaneName":"06/14/2017 Specialized Srvice",
+                 "date": "08/01/2017",
+                 "reason": "Strategic with CFO",
+                 "details": "Talk with Justin and Mark - our ACH solution too expensive. Also do not think need ECL",
+                 
                  }
                  
                  ]
