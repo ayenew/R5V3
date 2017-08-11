@@ -6,11 +6,12 @@ class CalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.lightGray
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.groupTableViewBackground
        // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
         annualViewController?.view.alpha = 0.7
+        //annualViewController?.view.backgroundColor = UIColor.groupTableViewBackground
         let date = Date()
         let calendar = Calendar.current
         let month = calendar.component(.month, from: date)
@@ -20,6 +21,7 @@ class CalendarVC: UIViewController {
        navigationController.navigationBar.barTintColor = UIColor.groupTableViewBackground
         navigationController.navigationBar.tintColor = UIColor.black
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
+        navigationController.view.backgroundColor = UIColor.lightGray
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame

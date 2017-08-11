@@ -86,7 +86,8 @@ class MeetingsTableViewController: UITableViewController {
 extension MeetingsTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         self.filteredMeetings = meetingsRepo.filter({
-            nil != ($0["company"] as! String).lowercased().range(of:searchController.searchBar.text!.lowercased())
+            nil != ($0["company"] as! String).lowercased().range(of:searchController.searchBar.text!.lowercased()) ||
+            nil != ($0["date"] as! String).range(of:searchController.searchBar.text!)
         })
         tableView.reloadData()
     }

@@ -48,6 +48,7 @@
                 <view contentMode="scaleToFill" id="5GD-33-WRh">
                     <rect key="frame" x="0.0" y="0.0" width="363" height="374"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
                             <real key="value" value="0.80000000000000004"/>
@@ -60,6 +61,7 @@
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" id="Nbo-IF-oBC">
                     <rect key="frame" x="0.0" y="0.0" width="315" height="370"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
                             <real key="value" value="0.80000000000000004"/>
@@ -151,7 +153,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="aGe-GF-qXI" firstAttribute="top" secondItem="KM5-Hl-a4X" secondAttribute="top" constant="32" id="N8n-aG-KCj"/>
                                 <constraint firstItem="aGe-GF-qXI" firstAttribute="centerX" secondItem="KM5-Hl-a4X" secondAttribute="centerX" id="cDv-il-3KF"/>
@@ -226,7 +228,7 @@
                                     </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="rPm-C7-IW4" firstAttribute="top" secondItem="Ydn-Mu-UwH" secondAttribute="bottom" constant="8" id="5Ey-Fc-5cP"/>
                                 <constraint firstItem="Ydn-Mu-UwH" firstAttribute="top" secondItem="pGC-z5-zlP" secondAttribute="bottom" constant="16" id="JFo-4F-NUF"/>
@@ -329,34 +331,6 @@
             </objects>
             <point key="canvasLocation" x="-1417" y="810"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xCJ-6d-PiO">
-            <objects>
-                <viewController id="6AX-Te-aAK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dg0-zl-IHo"/>
-                        <viewControllerLayoutGuide type="bottom" id="oHC-Zz-xsx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eiJ-0v-rRR">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G51-kc-ZxI">
-                                <rect key="frame" x="-20" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Notifications" id="C8q-r0-kHg"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.98728865389999998" green="0.61491399879999997" blue="0.1212544921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1TU-NJ-qTJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dg1-7r-E4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1969" y="1977"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -371,6 +345,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="e7s-0b-SSS" kind="relationship" relationship="viewControllers" id="0OL-fl-PFU"/>
                         <segue destination="ah2-yD-RPE" kind="relationship" relationship="viewControllers" id="N2D-ek-ldY"/>
+                        <segue destination="Ft1-Ng-vNa" kind="relationship" relationship="viewControllers" id="NIb-fz-vbp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -388,6 +363,7 @@
                     <view key="view" contentMode="scaleToFill" id="j6H-4J-S9V">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
                                 <real key="value" value="0.80000000000000004"/>
@@ -428,16 +404,16 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2r3-O3-Aq7">
-                                            <rect key="frame" x="852.5" y="9" width="21.5" height="23"/>
+                                            <rect key="frame" x="882.5" y="9" width="21.5" height="23"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                             <color key="textColor" red="0.17084711459999999" green="0.32245495749999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="2r3-O3-Aq7" firstAttribute="centerY" secondItem="Cla-YL-NeU" secondAttribute="centerY" constant="4" id="RRL-UZ-gNC"/>
-                                        <constraint firstAttribute="trailing" secondItem="2r3-O3-Aq7" secondAttribute="trailing" constant="150" id="UdM-fw-JD2"/>
+                                        <constraint firstAttribute="trailing" secondItem="2r3-O3-Aq7" secondAttribute="trailing" constant="120" id="UdM-fw-JD2"/>
                                         <constraint firstItem="2r3-O3-Aq7" firstAttribute="top" secondItem="ZsX-Tz-r2i" secondAttribute="top" constant="9" id="pGd-nr-o3y"/>
                                         <constraint firstItem="Cla-YL-NeU" firstAttribute="leading" secondItem="ZsX-Tz-r2i" secondAttribute="leading" constant="18" id="ycp-KM-ZiR"/>
                                     </constraints>
@@ -480,6 +456,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="6gr-OD-uZx" firstAttribute="centerY" secondItem="pqY-Wc-uea" secondAttribute="centerY" id="A4U-l6-GT9"/>
                                                 <constraint firstItem="6gr-OD-uZx" firstAttribute="leading" secondItem="pqY-Wc-uea" secondAttribute="leading" constant="16" id="RPL-sT-65z"/>
@@ -504,7 +481,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nfB-YQ-f3q">
-                                                    <rect key="frame" x="15" y="0.0" width="994" height="79.5"/>
+                                                    <rect key="frame" x="176" y="0.0" width="672" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -512,7 +489,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
@@ -560,6 +537,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RG-n2-9Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1165" y="1223"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="jUT-6d-gp7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notification" id="Ft1-Ng-vNa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NfC-8M-T7b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6z-2F-2Vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-756" y="1120"/>
         </scene>
     </scenes>
     <resources>

@@ -61,13 +61,16 @@ class RelationshipTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! RelationshipCell
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = filteredCompany[indexPath.row]["name"] as! String?
-            cell.detailTextLabel?.text = filteredCompany[indexPath.row]["address"] as! String?
+            cell.configureCell(item: filteredCompany[indexPath.row])
+            //cell.titleLbl.text = filteredCompany[indexPath.row]["name"] as! String?
+            //cell.textLabel?.text = filteredCompany[indexPath.row]["name"] as! String?
+           // cell.detailTextLabel?.text = filteredCompany[indexPath.row]["address"] as! String?
         } else {
-            cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
-            cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
+            cell.configureCell(item: relationshipRepo[indexPath.row])
+            //cell.titleLbl.text = relationshipRepo[indexPath.row]["name"] as! String?
+            //cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
         }
         
         return cell

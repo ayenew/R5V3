@@ -13,13 +13,13 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
     var opportunities = [[String:String]]()
     
     @IBOutlet weak var tableView: UITableView!
-    let cellIdentifier1 = "cell"
+    let cellIdentifier1 = "OpportunityCell2"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         //tableView.isScrollEnabled = false
-        self.tableView.register(UINib(nibName: "OpportunityCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "OpportunityCell2", bundle: nil), forCellReuseIdentifier: "OpportunityCell2")
         
         navigationController?.navigationBar.barTintColor = UIColor.groupTableViewBackground
         self.navigationItem.title = "Open Opportunities"
@@ -34,7 +34,7 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell: OpportunityCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1) as! OpportunityCell
+            let cell: OpportunityCell2 = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1) as! OpportunityCell2
             cell.relationship.text = opportunities[indexPath.row]["name"]
             cell.targetDate.text = opportunities[indexPath.row]["targetDate"]
             cell.salesStage.text = opportunities[indexPath.row]["salesStage"]

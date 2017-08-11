@@ -31,11 +31,11 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationItem.title = meetings["company"]
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        saveButton = UIBarButtonItem(image: UIImage(named: "save2"), style: .plain, target: self, action: #selector(saveItem))
+        saveButton = UIBarButtonItem(image: UIImage(named: "save"), style: .plain, target: self, action: #selector(saveItem))
         
-        addButton = UIBarButtonItem(image: UIImage(named: "add2"), style: .plain, target: self, action: #selector(addItem))
+        addButton = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addItem))
         
-         editButton = UIBarButtonItem(image: UIImage(named: "edit2"), style: .plain, target: self, action: #selector(editItem))
+         editButton = UIBarButtonItem(image: UIImage(named: "edit"), style: .plain, target: self, action: #selector(editItem))
         
         //let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         //let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))

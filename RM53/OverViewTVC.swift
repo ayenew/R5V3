@@ -148,6 +148,8 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
+            let newPrimarycontact:[String:String] = ["firstName": contacts[0]["firstName"]!,"lastName": contacts[0]["lastName"]!,"cellPhone": contacts[0]["cellPhone"]!,"secondPhone": contacts[0]["secondPhone"]!]
+            NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil, userInfo: newPrimarycontact)
         } else if editingStyle == .insert {
             let item = ["FirstName":"John","LastName":"Doe","Cell":"202-202-2000","Work":"210-210-2000"]
             contacts.append(item)

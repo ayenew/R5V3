@@ -25,7 +25,9 @@ struct Repo {
                         c["address"] = aCompany["address"] as! String
                         c["contact"] = aCompany["contact"] as! [[String:String]]
                         c["product"] = aCompany["product"] as! [String:Any]
-                        c["opportunity"] = aCompany["opportunity"] as! [[String:String]]
+                        c["opportunity"] = aCompany["opportunity"] as! [[String:Any]]
+                        c["meeting"] = aCompany["meeting"] as! Int
+                        c["notification"] = aCompany["notification"] as! Int
                         relationshipRepo.append(c)
                     }
                 } catch {}

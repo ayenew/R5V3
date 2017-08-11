@@ -16,7 +16,11 @@ class RelationshipDetailViewController: UIViewController {
     
     @IBOutlet weak var secondaryPhone: UILabel!
     @IBOutlet weak var companyPhone: UILabel!
+    @IBOutlet weak var smallBell: UIImageView!
+    @IBOutlet weak var smallNotif: UIImageView!
     
+    @IBOutlet weak var smallNotifValue: UILabel!
+    @IBOutlet weak var smallBellValue: UILabel!
     @IBOutlet weak var address: UILabel!
     var relationship = [String:Any]()
     var name: String = ""
@@ -29,16 +33,47 @@ class RelationshipDetailViewController: UIViewController {
         chartView.frame = addressView.frame
         chartView.dropShadow()
         navigationItem.title = (relationship["name"] as! String)
+        primaryContact.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         let contact = relationship["contact"] as! [[String:String]]
-        let primaryContact = contact[0]
-        let lastName = primaryContact["lastName"]!
-        let firstName = primaryContact["firstName"]!
-        let firstPhone = primaryContact["cellPhone"]
-        let secondPhone = primaryContact["secondPhone"]
+        let mainContact = contact[0]
+        let lastName = mainContact["lastName"]!
+        let firstName = mainContact["firstName"]!
+        let firstPhone = mainContact["cellPhone"]
+        let secondPhone = mainContact["secondPhone"]
         self.primaryContact.text = "\(lastName),\(firstName)"
         self.companyPhone.text = firstPhone
         self.secondaryPhone.text = secondPhone
         self.address.text = (relationship["address"] as! String)
+        let meeting = relationship["meeting"] as! Int
+        let notification = relationship["notification"] as! Int
+        if meeting  > 0 && notification > 0 {
+            smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
+            smallBell.isHidden = false
+            smallNotif.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
+            smallNotif.isHidden = false
+            smallBellValue.text = "\(meeting)"
+            smallNotifValue.text = "\(notification)"
+        } else if meeting > 0 && notification == 0 {
+            smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
+            smallBell.isHidden = false
+            smallBellValue.text = "\(meeting)"
+            smallNotif.isHidden = true
+            smallNotifValue.isHidden = true
+        } else if meeting == 0 && notification > 0 {
+            smallBell.image = UIImage(named: "smallbell")
+            smallBell.isHidden = false
+            smallBellValue.isHidden = false
+            smallBellValue.text = "\(notification)"
+            smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
+            smallNotif.isHidden = true
+            smallNotifValue.isHidden = true
+        } else {
+            smallBell.isHidden = true
+            smallNotif.isHidden = true
+            smallNotifValue.isHidden = true
+            smallBellValue.isHidden = true
+        }
+
         NotificationCenter.default.addObserver(self, selector: #selector(updatePrimaryContact), name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil)
         
     }
