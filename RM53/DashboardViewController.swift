@@ -48,5 +48,11 @@ class DashboardViewController: UIViewController {
         //self.alertView.dropShadow()
         //self.collectionView.dropShadow()
     }
+    @IBAction func goToNotificationPressed(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
+        tabbbarController.selectedIndex = 3
+
+    }
 }
 

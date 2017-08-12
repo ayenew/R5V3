@@ -9,6 +9,7 @@
 import Foundation
 var relationshipRepo = [[String:Any]]()
 var meetingsRepo = [[String:Any]]()
+var alertNotifRepo = [[String:Any]]()
 struct Repo {
     
     static func loadCompanyInfo(){
@@ -56,5 +57,34 @@ struct Repo {
             } catch {}
         }
     }
-}
+    
+    static func loadAlertNotifInfo(){
+        if let path = Bundle.main.path(forResource: "Notifications", ofType: "json") {
+            do {
+                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                do {
+                    let jsonResult: [String:[[String:Any]]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[[String:Any]]]
+                    let alertNotifArray : [[String:Any]] = jsonResult["alertNotif"]! as [[String:Any]]
+                    for aNotifAlert in alertNotifArray {
+                        var c = [String:Any]()
+                        c["category"] = aNotifAlert["category"] as! String
+                        c["notifType"] = aNotifAlert["notifType"] as! String
+                        c["eid"] = aNotifAlert["eid"] as! String
+                        c["date"] = aNotifAlert["date"] as! String
+                        c["entity"] = aNotifAlert["entity"] as! String
+                        c["accountType"] = aNotifAlert["accountType"] as! String
+                        c["pastDueAmount"] = aNotifAlert["pastDueAmount"] as! String
+                        c["daysPastDue"] = aNotifAlert["daysPastDue"] as! String
+                        c["segment"] = aNotifAlert["segment"] as! String
+                        c["daysPastSLA"] = aNotifAlert["daysPastSLA"] as! String
+                        c["changeAmount"] = aNotifAlert["changeAmount"] as! String
+                        alertNotifRepo.append(c)
+                    }
 
+                } catch {
+                print(error.localizedDescription)
+                }
+            } catch {}
+        }
+    }
+}

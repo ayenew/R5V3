@@ -39,10 +39,10 @@ class RelationshipDetailViewController: UIViewController {
         let lastName = mainContact["lastName"]!
         let firstName = mainContact["firstName"]!
         let firstPhone = mainContact["cellPhone"]
-        let secondPhone = mainContact["secondPhone"]
+        //let secondPhone = mainContact["secondPhone"]
         self.primaryContact.text = "\(lastName),\(firstName)"
         self.companyPhone.text = firstPhone
-        self.secondaryPhone.text = secondPhone
+        //self.secondaryPhone.text = secondPhone
         self.address.text = (relationship["address"] as! String)
         let meeting = relationship["meeting"] as! Int
         let notification = relationship["notification"] as! Int
@@ -51,19 +51,19 @@ class RelationshipDetailViewController: UIViewController {
             smallBell.isHidden = false
             smallNotif.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallNotif.isHidden = false
-            smallBellValue.text = "\(meeting)"
-            smallNotifValue.text = "\(notification)"
+            smallBellValue.text = "\(meeting) meeting(s)"
+            smallNotifValue.text = "\(notification) notification(s)"
         } else if meeting > 0 && notification == 0 {
             smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallBell.isHidden = false
-            smallBellValue.text = "\(meeting)"
+            smallBellValue.text = "\(meeting) meetings(s)"
             smallNotif.isHidden = true
             smallNotifValue.isHidden = true
         } else if meeting == 0 && notification > 0 {
             smallBell.image = UIImage(named: "smallbell")
             smallBell.isHidden = false
             smallBellValue.isHidden = false
-            smallBellValue.text = "\(notification)"
+            smallBellValue.text = "\(notification) notification(s)"
             smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallNotif.isHidden = true
             smallNotifValue.isHidden = true
