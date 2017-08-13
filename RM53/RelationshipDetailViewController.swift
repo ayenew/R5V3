@@ -39,7 +39,7 @@ class RelationshipDetailViewController: UIViewController {
         let lastName = mainContact["lastName"]!
         let firstName = mainContact["firstName"]!
         let firstPhone = mainContact["cellPhone"]
-        //let secondPhone = mainContact["secondPhone"]
+       // let secondPhone = mainContact["secondPhone"]
         self.primaryContact.text = "\(lastName),\(firstName)"
         self.companyPhone.text = firstPhone
         //self.secondaryPhone.text = secondPhone
@@ -76,6 +76,8 @@ class RelationshipDetailViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(updatePrimaryContact), name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil)
         
+        addGesture()
+        
     }
     
     func updatePrimaryContact(_ notification: NSNotification) {
@@ -85,7 +87,7 @@ class RelationshipDetailViewController: UIViewController {
             let lastName = contact["lastName"]!
             self.primaryContact.text = "\(String(describing: lastName)),\(String(describing: firstName))"
             self.companyPhone.text = contact["cellPhone"]!
-            self.secondaryPhone.text = contact["secondPhone"]!
+           // self.secondaryPhone.text = contact["secondPhone"]!
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -103,6 +105,27 @@ class RelationshipDetailViewController: UIViewController {
             let opportunityVC = opportunityNavVC.topViewController as! CompanyOpportunityViewController
             opportunityVC.opportunities = relationship["opportunity"] as! [[String : String]]
         }
+    }
+    
+    func addGesture(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
+        let tap3 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
+        let tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
+        smallBell.isUserInteractionEnabled = true
+        smallNotif.isUserInteractionEnabled = true
+        smallBellValue.isUserInteractionEnabled = true
+        smallNotifValue.isUserInteractionEnabled = true
+        smallBell.addGestureRecognizer(tap)
+        smallNotif.addGestureRecognizer(tap2)
+        smallBellValue.addGestureRecognizer(tap3)
+        smallNotifValue.addGestureRecognizer(tap4)
+    }
+    
+    func goToNotifTab(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
+        tabbbarController.selectedIndex = 3
     }
 
 
