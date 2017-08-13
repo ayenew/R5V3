@@ -68,7 +68,7 @@ struct Repo {
                     for aNotifAlert in alertNotifArray {
                         var c = [String:Any]()
                         c["category"] = aNotifAlert["category"] as! String
-                        c["notifType"] = aNotifAlert["notifType"] as! String
+                        c["type"] = aNotifAlert["type"] as! String
                         c["eid"] = aNotifAlert["eid"] as! String
                         c["date"] = aNotifAlert["date"] as! String
                         c["entity"] = aNotifAlert["entity"] as! String
@@ -78,6 +78,8 @@ struct Repo {
                         c["segment"] = aNotifAlert["segment"] as! String
                         c["daysPastSLA"] = aNotifAlert["daysPastSLA"] as! String
                         c["changeAmount"] = aNotifAlert["changeAmount"] as! String
+                        c["product"] = aNotifAlert["product"] as! String
+                        c["commitmentAmount"] = aNotifAlert["commitmentAmount"] as! String
                         alertNotifRepo.append(c)
                     }
 

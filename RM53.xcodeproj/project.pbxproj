@@ -39,6 +39,7 @@
 		539589611F030D2F00F8ED56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395895F1F030D2F00F8ED56 /* LaunchScreen.storyboard */; };
 		53C11A9C1F3A6E4000B2F246 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 53C11A9B1F3A6E4000B2F246 /* Meetings.json */; };
 		53E555D41F31294C00963DBB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E555D31F31294C00963DBB /* MapKit.framework */; };
+		53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */; };
 		53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A9751F2CFA6E00B8C5CD /* ProductViewController.swift */; };
 		53F3A97C1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A97B1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift */; };
 		53F3A97E1F2E61F900B8C5CD /* OverViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A97D1F2E61F900B8C5CD /* OverViewTVC.swift */; };
@@ -86,6 +87,7 @@
 		539589621F030D2F00F8ED56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53C11A9B1F3A6E4000B2F246 /* Meetings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
 		53E555D31F31294C00963DBB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		53F3A9751F2CFA6E00B8C5CD /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		53F3A97B1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyOpportunityViewController.swift; sourceTree = "<group>"; };
 		53F3A97D1F2E61F900B8C5CD /* OverViewTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTVC.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				532CEA2F1F3DE0FC0081F9E4 /* NotificationTVC.swift */,
 				536982DC1F3DE67800FF8309 /* NotificationDetailsTVC.swift */,
 				536983021F3F9A7F00FF8309 /* DetailViewTVC.swift */,
+				53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */,
 			);
 			name = Notifications;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			files = (
 				532CEA301F3DE0FC0081F9E4 /* NotificationTVC.swift in Sources */,
 				539589551F030D2E00F8ED56 /* AppDelegate.swift in Sources */,
+				53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */,
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* DashboardViewController.swift in Sources */,
 				5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */,

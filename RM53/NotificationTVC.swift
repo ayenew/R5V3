@@ -43,7 +43,7 @@ class NotificationTVC: UITableViewController {
             let targetController = vc.topViewController as! NotificationDetailsTVC
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
                // targetController.alertAndNotifs = alertNotifRepo[selectedRowIndexPath.row]
-                targetController.pageTitle = notifs[0]
+                targetController.pageTitle = notifs[selectedRowIndexPath.row]
                 targetController.alertAndNotifs = catagorizedNotif[notifs[selectedRowIndexPath.row]] as! [[String : Any]]
             } else{
                // targetController.alertAndNotifs = alertNotifRepo[0]
