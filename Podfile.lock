@@ -1,0 +1,15 @@
+PODS:
+  - PieCharts (0.0.5)
+  - SSCalendar (0.0.3)
+
+DEPENDENCIES:
+  - PieCharts
+  - SSCalendar
+
+SPEC CHECKSUMS:
+  PieCharts: a0fb4784a3460088c8ba7dfb00b89784ddaa7e70
+  SSCalendar: 65498d7ec6ff38b4aead38d3cf8bb317666a2fe4
+
+PODFILE CHECKSUM: 08cc751704f16a2c06ac1a41f0807f2debb81713
+
+COCOAPODS: 1.2.1

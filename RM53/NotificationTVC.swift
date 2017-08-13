@@ -11,6 +11,10 @@ import UIKit
 class NotificationTVC: UITableViewController {
     var catagorizedNotif = [String:Any]()
     var notifs = [String]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredNotifs = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
@@ -25,6 +29,13 @@ class NotificationTVC: UITableViewController {
         vc?.tabBarItem.badgeValue = nil
         catagorizedNotif = alertNotifRepo.groupBy(key: "entity") 
         notifs = Array(catagorizedNotif.keys)
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = false
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         
     }
     
@@ -42,13 +53,21 @@ class NotificationTVC: UITableViewController {
             let vc = segue.destination as!  UINavigationController
             let targetController = vc.topViewController as! NotificationDetailsTVC
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-               // targetController.alertAndNotifs = alertNotifRepo[selectedRowIndexPath.row]
-                targetController.pageTitle = notifs[selectedRowIndexPath.row]
-                targetController.alertAndNotifs = catagorizedNotif[notifs[selectedRowIndexPath.row]] as! [[String : Any]]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.pageTitle = filteredNotifs[selectedRowIndexPath.row]
+                    targetController.alertAndNotifs = catagorizedNotif[filteredNotifs[selectedRowIndexPath.row]] as! [[String : Any]]
+                }else{
+                    targetController.pageTitle = notifs[selectedRowIndexPath.row]
+                    targetController.alertAndNotifs = catagorizedNotif[notifs[selectedRowIndexPath.row]] as! [[String : Any]]
+                }
             } else{
-               // targetController.alertAndNotifs = alertNotifRepo[0]
-                targetController.pageTitle = notifs[0]
-                targetController.alertAndNotifs = catagorizedNotif[notifs[0]] as! [[String : Any]]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.pageTitle = filteredNotifs[0]
+                    targetController.alertAndNotifs = catagorizedNotif[filteredNotifs[0]] as! [[String : Any]]
+                } else{
+                    targetController.pageTitle = notifs[0]
+                    targetController.alertAndNotifs = catagorizedNotif[notifs[0]] as! [[String : Any]]
+                }
             }
         }
     }
@@ -67,15 +86,21 @@ class NotificationTVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return alertNotifRepo.count
+        if searchController.isActive && searchController.searchBar.text != "" {
+           return filteredNotifs.count
+        }
         return notifs.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //.textLabel?.text = alertNotifRepo[indexPath.row]["entity"] as! String?
-        cell.textLabel?.text = notifs[indexPath.row] 
+        if searchController.isActive && searchController.searchBar.text != "" {
+            cell.textLabel?.text = filteredNotifs[indexPath.row]
+        } else {
+            cell.textLabel?.text = notifs[indexPath.row]
+        }
+
         return cell
     }
  
@@ -84,51 +109,16 @@ class NotificationTVC: UITableViewController {
         performSegue(withIdentifier: "show_detail_segue_id_1", sender: self)
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+}
+
+extension NotificationTVC:UISearchBarDelegate,UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        self.filteredNotifs = notifs.filter({
+            nil != $0.lowercased().range(of:searchController.searchBar.text!.lowercased())
+        })
+        tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
 
 extension Sequence where Iterator.Element == [String: Any]{

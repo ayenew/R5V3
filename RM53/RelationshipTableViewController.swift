@@ -42,9 +42,19 @@ class RelationshipTableViewController: UITableViewController {
             let vc = segue.destination as!  UINavigationController
             let targetController = vc.topViewController as! RelationshipDetailViewController
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-                 targetController.relationship = relationshipRepo[selectedRowIndexPath.row]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.relationship = filteredCompany[selectedRowIndexPath.row]
+                }else{
+                   targetController.relationship = relationshipRepo[selectedRowIndexPath.row]
+                }
+                
             } else{
-                targetController.relationship = relationshipRepo[0]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.relationship = filteredCompany[0]
+                }else{
+                    targetController.relationship = relationshipRepo[0]
+                }
+                
             }
         }
     }
@@ -64,13 +74,8 @@ class RelationshipTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! RelationshipCell
         if searchController.isActive && searchController.searchBar.text != "" {
             cell.configureCell(item: filteredCompany[indexPath.row])
-            //cell.titleLbl.text = filteredCompany[indexPath.row]["name"] as! String?
-            //cell.textLabel?.text = filteredCompany[indexPath.row]["name"] as! String?
-           // cell.detailTextLabel?.text = filteredCompany[indexPath.row]["address"] as! String?
         } else {
             cell.configureCell(item: relationshipRepo[indexPath.row])
-            //cell.titleLbl.text = relationshipRepo[indexPath.row]["name"] as! String?
-            //cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
         }
         
         return cell

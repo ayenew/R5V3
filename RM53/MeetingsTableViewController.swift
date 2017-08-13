@@ -42,9 +42,19 @@ class MeetingsTableViewController: UITableViewController {
             let vc = segue.destination as!  UINavigationController
             let targetController = vc.topViewController as! MeetingDetailTVC
             if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
-                targetController.meetings = meetingsRepo[selectedRowIndexPath.row] as! [String:String]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.meetings = filteredMeetings[selectedRowIndexPath.row] as! [String:String]
+                } else{
+                    targetController.meetings = meetingsRepo[selectedRowIndexPath.row] as! [String:String]
+                }
+                
             } else{
-                targetController.meetings = meetingsRepo[0] as! [String:String]
+                if searchController.isActive && searchController.searchBar.text != "" {
+                    targetController.meetings = filteredMeetings[0] as! [String:String]
+                } else{
+                    targetController.meetings = meetingsRepo[0] as! [String:String]
+                }
+                
             }
         }
     }
@@ -63,8 +73,8 @@ class MeetingsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as UITableViewCell
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = filteredMeetings[indexPath.row]["company"] as! String
-            cell.detailTextLabel?.text = filteredMeetings[indexPath.row]["date"] as! String 
+            cell.textLabel?.text = (filteredMeetings[indexPath.row]["company"] as! String)
+            cell.detailTextLabel?.text = (filteredMeetings[indexPath.row]["date"] as! String) 
         } else {
             cell.textLabel?.text = meetingsRepo[indexPath.row]["company"] as! String?
             cell.detailTextLabel?.text = meetingsRepo[indexPath.row]["date"] as! String?
