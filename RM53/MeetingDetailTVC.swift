@@ -36,32 +36,33 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         addButton = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addItem))
         
          editButton = UIBarButtonItem(image: UIImage(named: "edit"), style: .plain, target: self, action: #selector(editItem))
-        
-        //let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
-        //let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
-        
-        //let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editItem))
+        updateRow()
         if callReportLbl.text != "" {
             isCellHidden = false
-            saveButton.isEnabled = true
+            saveButton.isEnabled = false
             editButton.isEnabled = true
+            addButton.isEnabled = false
+            callReportLbl.isEditable = false
         } else{
             isCellHidden = true
             saveButton.isEnabled = false
             editButton.isEnabled = false
+            addButton.isEnabled = true
         }
         self.navigationItem.rightBarButtonItems = [editButton,addButton,saveButton]
         self.tableView.tableFooterView = UIView()
         self.tableView.isScrollEnabled = false
-        updateRow()
+        
     }
     
     func updateRow(){
         companyLbl.text = meetings["company"]
         callPlanLbl.text = meetings["callPlaneName"]
         reasonLbl.text = meetings["reason"]
-        detailLbl.text = meetings["details"]
-        detailLbl.sizeToFit()
+        //detailLbl.text = meetings["details"]
+        //detailLbl.sizeToFit()
+        callReportLbl.text = meetings["details"]
+        callReportLbl.sizeToFit()
     }
     
     func addItem(){
@@ -70,6 +71,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         callReportLbl.isEditable = true
         saveButton.isEnabled = true
         editButton.isEnabled = true
+        addButton.isEnabled = false
         tableView.beginUpdates()
         tableView.endUpdates()
     }
@@ -96,6 +98,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         //self.setEditing(true, animated: true)
         if isCellHidden == false && callReportLbl.text != "" {
             callReportLbl.isEditable = true
+            saveButton.isEnabled = true
             callReportLbl.becomeFirstResponder()
         }
     }
@@ -106,7 +109,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 4 && isCellHidden {
+        if indexPath.row == 3 && isCellHidden {
             return 0
         } else {
             return super.tableView(tableView, heightForRowAt: indexPath)

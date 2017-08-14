@@ -25,14 +25,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1vw-I5-BqY">
-                                            <rect key="frame" x="15" y="5" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="16" y="5" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dwK-dW-d17">
-                                            <rect key="frame" x="15" y="24.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="24.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75050834759999996" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +71,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EtY-YQ-zaQ" id="88M-PL-brT">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COMPANY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su7-Kh-Nto">
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="81" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fe3-xS-OyH" id="VfQ-eG-ogq">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALL PLAN NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBi-Lr-F9L">
@@ -121,7 +121,7 @@
                                         <rect key="frame" x="0.0" y="162" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DsU-iw-zWM" id="G3S-q8-lkD">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REASON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-t7-mAW">
@@ -142,37 +142,11 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" rowHeight="167" id="Uy9-Br-Duo">
-                                        <rect key="frame" x="0.0" y="243" width="703" height="167"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uy9-Br-Duo" id="HOa-ET-LSD">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="167"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALL DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-DU-FwS">
-                                                    <rect key="frame" x="37" y="8" width="112" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-QT-MD0">
-                                                    <rect key="frame" x="37" y="37" width="636" height="104"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Meet with Dana to reciew account set ups. Need to change signers and close two accounts. The BCBS activity will grow quickly.Follow up in November to review to see if should change to analyzed account type. alos discussed CC for T &amp; E and how can automate and streamline the process.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell4" rowHeight="133" id="O4R-8M-kyN">
-                                        <rect key="frame" x="0.0" y="410" width="703" height="133"/>
+                                        <rect key="frame" x="0.0" y="243" width="703" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O4R-8M-kyN" id="u9p-yC-51o">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALL REPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZH-RA-yTu">
@@ -205,7 +179,6 @@
                         <outlet property="callPlanLbl" destination="dRN-Uw-FVk" id="RXG-Ly-2Qh"/>
                         <outlet property="callReportLbl" destination="MbS-zv-qYN" id="8tr-Fa-Yya"/>
                         <outlet property="companyLbl" destination="Y33-gG-0hi" id="EQu-nB-kIH"/>
-                        <outlet property="detailLbl" destination="Yfy-QT-MD0" id="yGW-3M-lgs"/>
                         <outlet property="reasonLbl" destination="mbj-Rm-RQb" id="Mht-xI-3zZ"/>
                     </connections>
                 </tableViewController>
