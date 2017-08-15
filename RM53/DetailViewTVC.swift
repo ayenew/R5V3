@@ -10,15 +10,9 @@ import UIKit
 
 class DetailViewTVC: UITableViewController {
     
-    var value1 = String()
-    var value2 = String()
-    var value3 = String()
-    var value4 = String()
+    var value1 = String(), value2 = String(), value3 = String(), value4 = String(),value5 = String()
     
-    var label1 = String()
-    var label2 = String()
-    var label3 = String()
-    var label4 = String()
+    var label1 = String(), label2 = String(), label3 = String(), label4 = String(), label5 = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +23,7 @@ class DetailViewTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,6 +41,9 @@ class DetailViewTVC: UITableViewController {
         case 3:
             cell.label1.text = label4
             cell.value1.text = value4
+        case 4:
+            cell.label1.text = label5
+            cell.value1.text = value5
         default: break
         }
         return cell

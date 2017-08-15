@@ -70,6 +70,7 @@ struct Repo {
                         var c = [String:Any]()
                         c["category"] = aNotifAlert["category"] as! String
                         c["type"] = aNotifAlert["type"] as! String
+                        c["typeId"] = aNotifAlert["typeId"] as! String
                         c["eid"] = aNotifAlert["eid"] as! String
                         c["date"] = aNotifAlert["date"] as! String
                         c["entity"] = aNotifAlert["entity"] as! String
@@ -81,6 +82,7 @@ struct Repo {
                         c["changeAmount"] = aNotifAlert["changeAmount"] as! String
                         c["product"] = aNotifAlert["product"] as! String
                         c["commitmentAmount"] = aNotifAlert["commitmentAmount"] as! String
+                        c["accountNumber"] = aNotifAlert["accountNumber"] as! String
                         alertNotifRepo.append(c)
                     }
 

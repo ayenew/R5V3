@@ -46,6 +46,7 @@ class NotificationDetailsTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotifCell
         let items = catagorizedDetails[notifs[indexPath.section]] as! [[String:String]]
         cell.accountType.text = items[indexPath.row]["accountType"]
+        cell.accountNumber.text = (items[indexPath.row]["accountNumber"] != "") ?items[indexPath.row]["accountNumber"] : items[indexPath.row]["eid"]
         return cell
     }
     
@@ -67,48 +68,39 @@ class NotificationDetailsTVC: UITableViewController {
         popoverVC.value1 = items[indexPath.row]["eid"]!
         popoverVC.label2 = "Date"
         popoverVC.value2 = items[indexPath.row]["date"]!
-
-        let type = items[indexPath.row]["type"]!
-        if type == "Delinquency" {
-            popoverVC.label3 = "Past Due Amount"
+        popoverVC.label3 = "Segment"
+        popoverVC.value3 = items[indexPath.row]["segment"]!
+        
+        let typeId = items[indexPath.row]["typeId"]!
+        switch typeId {
+        case "1":
             popoverVC.label4 = "Days Past Due"
-            popoverVC.value3 = items[indexPath.row]["pastDueAmount"]!
             popoverVC.value4 = items[indexPath.row]["daysPastDue"]!
-        } else if type == "Change in Balanace - Deposit" {
-            popoverVC.label3 = "Segment"
+            popoverVC.label5 = "Past Due Amount"
+            popoverVC.value5 = items[indexPath.row]["pastDueAmount"]!
+        case "2","3":
             popoverVC.label4 = "Change Amount"
-            popoverVC.value3 = items[indexPath.row]["segment"]!
             popoverVC.value4 = items[indexPath.row]["changeAmount"]!
-        } else if type == "Change in Balanace - Loan" {
-            popoverVC.label3 = "Segment"
-            popoverVC.label4 = "Change Amount"
-            popoverVC.value3 = items[indexPath.row]["segment"]!
-            popoverVC.value4 = items[indexPath.row]["changeAmount"]!
-        }
-        else if type == "Service Request - SLA Exceeded" {
-            popoverVC.label3 = "Segment"
+        case "4":
             popoverVC.label4 = "Days Past SLA"
-            popoverVC.value3 = items[indexPath.row]["segment"]!
             popoverVC.value4 = items[indexPath.row]["daysPastSLA"]!
-        }
-        else if type == "Matured Credit" {
-            popoverVC.label3 = "Past Due amount"
+        case "5":
             popoverVC.label4 = "Days Past Due"
-            popoverVC.value3 = items[indexPath.row]["pastDueAmount"]!
             popoverVC.value4 = items[indexPath.row]["daysPastDue"]!
-        }
-        else if type == "Maturing Credit" {
-            popoverVC.label3 = "Product"
+            popoverVC.label5 = "Past Due amount"
+            popoverVC.value5 = items[indexPath.row]["pastDueAmount"]!
+        case "6":
             popoverVC.label4 = "Commitment Amount"
-            popoverVC.value3 = items[indexPath.row]["product"]!
             popoverVC.value4 = items[indexPath.row]["commitmentAmount"]!
-        }
-        else if type == "Overdraft" {
-            popoverVC.label3 = "Segment"
+            popoverVC.label5 = "Product"
+            popoverVC.value5 = items[indexPath.row]["product"]!
+        case "7":
             popoverVC.label4 = "Change Amount"
-            popoverVC.value3 = items[indexPath.row]["segment"]!
             popoverVC.value4 = items[indexPath.row]["changeAmount"]!
+        default:
+            break
         }
+        
         popoverVC.modalPresentationStyle = .popover
        // popoverVC.modalTransitionStyle = .crossDissolve
         popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.9, height: 300)

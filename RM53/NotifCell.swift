@@ -12,6 +12,7 @@ class NotifCell: UITableViewCell {
 
     @IBOutlet weak var accountType: UILabel!
 
+    @IBOutlet weak var accountNumber: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
