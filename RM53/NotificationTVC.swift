@@ -11,7 +11,7 @@ import UIKit
 class NotificationTVC: UITableViewController {
     var catagorizedNotif = [String:Any]()
     var notifs = [String]()
-    
+    var searchBarText = ""
     let searchController = UISearchController(searchResultsController: nil)
     var filteredNotifs = [String]()
     
@@ -36,7 +36,18 @@ class NotificationTVC: UITableViewController {
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateSearchText), name: NSNotification.Name.init(rawValue: "UpdateSearchText"), object: nil)
         
+    }
+    
+    func updateSearchText(_ notification: NSNotification) {
+        
+        if let company = notification.userInfo as? [String:String] {
+            let text = company["name"]!
+            self.searchController.isActive = true
+            self.searchController.searchBar.text = text
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +56,7 @@ class NotificationTVC: UITableViewController {
     }
     
     func getSections(){
-        
+        //searchController.searchBar.text =
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

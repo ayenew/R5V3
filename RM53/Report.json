@@ -1,0 +1,41 @@
+{
+    "report": [{
+               "name": "Plastics & Rubber Machinery Manufacturing in USA",
+               "entities": [{
+                            "entity": "MPW Industrial Services Group, Inc.",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            },
+                            {
+                            "entity": "MPW Industrial Services Group, Inc. 2",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            }
+                            ]
+               },
+               {
+               "name": "Hospitals in USA",
+               "entities": [{
+                            "entity": "Premier Health Partners",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            }, {
+                            "entity": "Premier Health Partners 2",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            }]
+               },
+               {
+               "name": "Public Storage & Warehousing in the USA",
+               "entities": [{
+                            "entity": "ODW Logistics",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            }, {
+                            "entity": "ODW Logistics 2",
+                            "summaryImage": "report1",
+                            "riskImage": "report1"
+                            }]
+               }
+               ]
+}

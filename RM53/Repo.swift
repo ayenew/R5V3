@@ -10,6 +10,7 @@ import Foundation
 var relationshipRepo = [[String:Any]]()
 var meetingsRepo = [[String:Any]]()
 var alertNotifRepo = [[String:Any]]()
+var reportRepo = [[String:Any]]()
 struct Repo {
     
     static func loadCompanyInfo(){
@@ -86,6 +87,25 @@ struct Repo {
                 } catch {
                 print(error.localizedDescription)
                 }
+            } catch {}
+        }
+    }
+    
+    static func loadReportInfo(){
+        if let path = Bundle.main.path(forResource: "Report", ofType: "json") {
+            do {
+                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                do {
+                    let jsonResult: [String:[[String:Any]]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[[String:Any]]]
+                    
+                    let reportArray : [[String:Any]] = jsonResult["report"]! as [[String:Any]]
+                    for aReport in reportArray {
+                        var c = [String:Any]()
+                        c["name"] = aReport["name"] as! String
+                        c["entities"] = aReport["entities"] as! [[String:Any]]
+                        reportRepo.append(c)
+                    }
+                } catch {}
             } catch {}
         }
     }

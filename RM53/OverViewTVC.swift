@@ -135,13 +135,10 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             contacts.remove(at: indexPath.row)
@@ -160,7 +157,6 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         }    
     }
     
-    // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let itemToMove = contacts[fromIndexPath.row]
         contacts.remove(at: fromIndexPath.row)
@@ -169,11 +165,7 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil, userInfo: newPrimarycontact)
     }
     
-
-    
-    // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
         return true
     }
     

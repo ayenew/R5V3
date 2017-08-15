@@ -69,6 +69,8 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         isCellHidden = false
         isCallReportActive = true
         callReportLbl.isEditable = true
+        callReportLbl.becomeFirstResponder()
+        callReportLbl.sizeToFit()
         saveButton.isEnabled = true
         editButton.isEnabled = true
         addButton.isEnabled = false

@@ -126,6 +126,8 @@ class RelationshipDetailViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
         tabbbarController.selectedIndex = 3
+        let company : [String:String] = ["name": navigationItem.title!]
+        //NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdateSearchText"), object: nil, userInfo: company)
     }
 
 

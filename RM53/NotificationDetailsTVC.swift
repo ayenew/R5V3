@@ -63,7 +63,7 @@ class NotificationDetailsTVC: UITableViewController {
         let popoverVC = storyboard.instantiateViewController(withIdentifier: "popover") as! DetailViewTVC
         let items = catagorizedDetails[notifs[indexPath.section]] as! [[String:String]]
         
-        popoverVC.label1 = "EID"
+        popoverVC.label1 = "EID or Account Number"
         popoverVC.value1 = items[indexPath.row]["eid"]!
         popoverVC.label2 = "Date"
         popoverVC.value2 = items[indexPath.row]["date"]!
@@ -91,13 +91,31 @@ class NotificationDetailsTVC: UITableViewController {
             popoverVC.value3 = items[indexPath.row]["segment"]!
             popoverVC.value4 = items[indexPath.row]["daysPastSLA"]!
         }
-        
+        else if type == "Matured Credit" {
+            popoverVC.label3 = "Past Due amount"
+            popoverVC.label4 = "Days Past Due"
+            popoverVC.value3 = items[indexPath.row]["pastDueAmount"]!
+            popoverVC.value4 = items[indexPath.row]["daysPastDue"]!
+        }
+        else if type == "Maturing Credit" {
+            popoverVC.label3 = "Product"
+            popoverVC.label4 = "Commitment Amount"
+            popoverVC.value3 = items[indexPath.row]["product"]!
+            popoverVC.value4 = items[indexPath.row]["commitmentAmount"]!
+        }
+        else if type == "Overdraft" {
+            popoverVC.label3 = "Segment"
+            popoverVC.label4 = "Change Amount"
+            popoverVC.value3 = items[indexPath.row]["segment"]!
+            popoverVC.value4 = items[indexPath.row]["changeAmount"]!
+        }
         popoverVC.modalPresentationStyle = .popover
+       // popoverVC.modalTransitionStyle = .crossDissolve
         popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.9, height: 300)
         popoverVC.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.05)
         present(popoverVC, animated: true, completion: nil)
         let popoverController = popoverVC.popoverPresentationController
-        popoverController?.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
+        popoverController?.backgroundColor = UIColor(red: 27/255.0, green: 71/255.0, blue: 149/255.0, alpha: 0.5)
         popoverController!.sourceView = self.view
         popoverController!.sourceRect = fromRect
         popoverController!.permittedArrowDirections = .any

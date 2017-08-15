@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Repo.loadCompanyInfo()
         Repo.loadMeetingsInfo()
         Repo.loadAlertNotifInfo()
+        Repo.loadReportInfo()
         return true
     }
 }
