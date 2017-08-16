@@ -3,13 +3,13 @@
                "name": "Plastics & Rubber Machinery Manufacturing in USA",
                "entities": [{
                             "entity": "MPW Industrial Services Group, Inc.",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "mpw_summary",
+                            "riskImage": "mpw_risk"
                             },
                             {
                             "entity": "MPW Industrial Services Group, Inc. 2",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "mpw_summary",
+                            "riskImage": "mpw_risk"
                             }
                             ]
                },
@@ -17,24 +17,24 @@
                "name": "Hospitals in USA",
                "entities": [{
                             "entity": "Premier Health Partners",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "premier_summary",
+                            "riskImage": "premier_risk"
                             }, {
                             "entity": "Premier Health Partners 2",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "premier_summary",
+                            "riskImage": "premier_risk"
                             }]
                },
                {
                "name": "Public Storage & Warehousing in the USA",
                "entities": [{
                             "entity": "ODW Logistics",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "odw_summary",
+                            "riskImage": "odw_risk"
                             }, {
                             "entity": "ODW Logistics 2",
-                            "summaryImage": "report1",
-                            "riskImage": "report1"
+                            "summaryImage": "odw_summary",
+                            "riskImage": "odw_risk"
                             }]
                }
                ]

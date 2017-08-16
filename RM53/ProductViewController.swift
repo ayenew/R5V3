@@ -16,13 +16,13 @@ class ProductViewController: UIViewController , PieChartDelegate {
     @IBOutlet weak var chartView: PieChart!
     let PieSliceModelWithName: [String:PieSliceModel] = [String:PieSliceModel]()
     
-    fileprivate static let alpha: CGFloat = 0.4
+    fileprivate static let alpha: CGFloat = 1
     let colors = [
-        UIColor.yellow.withAlphaComponent(alpha),
-        UIColor.green.withAlphaComponent(alpha),
-        UIColor.orange.withAlphaComponent(alpha),
-        UIColor.cyan.withAlphaComponent(alpha),
-        UIColor.darkGray.withAlphaComponent(alpha),
+        UIColor(red: 192/255.0, green: 255/255.0, blue: 140/255.0, alpha: alpha),
+        UIColor(red: 255/255.0, green: 247/255.0, blue: 140/255.0, alpha: alpha),
+        UIColor(red: 255/255.0, green: 208/255.0, blue: 140/255.0, alpha: alpha),
+        UIColor(red: 140/255.0, green: 234/255.0, blue: 255/255.0, alpha: alpha),
+        UIColor(red: 255/255.0, green: 140/255.0, blue: 157/255.0, alpha: alpha),
         UIColor.red.withAlphaComponent(alpha),
         UIColor.magenta.withAlphaComponent(alpha),
         UIColor.orange.withAlphaComponent(alpha),

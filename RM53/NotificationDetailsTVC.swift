@@ -46,7 +46,9 @@ class NotificationDetailsTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotifCell
         let items = catagorizedDetails[notifs[indexPath.section]] as! [[String:String]]
         cell.accountType.text = items[indexPath.row]["accountType"]
-        cell.accountNumber.text = (items[indexPath.row]["accountNumber"] != "") ?items[indexPath.row]["accountNumber"] : items[indexPath.row]["eid"]
+        cell.accountNumber.text = items[indexPath.row]["accountNumber"]
+            //(items[indexPath.row]["accountNumber"] != "")
+            //?items[indexPath.row]["accountNumber"] : items[indexPath.row]["eid"]
         return cell
     }
     
@@ -64,53 +66,138 @@ class NotificationDetailsTVC: UITableViewController {
         let popoverVC = storyboard.instantiateViewController(withIdentifier: "popover") as! DetailViewTVC
         let items = catagorizedDetails[notifs[indexPath.section]] as! [[String:String]]
         
-        popoverVC.label1 = "EID or Account Number"
-        popoverVC.value1 = items[indexPath.row]["eid"]!
+        popoverVC.label1 = "Account Number"
+        popoverVC.value1 = items[indexPath.row]["accountNumber"]!
         popoverVC.label2 = "Date"
         popoverVC.value2 = items[indexPath.row]["date"]!
         popoverVC.label3 = "Segment"
         popoverVC.value3 = items[indexPath.row]["segment"]!
-        
         let typeId = items[indexPath.row]["typeId"]!
+        bindData(popoverVC: popoverVC, typeId: typeId, items: items, indexPath: indexPath)
+
+        
+        popoverVC.modalPresentationStyle = .popover
+        popoverVC.modalTransitionStyle = .crossDissolve
+        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.9, height: self.view.frame.height * 0.6)
+        present(popoverVC, animated: true, completion: nil)
+        let popoverController = popoverVC.popoverPresentationController
+        popoverController?.backgroundColor = UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)
+        popoverController!.sourceView = self.view
+        popoverController!.sourceRect = fromRect
+        popoverController!.permittedArrowDirections = .any
+    }
+    
+    func bindData(popoverVC: DetailViewTVC, typeId:String, items: [[String:String]], indexPath: IndexPath) {
         switch typeId {
         case "1":
             popoverVC.label4 = "Days Past Due"
             popoverVC.value4 = items[indexPath.row]["daysPastDue"]!
             popoverVC.label5 = "Past Due Amount"
             popoverVC.value5 = items[indexPath.row]["pastDueAmount"]!
+            popoverVC.label6 = "Interest Rate"
+            popoverVC.value6 = items[indexPath.row]["interestRate"]!
+            popoverVC.label7 = "Primary Contact"
+            popoverVC.value7 = items[indexPath.row]["primaryContact"]!
+            popoverVC.label8 = "Phone"
+            popoverVC.value8 = items[indexPath.row]["phone"]!
+            popoverVC.label9 = "Email"
+            popoverVC.value9 = items[indexPath.row]["email"]!
+            popoverVC.label10 = "Auto Bill Payer"
+            popoverVC.value10 = items[indexPath.row]["autoBillPayer"]!
+            popoverVC.label11 = "Bill Payer Account"
+            popoverVC.value11 = items[indexPath.row]["billPayerAccount"]!
+            popoverVC.label12 = "Bill Payer Account Balance"
+            popoverVC.value12 = items[indexPath.row]["billPayerBalance"]!
+            popoverVC.label13 = "Maturity Date"
+            popoverVC.value13 = items[indexPath.row]["maturityDate"]!
+            popoverVC.label14 = "Commitment Amount"
+            popoverVC.value14 = items[indexPath.row]["commitmentAmount"]!
+            popoverVC.numberOfRow = 14
         case "2","3":
             popoverVC.label4 = "Change Amount"
             popoverVC.value4 = items[indexPath.row]["changeAmount"]!
+            popoverVC.label5 = "Primary Contact"
+            popoverVC.value5 = items[indexPath.row]["primaryContact"]!
+            popoverVC.label6 = "Phone"
+            popoverVC.value6 = items[indexPath.row]["phone"]!
+            popoverVC.label7 = "Email"
+            popoverVC.value7 = items[indexPath.row]["email"]!
+            popoverVC.label8 = "Previous Balance"
+            popoverVC.value8 = items[indexPath.row]["previousBalance"]!
+            popoverVC.label9 = "Available Balance"
+            popoverVC.value9 = items[indexPath.row]["availableBalance"]!
+            popoverVC.numberOfRow = 9
         case "4":
             popoverVC.label4 = "Days Past SLA"
             popoverVC.value4 = items[indexPath.row]["daysPastSLA"]!
+            popoverVC.numberOfRow = 4
         case "5":
             popoverVC.label4 = "Days Past Due"
             popoverVC.value4 = items[indexPath.row]["daysPastDue"]!
             popoverVC.label5 = "Past Due amount"
             popoverVC.value5 = items[indexPath.row]["pastDueAmount"]!
+            popoverVC.label5 = "Primary Contact"
+            popoverVC.value5 = items[indexPath.row]["primaryContact"]!
+            popoverVC.label6 = "Phone"
+            popoverVC.value6 = items[indexPath.row]["phone"]!
+            popoverVC.label7 = "Email"
+            popoverVC.value7 = items[indexPath.row]["email"]!
+            popoverVC.label8 = "Interest Rate"
+            popoverVC.value8 = items[indexPath.row]["interestRate"]!
+            popoverVC.label9 = "Auto Bill Payer"
+            popoverVC.value9 = items[indexPath.row]["autoBillPayer"]!
+            popoverVC.label10 = "Bill Payer Account"
+            popoverVC.value10 = items[indexPath.row]["billPayerAccount"]!
+            popoverVC.label11 = "Bill Payer Account Balance"
+            popoverVC.value11 = items[indexPath.row]["billPayerBalance"]!
+            popoverVC.label12 = "Outstanding Balance"
+            popoverVC.value12 = items[indexPath.row]["outstandingBalance"]!
+            popoverVC.label13 = "Commitment Amount"
+            popoverVC.value13 = items[indexPath.row]["commitmentAmount"]!
+            popoverVC.numberOfRow = 13
         case "6":
-            popoverVC.label4 = "Commitment Amount"
-            popoverVC.value4 = items[indexPath.row]["commitmentAmount"]!
-            popoverVC.label5 = "Product"
-            popoverVC.value5 = items[indexPath.row]["product"]!
-        case "7":
             popoverVC.label4 = "Change Amount"
             popoverVC.value4 = items[indexPath.row]["changeAmount"]!
+            popoverVC.label5 = "Primary Contact"
+            popoverVC.value5 = items[indexPath.row]["primaryContact"]!
+            popoverVC.label6 = "Phone"
+            popoverVC.value6 = items[indexPath.row]["phone"]!
+            popoverVC.label7 = "Email"
+            popoverVC.value7 = items[indexPath.row]["email"]!
+            popoverVC.label8 = "No of Days OD"
+            popoverVC.value8 = items[indexPath.row]["noOfDaysOD"]!
+            popoverVC.label9 = "Days OD Last 12 Months"
+            popoverVC.value9 = items[indexPath.row]["daysODLast12Months"]!
+            popoverVC.label10 = "Times OD Last 12 Months"
+            popoverVC.value10 = items[indexPath.row]["timesODLast12Months"]!
+            popoverVC.numberOfRow = 10
+        case "7":
+            popoverVC.label4 = "Commitment Amount"
+            popoverVC.value4 = items[indexPath.row]["commitmentAmount"]!
+            popoverVC.label5 = "Primary Contact"
+            popoverVC.value5 = items[indexPath.row]["primaryContact"]!
+            popoverVC.label6 = "Phone"
+            popoverVC.value6 = items[indexPath.row]["phone"]!
+            popoverVC.label7 = "Email"
+            popoverVC.value7 = items[indexPath.row]["email"]!
+            popoverVC.label8 = "Portfolio Manager"
+            popoverVC.value8 = items[indexPath.row]["portfolioManager"]!
+            popoverVC.label9 = "Origination Date"
+            popoverVC.value9 = items[indexPath.row]["originationDate"]!
+            popoverVC.label10 = "Outstanding Balance"
+            popoverVC.value10 = items[indexPath.row]["outstandingBalance"]!
+            popoverVC.label11 = "PD Rating"
+            popoverVC.value11 = items[indexPath.row]["pdRating"]!
+            popoverVC.label12 = "PD Date"
+            popoverVC.value12 = items[indexPath.row]["pdDate"]!
+            popoverVC.label13 = "Product"
+            popoverVC.value13 = items[indexPath.row]["product"]!
+            popoverVC.label14 = "Outstanding Balance"
+            popoverVC.value14 = items[indexPath.row]["outstandingBalance"]!
+            popoverVC.numberOfRow = 14
         default:
             break
         }
-        
-        popoverVC.modalPresentationStyle = .popover
-       // popoverVC.modalTransitionStyle = .crossDissolve
-        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.9, height: 300)
-        popoverVC.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.05)
-        present(popoverVC, animated: true, completion: nil)
-        let popoverController = popoverVC.popoverPresentationController
-        popoverController?.backgroundColor = UIColor(red: 27/255.0, green: 71/255.0, blue: 149/255.0, alpha: 0.5)
-        popoverController!.sourceView = self.view
-        popoverController!.sourceRect = fromRect
-        popoverController!.permittedArrowDirections = .any
     }
 
 }

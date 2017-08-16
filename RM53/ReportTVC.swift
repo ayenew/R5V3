@@ -9,10 +9,6 @@
 import UIKit
 
 class ReportTVC: UITableViewController {
-   // let industries = [["name":"Plastics & Rubber Machinery Manufacturing in USA","entity":"MPW Industrial Services Group, Inc.","summaryImage":"", "riskImage":""],["name":"Hospitals in USA","entity":"Premier Health Partners","summaryImage":"", "riskImage":""],["name":"Public Storage & Warehousing in the USA","entity":"ODW Logistics","summaryImage":"", "riskImage":""]]
-    
-    //var industries = [String:Any]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]

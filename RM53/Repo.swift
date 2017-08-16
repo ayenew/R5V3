@@ -81,8 +81,26 @@ struct Repo {
                         c["daysPastSLA"] = aNotifAlert["daysPastSLA"] as! String
                         c["changeAmount"] = aNotifAlert["changeAmount"] as! String
                         c["product"] = aNotifAlert["product"] as! String
-                        c["commitmentAmount"] = aNotifAlert["commitmentAmount"] as! String
                         c["accountNumber"] = aNotifAlert["accountNumber"] as! String
+                        c["commitmentAmount"] = aNotifAlert["commitmentAmount"] as! String
+                         c["interestRate"] = aNotifAlert["interestRate"] as! String
+                         c["primaryContact"] = aNotifAlert["primaryContact"] as! String
+                         c["phone"] = aNotifAlert["phone"] as! String
+                         c["email"] = aNotifAlert["email"] as! String
+                         c["autoBillPayer"] = aNotifAlert["autoBillPayer"] as! String
+                         c["billPayerAccount"] = aNotifAlert["billPayerAccount"] as! String
+                         c["pdRating"] = aNotifAlert["pdRating"] as! String
+                         c["portfolioManager"] = aNotifAlert["portfolioManager"] as! String
+                         c["originationDate"] = aNotifAlert["originationDate"] as! String
+                         c["outstandingBalance"] = aNotifAlert["outstandingBalance"] as! String
+                        c["billPayerBalance"] = aNotifAlert["billPayerBalance"] as! String
+                        c["maturityDate"] = aNotifAlert["maturityDate"] as! String
+                        c["pdDate"] = aNotifAlert["pdDate"] as! String
+                        c["previousBalance"] = aNotifAlert["previousBalance"] as! String
+                        c["availableBalance"] = aNotifAlert["availableBalance"] as! String
+                        c["noOfDaysOD"] = aNotifAlert["noOfDaysOD"] as! String
+                        c["daysODLast12Months"] = aNotifAlert["daysODLast12Months"] as! String
+                        c["timesODLast12Months"] = aNotifAlert["timesODLast12Months"] as! String
                         alertNotifRepo.append(c)
                     }
 

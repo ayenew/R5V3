@@ -19,7 +19,7 @@ class ReportDetailVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
-        self.title = industry["name"] as! String
+        self.title = (industry["name"] as! String)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.page.currentPage = 0

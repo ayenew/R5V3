@@ -96,13 +96,27 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
             alert -> Void in
-            
+           
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
             let thirdTextField = alertController.textFields![1] as UITextField
-            self.opportunities[index]["targetDate"] = firstTextField.text!
-            self.opportunities[index]["salesStage"] = secondTextField.text!
-            self.opportunities[index]["balance"] = thirdTextField.text!
+            if firstTextField.text != "" {
+                self.opportunities[index]["targetDate"] = firstTextField.text!
+            } else{
+                self.opportunities[index]["targetDate"] = text1
+            }
+            
+            if secondTextField.text != "" {
+                self.opportunities[index]["salesStage"] = secondTextField.text!
+            } else{
+                self.opportunities[index]["salesStage"] = text2
+            }
+            if thirdTextField.text != "" {
+                self.opportunities[index]["balance"] = thirdTextField.text!
+            } else{
+                self.opportunities[index]["balance"] = text3
+            }
+
             self.tableView.reloadData()
         })
         
