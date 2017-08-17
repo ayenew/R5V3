@@ -25,6 +25,16 @@ class OpportunityDataEntryVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.keyWindow?.rootViewController?.view.alpha = 0.7
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.keyWindow?.rootViewController?.view.alpha = 1
+    }
 
 }
 
