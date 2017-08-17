@@ -31,19 +31,19 @@
                      "notification": 1,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Pending Action",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -82,19 +82,19 @@
                      "notification": 1,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Pending Action",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -133,19 +133,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Pending Action",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -184,19 +184,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Pending Action",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Pending Action",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -235,19 +235,19 @@
                      "notification": 1,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -286,19 +286,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -337,19 +337,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -388,19 +388,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -439,19 +439,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -490,19 +490,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -541,19 +541,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -592,19 +592,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -643,19 +643,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -694,19 +694,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -745,19 +745,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -796,19 +796,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -847,19 +847,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -898,19 +898,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -949,19 +949,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -1000,19 +1000,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -1051,19 +1051,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }
@@ -1102,19 +1102,19 @@
                      "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "07/30/2017",
                                      "balance": "$7500.00"
                                      },
                                      {
                                      "name": "Advanced Drainage System Inc",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "08/30/2017",
                                      "balance": "$9500.00"
                                      },
                                      {
                                      "name": "BankInsurance Corporation",
-                                     "salesStage": "02-Opportunity",
+                                     "salesStage": "Opportunity",
                                      "targetDate": "09/30/2017",
                                      "balance": "$5500.00"
                                      }

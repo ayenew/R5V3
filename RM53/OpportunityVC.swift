@@ -10,12 +10,14 @@ import UIKit
 
 class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities : [[String:String]] = [
-        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"02-Opportunity", "balance":"$7,500"],
-        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"02-Opportunity", "balance":"$17,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"02-Opportunity", "balance":"$117,500"]
+        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"Opportunity", "balance":"$7,500"],
+        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"Opportunity", "balance":"$17,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Pending Action", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Opportunity", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Opportunity", "balance":"$117,500"]
     ]
+    
+    var selectedIndex = Int()
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier1 = "opportunityCell"
@@ -26,6 +28,16 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         self.tableView.delegate = self
         tableView.isScrollEnabled = false
         self.tableView.register(UINib(nibName: "OpportunityCell", bundle: nil), forCellReuseIdentifier: cellIdentifier1)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateOpportunity), name: NSNotification.Name.init(rawValue: "UpdateOpportunity"), object: nil)
+    }
+    
+    func updateOpportunity(_ notification: NSNotification) {
+        if let target = notification.userInfo as? [String:String] {
+            self.opportunities[selectedIndex]["targetDate"] = target["targetDate"]
+            self.opportunities[selectedIndex]["salesStage"] = target["salesTarget"]
+            self.opportunities[selectedIndex]["balance"] = target["balance"]
+        }
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,17 +84,43 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 0 {
+        selectedIndex = indexPath.row
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
             let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
             let editableItem3 = self.opportunities[indexPath.row]["balance"]
-            self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
+            //self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
+            self.openEditWindow(indexPath:indexPath, editableItem1: editableItem1!, editableItem2: editableItem2!, editableItem3: editableItem3!)
+            
+ 
         }
         edit.backgroundColor = UIColor.orange
         
         return [edit]
         }
         return nil
+    }
+    
+    func openEditWindow(indexPath:IndexPath, editableItem1: String, editableItem2: String, editableItem3: String){
+        let fromRect:CGRect = self.tableView.rectForRow(at: indexPath)
+        let storyboard = UIStoryboard(name: "Opportunity", bundle: nil)
+        let popoverVC = storyboard.instantiateViewController(withIdentifier: "popover") as! OpportunityDataEntryVC
+        
+        popoverVC.targetDate = editableItem1
+        popoverVC.salesStage = editableItem2
+        popoverVC.balance = editableItem3
+
+        
+        
+        popoverVC.modalPresentationStyle = .popover
+        popoverVC.modalTransitionStyle = .crossDissolve
+        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.6, height: self.view.frame.height)
+        present(popoverVC, animated: true, completion: nil)
+        let popoverController = popoverVC.popoverPresentationController
+        popoverController?.backgroundColor = UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)
+        popoverController!.sourceView = self.view
+        popoverController!.sourceRect = fromRect
+        popoverController!.permittedArrowDirections = .any
     }
     
     func editButtonTapped(text1:String, text2: String, text3: String, index:Int){

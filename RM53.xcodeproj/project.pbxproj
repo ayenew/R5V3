@@ -18,6 +18,9 @@
 		533DFA961F1A6924004EC44F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA951F1A6924004EC44F /* Repo.swift */; };
 		533DFA981F1A6942004EC44F /* Company.json in Resources */ = {isa = PBXBuildFile; fileRef = 533DFA971F1A6942004EC44F /* Company.json */; };
 		533DFAB51F1A963F004EC44F /* RelationshipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */; };
+		5344016E1F44D99A00725B10 /* OpportunityDataEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5344016D1F44D99A00725B10 /* OpportunityDataEntryVC.swift */; };
+		534401701F44DA9D00725B10 /* Opportunity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5344016F1F44DA9D00725B10 /* Opportunity.storyboard */; };
+		534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534401711F44EA8500725B10 /* DataEntryCell.swift */; };
 		5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */; };
 		536982DD1F3DE67800FF8309 /* NotificationDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536982DC1F3DE67800FF8309 /* NotificationDetailsTVC.swift */; };
 		536982DF1F3DEACD00FF8309 /* Notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = 536982DE1F3DEACD00FF8309 /* Notifications.json */; };
@@ -69,6 +72,9 @@
 		533DFA951F1A6924004EC44F /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		533DFA971F1A6942004EC44F /* Company.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Company.json; sourceTree = "<group>"; };
 		533DFAB41F1A963F004EC44F /* RelationshipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipDetailViewController.swift; sourceTree = "<group>"; };
+		5344016D1F44D99A00725B10 /* OpportunityDataEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityDataEntryVC.swift; sourceTree = "<group>"; };
+		5344016F1F44DA9D00725B10 /* Opportunity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Opportunity.storyboard; sourceTree = "<group>"; };
+		534401711F44EA8500725B10 /* DataEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCell.swift; sourceTree = "<group>"; };
 		5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntryVC.swift; sourceTree = "<group>"; };
 		536982DC1F3DE67800FF8309 /* NotificationDetailsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsTVC.swift; sourceTree = "<group>"; };
 		536982DE1F3DEACD00FF8309 /* Notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notifications.json; sourceTree = "<group>"; };
@@ -254,6 +260,9 @@
 				538E8C111F03E8F40003D939 /* OpportunityVC.swift */,
 				538E8C131F04A34B0003D939 /* OpportunityCell.swift */,
 				538E8C141F04A34B0003D939 /* OpportunityCell.xib */,
+				5344016D1F44D99A00725B10 /* OpportunityDataEntryVC.swift */,
+				5344016F1F44DA9D00725B10 /* Opportunity.storyboard */,
+				534401711F44EA8500725B10 /* DataEntryCell.swift */,
 			);
 			name = Opportunities;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 				53FAA6C51F3CB03E005669F1 /* Notification.storyboard in Resources */,
 				53A4BDE81F41F888009063C0 /* Report.storyboard in Resources */,
 				53A4BDF11F425EBF009063C0 /* Report.json in Resources */,
+				534401701F44DA9D00725B10 /* Opportunity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +449,10 @@
 				53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */,
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* DashboardViewController.swift in Sources */,
+				5344016E1F44D99A00725B10 /* OpportunityDataEntryVC.swift in Sources */,
 				5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */,
 				53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */,
+				534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */,
 				53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */,
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
@@ -606,7 +618,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -621,7 +633,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
