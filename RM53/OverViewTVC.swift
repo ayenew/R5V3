@@ -20,7 +20,7 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         navigationController?.navigationBar.barTintColor = UIColor.groupTableViewBackground
          self.navigationItem.title = "Contacts"
          self.tableView.register(UINib(nibName: "OverViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 44/255.0, green: 82/255.0, blue: 231/255.0, alpha: 1)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)]
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
         self.tableView.tableFooterView = UIView()
     }
@@ -37,9 +37,9 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
     }
     
     func getNewContact() {
-        let alertController = UIAlertController(title: "Enter New Contact", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Add New Contact", message: "", preferredStyle: .alert)
         
-        let titleString  = "Enter New Contact"
+        let titleString  = "Add New Contact"
         var titleMutableString = NSMutableAttributedString()
         titleMutableString = NSMutableAttributedString(string: titleString as String, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next", size: 18.0)!])
         titleMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 44/255.0, green: 82/255.0, blue: 231/255.0, alpha: 1), range: NSRange(location:0,length:titleString.characters.count))
@@ -50,20 +50,28 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
             
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
-            let thirdTextField = alertController.textFields![1] as UITextField
-
-            self.newContact["firstName"] = firstTextField.text!
-            self.newContact["lastName"] = secondTextField.text!
-            self.newContact["cellPhone"] = thirdTextField.text!
-            self.newContact["secondPhone"] = "222"
-            self.contacts.append(self.newContact)
+            let thirdTextField = alertController.textFields![2] as UITextField
+            if (firstTextField.text! == "" || secondTextField.text! == "" || thirdTextField.text! == "") {
+                let alertController = UIAlertController(title: "Adding Contact Failed", message: "All fields are required. Please provide all the fields", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(action)
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                self.newContact["firstName"] = firstTextField.text!
+                self.newContact["lastName"] = secondTextField.text!
+                self.newContact["cellPhone"] = thirdTextField.text!
+                self.newContact["secondPhone"] = thirdTextField.text!
+                self.contacts.append(self.newContact)
+                
+                let indexPath = IndexPath(row: self.contacts.count-1, section: 0)
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [indexPath], with: .automatic)
+                self.tableView.endUpdates()
+                
+                self.tableView.reloadData()
+            }
             
-            let indexPath = IndexPath(row: self.contacts.count-1, section: 0)
-            self.tableView.beginUpdates()
-            self.tableView.insertRows(at: [indexPath], with: .automatic)
-            self.tableView.endUpdates()
-            
-            self.tableView.reloadData()
+           
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
@@ -73,14 +81,14 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "First Name"
             textField.textColor = UIColor.blue
-            //textField.borderStyle = .roundedRect
+            textField.borderStyle = .roundedRect
             textField.delegate = self
             textField.tag = 1000
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Last Name"
             textField.textColor = UIColor.blue
-            //textField.borderStyle = .roundedRect
+            textField.borderStyle = .roundedRect
             textField.delegate = self
             textField.tag = 2000
         }
@@ -88,7 +96,7 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Cell Phone"
             textField.textColor = UIColor.blue
-            //textField.borderStyle = .roundedRect
+            textField.borderStyle = .roundedRect
             textField.delegate = self
             textField.tag = 3000
         }
@@ -102,11 +110,6 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -114,8 +117,6 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let addRow = self.isEditing ? 1:0
-        //return contacts.count + addRow
         return contacts.count
     }
     

@@ -27,17 +27,17 @@ class RelationshipCell: UITableViewCell {
     func configureCell(item: [String:Any]){
         titleLbl.text = item["name"] as! String?
         if item["meeting"] as! Int > 0 && item["notification"] as! Int > 0 {
-            meetingImg.tintColor = UIColor.blue
+            meetingImg.tintColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
             meetingImg.isHidden = false
-            notifImg.tintColor = UIColor.blue
+            notifImg.tintColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
             notifImg.isHidden = false
         } else if item["meeting"] as! Int > 0 && item["notification"] as! Int == 0 {
-            meetingImg.tintColor = UIColor.blue
+            meetingImg.tintColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
             meetingImg.isHidden = false
             notifImg.isHidden = true
         } else if item["meeting"] as! Int == 0 && item["notification"] as! Int > 0 {
             meetingImg.image = UIImage(named: "smallbell")
-            meetingImg.tintColor = UIColor.blue
+            meetingImg.tintColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
             meetingImg.isHidden = false
             notifImg.isHidden = true
         } else {

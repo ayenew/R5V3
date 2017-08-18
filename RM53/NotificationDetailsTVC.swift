@@ -52,8 +52,26 @@ class NotificationDetailsTVC: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return notifs[section]
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return notifs[section]
+//    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return setSectionHeader(title: notifs[section])
+    }
+    
+    func setSectionHeader(title: String) -> UIView {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
+        headerView.backgroundColor = UIColor.groupTableViewBackground
+        let titleLbl = UILabel(frame: CGRect(x: 8, y: 0, width: self.view.frame.width, height: 40))
+        
+        titleLbl.attributedText = NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName : UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1), NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 18)!])
+        headerView.addSubview(titleLbl)
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

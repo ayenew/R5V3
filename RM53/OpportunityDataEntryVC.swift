@@ -9,7 +9,7 @@
 import UIKit
 
 class OpportunityDataEntryVC: UIViewController, UITextFieldDelegate {
-    let targets = ["Opportunity","Pending Action","Won/Closed","Discovery","Proposal/Presentation","Client Commitmnet/Mandate","Lost"]
+    let targets = ["Opportunity","Pending Action","Won/Closed","Discovery","Proposal/Presentation","Client Commitment/Mandate","Lost"]
     var isDateCellHidden = true
     var isTargetCellHidden = true
     @IBOutlet weak var tableView: UITableView!

@@ -37,7 +37,7 @@ class DataEntryCell: UITableViewCell {
         
     }
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-        let date = DateFormatter.localizedString(from: sender.date, dateStyle: .medium, timeStyle: .none)
+        let date = DateFormatter.localizedString(from: sender.date, dateStyle: .short, timeStyle: .none)
         if let delegate = self.datePickerUpdateDelegate {
             delegate.updateDatePicker(newDate: date)
         }

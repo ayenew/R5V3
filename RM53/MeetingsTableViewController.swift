@@ -21,7 +21,8 @@ class MeetingsTableViewController: UITableViewController {
         self.title = "Companies"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
+        self.navigationItem.rightBarButtonItems = [addButton]
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
@@ -29,6 +30,13 @@ class MeetingsTableViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         
+    }
+    
+    func addItem(){
+        let alertController = UIAlertController(title: "Add Meeting", message: "Feature is not available at the moment.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

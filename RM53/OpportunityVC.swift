@@ -10,11 +10,11 @@ import UIKit
 
 class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities : [[String:String]] = [
-        ["relationship":"odw Logistic Relationship","targetDate":"07/30/2017", "salesStage":"Opportunity", "balance":"$7,500"],
-        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/2017", "salesStage":"Opportunity", "balance":"$17,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Pending Action", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Opportunity", "balance":"$117,500"],
-        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/2017", "salesStage":"Opportunity", "balance":"$117,500"]
+        ["relationship":"odw Logistic Relationship","targetDate":"07/30/17", "salesStage":"Opportunity", "balance":"$7,500"],
+        ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/17", "salesStage":"Opportunity", "balance":"$17,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/17", "salesStage":"Pending Action", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/17", "salesStage":"Opportunity", "balance":"$117,500"],
+        ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/17", "salesStage":"Opportunity", "balance":"$117,500"]
     ]
     
     var selectedIndex = Int()
@@ -60,7 +60,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let color: UIColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
+        let color: UIColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
         if indexPath.section == 0{
             let cell: OpportunityCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1) as! OpportunityCell
             cell.relationship.text = opportunities[indexPath.row]["relationship"]
@@ -73,6 +73,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         if indexPath.section == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier2)
             cell?.textLabel?.text = "Show More"
+            cell?.textLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
             cell?.textLabel?.textColor = color
             cell?.textLabel?.textAlignment = .center
             return cell!
@@ -200,6 +201,13 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         } else{
             return true
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 1 {
+            return false
+        }
+        return true
     }
     
 }

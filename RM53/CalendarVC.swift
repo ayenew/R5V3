@@ -6,11 +6,12 @@ class CalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.lightGray
-        self.view.backgroundColor = UIColor.groupTableViewBackground
+        //self.view.backgroundColor = UIColor.groupTableViewBackground
+        self.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
        // SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
-        annualViewController?.view.alpha = 0.7
+        annualViewController?.view.alpha = 0.5
         //annualViewController?.view.backgroundColor = UIColor.groupTableViewBackground
         let date = Date()
         let calendar = Calendar.current
@@ -18,10 +19,11 @@ class CalendarVC: UIViewController {
          annualViewController?.startingIndexPath = NSIndexPath(item: 0, section: month-1) as IndexPath!
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-       navigationController.navigationBar.barTintColor = UIColor.groupTableViewBackground
+       navigationController.navigationBar.barTintColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
         navigationController.navigationBar.tintColor = UIColor.black
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
-        navigationController.view.backgroundColor = UIColor.lightGray
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 0.6)]
+        //navigationController.view.backgroundColor = UIColor.lightGray
+        navigationController.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame

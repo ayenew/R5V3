@@ -22,8 +22,8 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
         self.tableView.register(UINib(nibName: "OpportunityCell2", bundle: nil), forCellReuseIdentifier: "OpportunityCell2")
         
         navigationController?.navigationBar.barTintColor = UIColor.groupTableViewBackground
-        self.navigationItem.title = "Open Opportunities"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 44/255.0, green: 82/255.0, blue: 231/255.0, alpha: 1)]
+        self.navigationItem.title = "Opportunities"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)]
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
        // self.tableView.tableFooterView = UIView()
     }
