@@ -17,9 +17,9 @@ class DetailViewTVC: UITableViewController {
     var numberOfRow = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let v = UIView()
-        //v.backgroundColor = UIColor.clear
-        //tableView.tableFooterView = v
+        let v = UIView()
+        v.backgroundColor = UIColor.clear
+        tableView.tableFooterView = v
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

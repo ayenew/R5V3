@@ -52,7 +52,7 @@ class ReportDetailVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ReportCell
         let entities = industry["entities"] as! [[String:Any]]
-        cell.entityLbl.text = (entities[indexPath.row]["entity"] as! String)
+        //cell.entityLbl.text = (entities[indexPath.row]["entity"] as! String)
         cell.keyStat.image = UIImage(named: (entities[indexPath.row]["summaryImage"] as! String))
         cell.riskSummary.image = UIImage(named: (entities[indexPath.row]["riskImage"] as! String))
         

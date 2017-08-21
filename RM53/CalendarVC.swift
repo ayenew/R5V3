@@ -8,22 +8,26 @@ class CalendarVC: UIViewController {
         //self.view.backgroundColor = UIColor.lightGray
         //self.view.backgroundColor = UIColor.groupTableViewBackground
         self.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
-       // SSStyles.applyNavigationBarStyles()
+        //SSStyles.applyNavigationBarStyles()
         
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
-        annualViewController?.view.alpha = 0.5
-        //annualViewController?.view.backgroundColor = UIColor.groupTableViewBackground
+        //annualViewController?.view.alpha = 0.1
+        //annualViewController?.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
+
+        annualViewController?.view.backgroundColor = UIColor.clear
         let date = Date()
         let calendar = Calendar.current
         let month = calendar.component(.month, from: date)
          annualViewController?.startingIndexPath = NSIndexPath(item: 0, section: month-1) as IndexPath!
+        annualViewController?.dataSource.view.backgroundColor = UIColor(red: 188/255.0, green: 222/255.0, blue: 244/255.0, alpha: 1)
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-       navigationController.navigationBar.barTintColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
+       navigationController.navigationBar.barTintColor = UIColor(red: 188/255.0, green: 222/255.0, blue: 244/255.0, alpha: 1)
         navigationController.navigationBar.tintColor = UIColor.black
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 0.6)]
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
         //navigationController.view.backgroundColor = UIColor.lightGray
-        navigationController.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
+        //navigationController.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
+        navigationController.view.backgroundColor = UIColor.clear
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)
         navigationController.view.frame = self.view.frame
@@ -41,27 +45,27 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        var year = 2017; var month = 08; var day = 03
+        var year = 2017; var month = 08; var day = 30
         var event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
-        event.startTime = "09:00"
-        event.name = "Meet CFO of ABC Consulting at his Office"
-        event.desc = "First Round Metting"
+        event.startTime = "11:00"
+        event.name = "Builders Plus Inc - Strategic with CFO"
+        event.desc = "Talk with Justin and Mark - our ACH solution too expensive. Also do not think need ECL"
         events.append(event)
    
         event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
-        event.startTime = "11:00"
-        event.name = "Meet CEO of DEF Logistics"
-        event.desc = "Discuss Business Opportunities"
+        event.startTime = "3:00"
+        event.name = "06/30/2017 MPW Industrial Service"
+        event.desc = "Meet with Dana to reciew account set ups. Need to change signers and close two accounts. The BCBS activity will grow quickly.Follow up in November to review to see if should change to analyzed account type. alos discussed CC for T & E and how can automate and streamline the process."
         events.append(event)
         
-        year = 2017; month = 8; day = 05
+        year = 2017; month = 09; day = 07
         event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
-        event.startTime = "09:00"
-        event.name = "Meeting CFO of ABC Consulting at his Office"
-        event.desc = "Follow up Round Meeting"
+        event.startTime = "11:00"
+        event.name = "06/14/2017 Specialized Service"
+        event.desc = "KALI R NANDI - Strategic"
         events.append(event)
         return events
     }

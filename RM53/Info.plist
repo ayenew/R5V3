@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>RM53_V2</string>
+	<string>RM53_V3</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSLocationUsageDescription</key>
 	<string>"Use Location?"</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>"Your microphone will be used to record your speech when you press the "Start Recording" button."</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>"Speech recognition will be used to determine which words you speak into this device's microphone."</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

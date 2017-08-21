@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,11 +157,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-zv-qYN">
-                                                    <rect key="frame" x="39" y="41" width="647.5" height="92"/>
+                                                    <rect key="frame" x="39" y="41" width="648" height="92"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-N1-FQS">
+                                                    <rect key="frame" x="463" y="5" width="190" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Start Recording">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="recordCallReport:" destination="jYP-Qe-JD3" eventType="touchUpInside" id="uNc-1T-YeD"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LZH-RA-yTu" firstAttribute="leading" secondItem="u9p-yC-51o" secondAttribute="leading" constant="31" id="EDG-iC-Vpa"/>
@@ -186,6 +197,7 @@
                         <outlet property="callReportLbl" destination="MbS-zv-qYN" id="8tr-Fa-Yya"/>
                         <outlet property="companyLbl" destination="Y33-gG-0hi" id="EQu-nB-kIH"/>
                         <outlet property="reasonLbl" destination="mbj-Rm-RQb" id="Mht-xI-3zZ"/>
+                        <outlet property="recordButton" destination="lO6-N1-FQS" id="IXP-eb-CP4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e95-ae-OLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
