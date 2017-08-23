@@ -9,7 +9,7 @@
 import UIKit
 import PieCharts
 
-class DashboardViewController: ParentViewController {
+class DashboardViewController: UIViewController {
     
     @IBOutlet weak var mainBar: UINavigationBar!
     @IBOutlet weak var collectionView: UIView!
@@ -51,6 +51,15 @@ class DashboardViewController: ParentViewController {
         //self.alertView.dropShadow()
         //self.collectionView.dropShadow()
     }
+    
+  
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Login", bundle: nil)
+        let login = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        UIApplication.shared.keyWindow?.rootViewController = login
+    }
+    
+    
     @IBAction func goToNotificationPressed(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController

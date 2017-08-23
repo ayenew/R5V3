@@ -58,7 +58,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         saveButton.isEnabled = false
         editButton.isEnabled = true
         callReportLbl.isEditable = false
-        self.navigationItem.leftBarButtonItems = [editButton,saveButton]
+        self.navigationItem.rightBarButtonItems = [editButton,saveButton]
         self.tableView.tableFooterView = UIView()
         self.tableView.isScrollEnabled = true
         companyIcon.tintColor = tintColor
