@@ -63,8 +63,6 @@ class ReportDetailVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 0
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         return CGSize(width: self.view.frame.width, height: self.view.frame.height)
     }

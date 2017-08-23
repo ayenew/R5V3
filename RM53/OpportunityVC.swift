@@ -84,29 +84,26 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            let alertController = UIAlertController(title: "More Opportunities", message: "This feature is not available at the moment. Please try later.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            showToast(message: "Opportunities feature coming soon.")
         }
     }
     
-        
+    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 0 {
-        selectedIndex = indexPath.row
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-            let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
-            let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
-            let editableItem3 = self.opportunities[indexPath.row]["balance"]
-            //self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
-            self.openEditWindow(indexPath:indexPath, editableItem1: editableItem1!, editableItem2: editableItem2!, editableItem3: editableItem3!)
+            selectedIndex = indexPath.row
+            let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+                let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
+                let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
+                let editableItem3 = self.opportunities[indexPath.row]["balance"]
+                //self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
+                self.openEditWindow(indexPath:indexPath, editableItem1: editableItem1!, editableItem2: editableItem2!, editableItem3: editableItem3!)
+                
+                
+            }
+            edit.backgroundColor = UIColor.orange
             
- 
-        }
-        edit.backgroundColor = UIColor.orange
-        
-        return [edit]
+            return [edit]
         }
         return nil
     }
@@ -119,8 +116,6 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         popoverVC.targetDate = editableItem1
         popoverVC.salesStage = editableItem2
         popoverVC.balance = editableItem3
-
-        
         
         popoverVC.modalPresentationStyle = .popover
         popoverVC.modalTransitionStyle = .crossDissolve
@@ -144,7 +139,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
             alert -> Void in
-           
+            
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
             let thirdTextField = alertController.textFields![1] as UITextField
@@ -164,7 +159,7 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             } else{
                 self.opportunities[index]["balance"] = text3
             }
-
+            
             self.tableView.reloadData()
         })
         
@@ -217,6 +212,28 @@ class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate
             return false
         }
         return true
+    }
+    
+    func showToast(message : String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 220, height: 35))
+        toastLabel.layoutMargins = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        toastLabel.backgroundColor = UIColor.darkGray
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center
+        toastLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        toastLabel.text = message
+        toastLabel.numberOfLines = 0
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        //self.parent?.view.addSubview(toastLabel)
+        //toastLabel.center = (self.parent?.view.center)!
+        UIView.animate(withDuration: 3.0, delay: 0, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.4
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
     
 }

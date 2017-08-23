@@ -2,31 +2,25 @@ import UIKit
 import SSCalendar
 
 class CalendarVC: UIViewController {
+    let backgroundColor = UIColor(red: 228/255.0, green: 242/255.0, blue: 244/255.0, alpha: 1)
     var annualViewController: SSCalendarMonthlyViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.lightGray
-        //self.view.backgroundColor = UIColor.groupTableViewBackground
         self.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
         //SSStyles.applyNavigationBarStyles()
-        
         let annualViewController = SSCalendarMonthlyViewController(events: generateEvents())
-        //annualViewController?.view.alpha = 0.1
-        //annualViewController?.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
-
         annualViewController?.view.backgroundColor = UIColor.clear
         let date = Date()
         let calendar = Calendar.current
         let month = calendar.component(.month, from: date)
          annualViewController?.startingIndexPath = NSIndexPath(item: 0, section: month-1) as IndexPath!
-        annualViewController?.dataSource.view.backgroundColor = UIColor(red: 188/255.0, green: 222/255.0, blue: 244/255.0, alpha: 1)
+        annualViewController?.dataSource.view.backgroundColor = backgroundColor
+
         let navigationController = UINavigationController(rootViewController: annualViewController!)
         navigationController.navigationBar.isTranslucent = false
-       navigationController.navigationBar.barTintColor = UIColor(red: 188/255.0, green: 222/255.0, blue: 244/255.0, alpha: 1)
+       navigationController.navigationBar.barTintColor = backgroundColor
         navigationController.navigationBar.tintColor = UIColor.black
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
-        //navigationController.view.backgroundColor = UIColor.lightGray
-        //navigationController.view.backgroundColor = UIColor(red: 106/255.0, green: 173/255.0, blue: 228/255.0, alpha: 1)
         navigationController.view.backgroundColor = UIColor.clear
         self.addChildViewController(navigationController)
         self.view.addSubview(navigationController.view)

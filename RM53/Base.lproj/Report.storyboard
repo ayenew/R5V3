@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-up-aAV">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="702.5" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gCf-kH-Sft">
                                     <size key="itemSize" width="703" height="516"/>
@@ -200,11 +200,11 @@
             </objects>
             <point key="canvasLocation" x="-283" y="1304"/>
         </scene>
-        <!--Reports-->
+        <!--Research-->
         <scene sceneID="xZ7-O7-T9I">
             <objects>
                 <splitViewController id="1Mi-tn-uHG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reports" image="padnote" id="ceR-ap-fTI"/>
+                    <tabBarItem key="tabBarItem" title="Research" image="padnote" id="ceR-ap-fTI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="LZ7-Cz-jfI" kind="relationship" relationship="masterViewController" id="bS6-Ij-b5a"/>

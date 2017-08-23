@@ -10,6 +10,15 @@ import UIKit
 import Speech
 
 class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
+    
+    @IBOutlet weak var companyIcon: UIImageView!
+    
+    @IBOutlet weak var callPlanIcon: UIImageView!
+    
+    @IBOutlet weak var callReportIcon: UIImageView!
+    @IBOutlet weak var reasonIcon: UIImageView!
+    
+    
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     
@@ -31,6 +40,8 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
     private var recognitionTask: SFSpeechRecognitionTask?
     
     private let audioEngine = AVAudioEngine()
+    
+    let tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +58,13 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         saveButton.isEnabled = false
         editButton.isEnabled = true
         callReportLbl.isEditable = false
-        self.navigationItem.rightBarButtonItems = [editButton,saveButton]
+        self.navigationItem.leftBarButtonItems = [editButton,saveButton]
         self.tableView.tableFooterView = UIView()
         self.tableView.isScrollEnabled = true
+        companyIcon.tintColor = tintColor
+        callPlanIcon.tintColor = tintColor
+        reasonIcon.tintColor = tintColor
+        callReportIcon.tintColor = tintColor
         
     }
     
@@ -114,10 +129,12 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
             audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
-            recordButton.setTitle("Stopping", for: .disabled)
+            //recordButton.setTitle("Stopping", for: .disabled)
+            self.recordButton.setImage(UIImage(named: "microphone1"), for: .disabled)
         } else {
             try! startRecording()
-            recordButton.setTitle("Stop recording", for: [])
+            //recordButton.setTitle("Stop recording", for: [])
+            self.recordButton.setImage(UIImage(named: "mute1"), for: [])
         }
     }
     
@@ -162,7 +179,8 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
                 self.recognitionTask = nil
                 
                 self.recordButton.isEnabled = true
-                self.recordButton.setTitle("Start Recording", for: [])
+                self.recordButton.setImage(UIImage(named: "microphone1"), for: .normal)
+               // self.recordButton.setTitle("Start Recording", for: [])
             }
         }
         
@@ -175,7 +193,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         
         try audioEngine.start()
         if callReportLbl.text == "" {
-            callReportLbl.text = "(Go ahead, I'm listening)"
+            callReportLbl.text = "(Started recording)"
         }
     }
 

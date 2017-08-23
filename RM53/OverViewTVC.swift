@@ -25,7 +25,6 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         self.tableView.tableFooterView = UIView()
     }
     
-    
     func setupMap(){
         
     }

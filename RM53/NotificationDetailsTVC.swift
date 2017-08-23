@@ -99,7 +99,8 @@ class NotificationDetailsTVC: UITableViewController {
         popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.9, height: self.view.frame.height * 0.6)
         present(popoverVC, animated: true, completion: nil)
         let popoverController = popoverVC.popoverPresentationController
-        popoverController?.backgroundColor = UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)
+        popoverController?.backgroundColor = UIColor(red: 188/255.0, green: 222/255.0, blue: 244/255.0, alpha: 1)
+          //  UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)
         popoverController!.sourceView = self.view
         popoverController!.sourceRect = fromRect
         popoverController!.permittedArrowDirections = .any

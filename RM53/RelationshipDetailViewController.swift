@@ -108,10 +108,10 @@ class RelationshipDetailViewController: UIViewController {
     }
     
     func addGesture(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
-        let tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
-        let tap3 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
-        let tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotifTab))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+        let tap3 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+        let tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
         smallBell.isUserInteractionEnabled = true
         smallNotif.isUserInteractionEnabled = true
         smallBellValue.isUserInteractionEnabled = true
@@ -122,11 +122,20 @@ class RelationshipDetailViewController: UIViewController {
         smallNotifValue.addGestureRecognizer(tap4)
     }
     
-    func goToNotifTab(){
+    func goToNotif(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
         tabbbarController.selectedIndex = 3
        // let company : [String:String] = ["name": navigationItem.title!]
+        //NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdateSearchText"), object: nil, userInfo: company)
+    }
+    
+    func goToMeeting(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
+        tabbbarController.selectedIndex = 2
+
+        // let company : [String:String] = ["name": navigationItem.title!]
         //NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdateSearchText"), object: nil, userInfo: company)
     }
 

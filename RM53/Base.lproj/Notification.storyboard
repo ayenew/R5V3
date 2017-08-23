@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -112,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2P4-jv-7hF" id="TWv-83-8u3">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="680-qv-Bba">
@@ -173,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TuC-3t-jw9" id="LH1-im-pY8">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fz-mQ-utD">
@@ -191,7 +192,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.19662350171232876" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.73725490196078436" green="0.87058823529411766" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="Kra-Ls-7Jn" firstAttribute="centerY" secondItem="4Fz-mQ-utD" secondAttribute="centerY" id="8UN-Jb-CWW"/>
                                         <constraint firstItem="Kra-Ls-7Jn" firstAttribute="firstBaseline" secondItem="4Fz-mQ-utD" secondAttribute="firstBaseline" id="G0V-qf-6mK"/>
@@ -202,7 +203,7 @@
                                         <constraint firstItem="Kra-Ls-7Jn" firstAttribute="leading" secondItem="4Fz-mQ-utD" secondAttribute="trailing" constant="16" id="thq-Tv-K97"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.20419520547945205" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.41568627450000001" green="0.67843137249999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="label1" destination="4Fz-mQ-utD" id="a31-nM-hPM"/>
                                     <outlet property="value1" destination="Kra-Ls-7Jn" id="Pgh-OT-8SX"/>

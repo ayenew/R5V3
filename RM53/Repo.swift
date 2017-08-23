@@ -103,7 +103,6 @@ struct Repo {
                         c["timesODLast12Months"] = aNotifAlert["timesODLast12Months"] as! String
                         alertNotifRepo.append(c)
                     }
-
                 } catch {
                 print(error.localizedDescription)
                 }

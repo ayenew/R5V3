@@ -9,7 +9,7 @@
 import UIKit
 import PieCharts
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: ParentViewController {
     
     @IBOutlet weak var mainBar: UINavigationBar!
     @IBOutlet weak var collectionView: UIView!
@@ -22,6 +22,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet var rmChartBookChart: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let logout = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
+        self.navigationItem.setRightBarButton(logout, animated: true)
         self.view.backgroundColor = UIColor.white
         //self.mainBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
         self.mainBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)

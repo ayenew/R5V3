@@ -10,7 +10,7 @@ import UIKit
 import PieCharts
 
 class ChartVC: UIViewController, PieChartDelegate {
-    
+    let backgroundColor = UIColor.white
     @IBOutlet weak var totalRevenue: UILabel!
     @IBOutlet weak var chartView: PieChart!
     let PieSliceModelWithName: [String:PieSliceModel] = [String:PieSliceModel]()
@@ -22,18 +22,6 @@ class ChartVC: UIViewController, PieChartDelegate {
         UIColor(red: 255/255.0, green: 208/255.0, blue: 140/255.0, alpha: alpha),
         UIColor(red: 140/255.0, green: 234/255.0, blue: 255/255.0, alpha: alpha),
         UIColor(red: 255/255.0, green: 140/255.0, blue: 157/255.0, alpha: alpha),
-        //UIColor.yellow.withAlphaComponent(alpha),
-        //UIColor.green.withAlphaComponent(alpha),
-        //UIColor.orange.withAlphaComponent(alpha),
-       // UIColor.cyan.withAlphaComponent(alpha),
-        //UIColor.darkGray.withAlphaComponent(alpha),
-        UIColor.red.withAlphaComponent(alpha),
-        UIColor.magenta.withAlphaComponent(alpha),
-        UIColor.orange.withAlphaComponent(alpha),
-        UIColor.brown.withAlphaComponent(alpha),
-        UIColor.blue.withAlphaComponent(alpha),
-        UIColor.lightGray.withAlphaComponent(alpha),
-        UIColor.gray.withAlphaComponent(alpha),
         ]
     fileprivate var currentColorIndex = 0
     
@@ -41,7 +29,7 @@ class ChartVC: UIViewController, PieChartDelegate {
     
     @IBOutlet weak var total2: UILabel!
     override func viewDidAppear(_ animated: Bool) {
-        
+        view.backgroundColor = backgroundColor
         //chartView.layers = [createPlainTextLayer(), createTextWithLinesLayer()]
         chartView.layers = [createPlainTextLayer()]
         chartView.delegate = self

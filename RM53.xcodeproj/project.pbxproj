@@ -45,6 +45,9 @@
 		53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */; };
 		53A4BDEF1F424FF3009063C0 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEE1F424FF3009063C0 /* ReportCell.swift */; };
 		53A4BDF11F425EBF009063C0 /* Report.json in Resources */ = {isa = PBXBuildFile; fileRef = 53A4BDF01F425EBF009063C0 /* Report.json */; };
+		53ADBBBF1F4D14E8002925FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ADBBBE1F4D14E7002925FA /* Login.storyboard */; };
+		53ADBBC11F4D150F002925FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC01F4D150F002925FA /* LoginVC.swift */; };
+		53ADBBC31F4D2125002925FA /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC21F4D2125002925FA /* ParentViewController.swift */; };
 		53C11A9C1F3A6E4000B2F246 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 53C11A9B1F3A6E4000B2F246 /* Meetings.json */; };
 		53E555D41F31294C00963DBB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E555D31F31294C00963DBB /* MapKit.framework */; };
 		53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */; };
@@ -101,6 +104,9 @@
 		53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDetailVC.swift; sourceTree = "<group>"; };
 		53A4BDEE1F424FF3009063C0 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		53A4BDF01F425EBF009063C0 /* Report.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Report.json; sourceTree = "<group>"; };
+		53ADBBBE1F4D14E7002925FA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		53ADBBC01F4D150F002925FA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		53ADBBC21F4D2125002925FA /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		53C11A9B1F3A6E4000B2F246 /* Meetings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
 		53E555D31F31294C00963DBB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
+				53ADBBBD1F4D1451002925FA /* Login */,
 				53A4BDE91F41FA33009063C0 /* Reports */,
 				532CEA2E1F3DE0B70081F9E4 /* Notifications */,
 				53FAA6C61F3CB465005669F1 /* Model */,
@@ -205,6 +212,16 @@
 				53A4BDF01F425EBF009063C0 /* Report.json */,
 			);
 			name = Reports;
+			sourceTree = "<group>";
+		};
+		53ADBBBD1F4D1451002925FA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				53ADBBBE1F4D14E7002925FA /* Login.storyboard */,
+				53ADBBC01F4D150F002925FA /* LoginVC.swift */,
+				53ADBBC21F4D2125002925FA /* ParentViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		53BE59061F183A9600A3E430 /* Relationship */ = {
@@ -377,6 +394,7 @@
 				533DFA981F1A6942004EC44F /* Company.json in Resources */,
 				5395895C1F030D2E00F8ED56 /* Main.storyboard in Resources */,
 				530A902C1F2E816200876A58 /* ContactCell.xib in Resources */,
+				53ADBBBF1F4D14E8002925FA /* Login.storyboard in Resources */,
 				536982DF1F3DEACD00FF8309 /* Notifications.json in Resources */,
 				538E8BF81F03109B0003D939 /* ChartVC.xib in Resources */,
 				53F5C46F1F3A5FAD0058CC2A /* Meetings.storyboard in Resources */,
@@ -470,6 +488,8 @@
 				53705B711F3A655900018B85 /* MeetingsTableViewController.swift in Sources */,
 				536983011F3F7BE200FF8309 /* NotifCell.swift in Sources */,
 				53F3A97C1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift in Sources */,
+				53ADBBC31F4D2125002925FA /* ParentViewController.swift in Sources */,
+				53ADBBC11F4D150F002925FA /* LoginVC.swift in Sources */,
 				536982DD1F3DE67800FF8309 /* NotificationDetailsTVC.swift in Sources */,
 				532CEA2D1F3DC3520081F9E4 /* OpportunityCell2.swift in Sources */,
 				53A4BDEB1F41FB00009063C0 /* ReportTVC.swift in Sources */,

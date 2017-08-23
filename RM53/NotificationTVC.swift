@@ -76,8 +76,8 @@ class NotificationTVC: UITableViewController {
                     targetController.pageTitle = filteredNotifs[0]
                     targetController.alertAndNotifs = catagorizedNotif[filteredNotifs[0]] as! [[String : Any]]
                 } else{
-                    targetController.pageTitle = notifs[0]
-                    targetController.alertAndNotifs = catagorizedNotif[notifs[0]] as! [[String : Any]]
+                    targetController.pageTitle = notifs[1]
+                    targetController.alertAndNotifs = catagorizedNotif[notifs[1]] as! [[String : Any]]
                 }
             }
         }

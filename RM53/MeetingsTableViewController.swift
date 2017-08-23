@@ -12,10 +12,8 @@ class MeetingsTableViewController: UITableViewController {
     var filteredMeetings = [[String:Any]]()
     var collapseDetailViewController: Bool  = true
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
         self.title = "Companies"
@@ -30,14 +28,37 @@ class MeetingsTableViewController: UITableViewController {
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
-        
     }
     
     func addItem(){
-        let alertController = UIAlertController(title: "Add Meeting", message: "Feature is not available at the moment.", preferredStyle: .alert)
+        showToast(message: "Add Meeting feature coming soon.")
+        
+        let alertController = UIAlertController(title: "", message: "Add Meeting feature coming soon.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+        //present(alertController, animated: true, completion: nil)
+    }
+    
+    func showToast(message : String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: 0, width: 210, height: 35))
+        toastLabel.layoutMargins = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        toastLabel.backgroundColor = UIColor.darkGray
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont.boldSystemFont(ofSize: 10)
+        toastLabel.text = message
+        toastLabel.numberOfLines = 0
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        //UIApplication.shared.keyWindow?.addSubview(toastLabel)
+       // toastLabel.center = (UIApplication.shared.keyWindow?.center)!
+        UIView.animate(withDuration: 4.0, delay: 0, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.3
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +77,6 @@ class MeetingsTableViewController: UITableViewController {
                 } else{
                     targetController.meetings = meetingsRepo[selectedRowIndexPath.row] as! [String:String]
                 }
-                
             } else{
                 if searchController.isActive && searchController.searchBar.text != "" {
                     targetController.meetings = filteredMeetings[0] as! [String:String]
