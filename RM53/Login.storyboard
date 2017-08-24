@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-kr-wXl">
-                                <rect key="frame" x="358.5" y="288" width="307" height="115"/>
+                                <rect key="frame" x="359" y="288" width="307" height="115"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jBT-BO-5EJ">
                                         <rect key="frame" x="0.0" y="0.0" width="307" height="57"/>
@@ -70,7 +70,7 @@
                                 </constraints>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relationship Management a Fifth Thid BETTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ6-05-94q">
-                                <rect key="frame" x="358.5" y="180" width="307" height="60"/>
+                                <rect key="frame" x="359" y="180" width="307" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.1058823529" green="0.28235294119999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,13 +87,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017, Fifth Third Bank, Member FDIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-cs-saX">
-                                <rect key="frame" x="0.0" y="727" width="1024" height="20.5"/>
+                                <rect key="frame" x="0.0" y="727.5" width="1024" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.094117647060000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R8-9w-9q5">
-                                <rect key="frame" x="493" y="410.5" width="172" height="50"/>
+                                <rect key="frame" x="494" y="411" width="172" height="50"/>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.28235294117647058" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Rh2-Sm-J8y"/>
@@ -112,9 +112,11 @@
                                     <action selector="login:" destination="E7B-6c-r7c" eventType="touchUpInside" id="Asr-Ol-R3i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy | Support " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-oR-s9i">
-                                <rect key="frame" x="283" y="698" width="410" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy | Support " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-oR-s9i">
+                                <rect key="frame" x="283" y="699" width="410" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="410" id="SFe-VA-LGu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.094117647060000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +138,8 @@
                             <constraint firstItem="jBT-BO-5EJ" firstAttribute="leading" secondItem="uJ6-05-94q" secondAttribute="leading" id="B4H-4d-21D"/>
                             <constraint firstItem="YfB-kr-wXl" firstAttribute="centerX" secondItem="ry2-qx-DQs" secondAttribute="centerX" id="GAb-zb-biD"/>
                             <constraint firstItem="jBT-BO-5EJ" firstAttribute="trailing" secondItem="uJ6-05-94q" secondAttribute="trailing" id="HeW-Z8-xMV"/>
+                            <constraint firstItem="gI9-oR-s9i" firstAttribute="leading" secondItem="ry2-qx-DQs" secondAttribute="leading" constant="283" id="Lbs-gK-txb"/>
+                            <constraint firstItem="f7o-cs-saX" firstAttribute="top" secondItem="gI9-oR-s9i" secondAttribute="bottom" constant="8" symbolic="YES" id="MUi-oY-YYb"/>
                             <constraint firstItem="eQa-xV-kqA" firstAttribute="trailing" secondItem="jBT-BO-5EJ" secondAttribute="trailing" id="YIZ-fl-j7b"/>
                             <constraint firstItem="HsX-2a-r3p" firstAttribute="centerX" secondItem="ry2-qx-DQs" secondAttribute="centerX" id="bu4-60-QTZ"/>
                             <constraint firstItem="f7o-cs-saX" firstAttribute="leading" secondItem="ry2-qx-DQs" secondAttribute="leading" id="buA-Tg-SGB"/>
@@ -144,6 +148,7 @@
                             <constraint firstItem="pFt-Cl-nMh" firstAttribute="top" secondItem="Vdt-Zu-t0p" secondAttribute="bottom" constant="-20" id="erO-aJ-HZg"/>
                             <constraint firstItem="YfB-kr-wXl" firstAttribute="height" secondItem="ry2-qx-DQs" secondAttribute="height" multiplier="0.15" id="gsb-ME-Np7"/>
                             <constraint firstItem="pFt-Cl-nMh" firstAttribute="leading" secondItem="ry2-qx-DQs" secondAttribute="leading" id="lQM-ga-v84"/>
+                            <constraint firstAttribute="bottom" secondItem="f7o-cs-saX" secondAttribute="bottom" constant="20" symbolic="YES" id="oYn-n6-88g"/>
                             <constraint firstItem="6mB-cH-0eI" firstAttribute="top" secondItem="pFt-Cl-nMh" secondAttribute="bottom" id="pYf-3i-vMb"/>
                             <constraint firstItem="5R8-9w-9q5" firstAttribute="top" secondItem="7hM-Bp-kix" secondAttribute="bottom" constant="7.5" id="sqb-v8-x0p"/>
                             <constraint firstItem="HsX-2a-r3p" firstAttribute="centerY" secondItem="ry2-qx-DQs" secondAttribute="centerY" id="ucE-jO-nD6"/>
@@ -163,6 +168,11 @@
                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pFt-Cl-nMh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="activity" destination="HsX-2a-r3p" id="fyO-2g-ahi"/>
