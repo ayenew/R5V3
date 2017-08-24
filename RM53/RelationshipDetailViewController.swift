@@ -19,9 +19,11 @@ class RelationshipDetailViewController: UIViewController {
     @IBOutlet weak var smallBell: UIImageView!
     @IBOutlet weak var smallNotif: UIImageView!
     
+    @IBOutlet weak var phoneImage: UIImageView!
     @IBOutlet weak var smallNotifValue: UILabel!
     @IBOutlet weak var smallBellValue: UILabel!
     @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var addressIcon: UIImageView!
     var relationship = [String:Any]()
     var name: String = ""
     override func viewDidLoad() {
@@ -32,6 +34,7 @@ class RelationshipDetailViewController: UIViewController {
         let chartView:ChartView = chartVC.view as! ChartView
         chartView.frame = addressView.frame
         chartView.dropShadow()
+        addressIcon.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         navigationItem.title = (relationship["name"] as! String)
         primaryContact.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         let contact = relationship["contact"] as! [[String:String]]
@@ -46,6 +49,7 @@ class RelationshipDetailViewController: UIViewController {
         self.address.text = (relationship["address"] as! String)
         let meeting = relationship["meeting"] as! Int
         let notification = relationship["notification"] as! Int
+        phoneImage.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         if meeting  > 0 && notification > 0 {
             smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallBell.isHidden = false

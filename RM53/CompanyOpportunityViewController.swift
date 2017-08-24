@@ -35,7 +35,7 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell: OpportunityCell2 = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1) as! OpportunityCell2
-            cell.relationship.text = opportunities[indexPath.row]["name"]
+            //cell.relationship.text = opportunities[indexPath.row]["name"]
             cell.targetDate.text = opportunities[indexPath.row]["targetDate"]
             cell.salesStage.text = opportunities[indexPath.row]["salesStage"]
             cell.balance.text = opportunities[indexPath.row]["balance"]

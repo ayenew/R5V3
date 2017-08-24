@@ -40,6 +40,7 @@
 		5395895C1F030D2E00F8ED56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395895A1F030D2E00F8ED56 /* Main.storyboard */; };
 		5395895E1F030D2F00F8ED56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5395895D1F030D2F00F8ED56 /* Assets.xcassets */; };
 		539589611F030D2F00F8ED56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395895F1F030D2F00F8ED56 /* LaunchScreen.storyboard */; };
+		539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD51C1F4F2E110059E309 /* Gradient.swift */; };
 		53A4BDE81F41F888009063C0 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A4BDE61F41F888009063C0 /* Report.storyboard */; };
 		53A4BDEB1F41FB00009063C0 /* ReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEA1F41FB00009063C0 /* ReportTVC.swift */; };
 		53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */; };
@@ -48,6 +49,7 @@
 		53ADBBBF1F4D14E8002925FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ADBBBE1F4D14E7002925FA /* Login.storyboard */; };
 		53ADBBC11F4D150F002925FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC01F4D150F002925FA /* LoginVC.swift */; };
 		53ADBBC31F4D2125002925FA /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC21F4D2125002925FA /* ParentViewController.swift */; };
+		53ADBBC51F4DB0B5002925FA /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC41F4DB0B5002925FA /* TextField.swift */; };
 		53C11A9C1F3A6E4000B2F246 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 53C11A9B1F3A6E4000B2F246 /* Meetings.json */; };
 		53E555D41F31294C00963DBB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E555D31F31294C00963DBB /* MapKit.framework */; };
 		53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */; };
@@ -99,6 +101,7 @@
 		5395895D1F030D2F00F8ED56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539589601F030D2F00F8ED56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539589621F030D2F00F8ED56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		539DD51C1F4F2E110059E309 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		53A4BDE71F41F888009063C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Report.storyboard; sourceTree = "<group>"; };
 		53A4BDEA1F41FB00009063C0 /* ReportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
 		53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDetailVC.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		53ADBBBE1F4D14E7002925FA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		53ADBBC01F4D150F002925FA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		53ADBBC21F4D2125002925FA /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		53ADBBC41F4DB0B5002925FA /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		53C11A9B1F3A6E4000B2F246 /* Meetings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
 		53E555D31F31294C00963DBB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				53ADBBBE1F4D14E7002925FA /* Login.storyboard */,
 				53ADBBC01F4D150F002925FA /* LoginVC.swift */,
 				53ADBBC21F4D2125002925FA /* ParentViewController.swift */,
+				53ADBBC41F4DB0B5002925FA /* TextField.swift */,
+				539DD51C1F4F2E110059E309 /* Gradient.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */,
 				534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */,
 				53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */,
+				539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */,
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
 				538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */,
@@ -485,6 +492,7 @@
 				5320DAF91F3BF620005D8E99 /* MeetingDetailTVC.swift in Sources */,
 				536983031F3F9A7F00FF8309 /* DetailViewTVC.swift in Sources */,
 				538E8C261F05EF7C0003D939 /* Extensions.swift in Sources */,
+				53ADBBC51F4DB0B5002925FA /* TextField.swift in Sources */,
 				53705B711F3A655900018B85 /* MeetingsTableViewController.swift in Sources */,
 				536983011F3F7BE200FF8309 /* NotifCell.swift in Sources */,
 				53F3A97C1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift in Sources */,

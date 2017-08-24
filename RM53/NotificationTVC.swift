@@ -23,10 +23,10 @@ class NotificationTVC: UITableViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         //getSections()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
-        let vc = tabbbarController.viewControllers?[3]
-        vc?.tabBarItem.badgeValue = nil
+       // let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //let tabbbarController = appDelegate.window!.rootViewController as! UITabBarController
+        //let vc = tabbbarController.viewControllers?[3]
+        //vc?.tabBarItem.badgeValue = nil
         catagorizedNotif = alertNotifRepo.groupBy(key: "entity") 
         notifs = Array(catagorizedNotif.keys)
         

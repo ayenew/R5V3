@@ -135,6 +135,7 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
             try! startRecording()
             //recordButton.setTitle("Stop recording", for: [])
             self.recordButton.setImage(UIImage(named: "mute1"), for: [])
+            self.recordButton.tintColor = UIColor.red
         }
     }
     

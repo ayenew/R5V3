@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X6a-G2-wIV">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80048694350000005" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +72,7 @@
         <scene sceneID="Ret-AZ-3fr">
             <objects>
                 <splitViewController id="IKO-NW-Ey4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notification" image="notifIcon" badgeValue="3" id="fL6-OE-zlX"/>
+                    <tabBarItem key="tabBarItem" title="Notification" image="notifIcon" badgeValue="5" id="fL6-OE-zlX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="iVH-bL-PCS" kind="relationship" relationship="masterViewController" id="f7S-Gh-iU8"/>
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2P4-jv-7hF" id="TWv-83-8u3">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="680-qv-Bba">

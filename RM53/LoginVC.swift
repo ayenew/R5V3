@@ -9,11 +9,13 @@
 import UIKit
 
 class LoginVC: UIViewController, UITextFieldDelegate {
-    let user = "rm001"
-    let pass = "rm001"
-    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    let user = "rm53"
+    let pass = "rm53"
+    @IBOutlet weak var userName: TextField!
 
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var password: TextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKB))
@@ -35,19 +37,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    
     func loadDashboard(){
         userName.text = user
         password.text = pass
         if userName.text == user && password.text == pass {
-            let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-            activityView.center = self.view.center
-            activityView.hidesWhenStopped = false
-            activityView.startAnimating()
-            //sleep(10)
-            activityView.stopAnimating()
-            self.view.addSubview(activityView)
+            activity.alpha = 1
+            activity.activityIndicatorViewStyle = .gray
+            activity.hidesWhenStopped = true
+            activity.startAnimating()
+            sleep(1)
+            activity.stopAnimating()
+            activity.alpha = 0
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let dashboard = sb.instantiateViewController(withIdentifier: "Main") as! UITabBarController
             UIApplication.shared.keyWindow?.rootViewController = dashboard

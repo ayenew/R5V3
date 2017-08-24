@@ -69,8 +69,6 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
                 
                 self.tableView.reloadData()
             }
-            
-           
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
@@ -126,11 +124,18 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OverViewCell
-        let item = contacts[indexPath.row]
-        cell.firstName.text = item["firstName"]!
-        cell.lastName.text = item["lastName"]!
-        cell.cellPhone.text = "Cell: \(item["cellPhone"]!)"
-        cell.workPhone.text = "Work: \(item["secondPhone"]!)"
+        if indexPath.row == 0 {
+            let item = contacts[indexPath.row]
+            cell.lastName.text = "\(item["firstName"]!) \(item["lastName"]!)"
+            cell.lastName.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
+            cell.cellPhone.text = "Cell: \(item["cellPhone"]!)   Work: \(item["secondPhone"]!)"
+            cell.cellPhone.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
+        } else {
+            let item = contacts[indexPath.row]
+            cell.lastName.text = "\(item["firstName"]!) \(item["lastName"]!)"
+            cell.cellPhone.text = "Cell: \(item["cellPhone"]!)   Work: \(item["secondPhone"]!)"
+        }
+        
         
         return cell
     }

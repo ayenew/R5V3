@@ -10,7 +10,7 @@ import UIKit
 
 class OpportunityVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities : [[String:String]] = [
-        ["relationship":"odw Logistic Relationship","targetDate":"07/30/17", "salesStage":"Opportunity", "balance":"$7,500"],
+        ["relationship":"ODW Logistic Relationship","targetDate":"07/30/17", "salesStage":"Opportunity", "balance":"$7,500"],
         ["relationship":"Advanced Drainage Systems Inc.","targetDate":"06/30/17", "salesStage":"Opportunity", "balance":"$17,500"],
         ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/17", "salesStage":"Pending Action", "balance":"$117,500"],
         ["relationship":"Bancinsurance Corporation Ralationship","targetDate":"08/30/17", "salesStage":"Opportunity", "balance":"$117,500"],
