@@ -101,19 +101,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Pasword?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50r-fQ-CRo">
                                 <rect key="frame" x="333" y="393" width="128.5" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.094117647060000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relation Management a Fifth Third BETTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L9-k1-sWi">
-                                <rect key="frame" x="311" y="195" width="402" height="22"/>
+                                <rect key="frame" x="321.5" y="195" width="381.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="siC-hD-lKj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.094117647060000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" red="0.1058823529" green="0.28235294119999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
+                                <color key="shadowColor" red="0.83460253480000002" green="0.900364995" blue="0.98426395649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowColor">
                                         <integer key="value" value="5"/>
@@ -162,13 +162,13 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.83460253480000002" green="0.900364995" blue="0.98426395649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.10588235294117647" green="0.28235294117647058" blue="0.58039215686274503" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.83460253480000002" green="0.900364995" blue="0.98426395649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
-                                <color key="value" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">

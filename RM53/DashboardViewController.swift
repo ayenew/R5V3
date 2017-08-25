@@ -41,13 +41,16 @@ class DashboardViewController: UIViewController {
         rmOpportunityView.frame = CGRect(x: self.view.frame.width/3, y: self.view.frame.height/2 + 48, width: 2 * self.view.frame.width/3-8, height: self.view.frame.height/2 - 47)
         notificationView.frame = CGRect(x: 2 * self.view.frame.width/3, y: 45, width: self.view.frame.width/3-4, height: self.view.frame.height/2-2)
         
-        
-        let chartVC = ChartVC(nibName:"ChartVC",bundle: nil) 
-        let chartView:ChartView = chartVC.view as! ChartView
-        chartView.frame = rmChartBookChart.frame
+        DispatchQueue.main.async {
+            let chartVC = ChartVC(nibName:"ChartVC",bundle: nil)
+            let chartView:ChartView = chartVC.view as! ChartView
+            chartView.frame = self.rmChartBookChart.frame
+            self.rmChartBookChart.addSubview(chartView)
+        }
+
         //chartView.dropShadow()
         
-        rmChartBookChart.addSubview(chartView)
+        
         rmOpportunityView.addSubview(opportunityContainer)
         //rmOpportunityView.dropShadow()
         //self.alertView.dropShadow()
@@ -61,14 +64,14 @@ class DashboardViewController: UIViewController {
         UIApplication.shared.keyWindow?.rootViewController = login
     }
     
-    @IBAction func swap(_ sender: UIBarButtonItem) {
-        exit()
-    }
-    func exit() {
-        let sb = UIStoryboard(name: "Other", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Other") as! UITabBarController
-        UIApplication.shared.keyWindow?.rootViewController = vc
-    }
+//    @IBAction func swap(_ sender: UIBarButtonItem) {
+//        exit()
+//    }
+//    func exit() {
+//        let sb = UIStoryboard(name: "Other", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "Other") as! UITabBarController
+//        UIApplication.shared.keyWindow?.rootViewController = vc
+//    }
     
 //    @IBAction func switchApp(_ sender: Any) {
 //        let sb = UIStoryboard(name: "Other", bundle: nil)

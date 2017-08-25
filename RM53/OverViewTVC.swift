@@ -166,8 +166,13 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         let itemToMove = contacts[fromIndexPath.row]
         contacts.remove(at: fromIndexPath.row)
         contacts.insert(itemToMove, at: to.row)
-        let newPrimarycontact:[String:String] = ["firstName": contacts[0]["firstName"]!,"lastName": contacts[0]["lastName"]!,"cellPhone": contacts[0]["cellPhone"]!,"secondPhone": contacts[0]["secondPhone"]!]
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil, userInfo: newPrimarycontact)
+        if to.row == 0 {
+            let newPrimarycontact:[String:String] = ["firstName": contacts[0]["firstName"]!,"lastName": contacts[0]["lastName"]!,"cellPhone": contacts[0]["cellPhone"]!,"secondPhone": contacts[0]["secondPhone"]!]
+            NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil, userInfo: newPrimarycontact)
+            let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! OverViewCell
+            cell.lastName.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
+            cell.cellPhone.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
+        }
     }
     
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

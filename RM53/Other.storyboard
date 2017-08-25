@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard03" translatesAutoresizingMaskIntoConstraints="NO" id="Tru-Fc-14k">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard03" translatesAutoresizingMaskIntoConstraints="NO" id="Tru-Fc-14k">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tru-Fc-14k" firstAttribute="leading" secondItem="zcr-mO-uNS" secondAttribute="leading" id="08l-Rx-fqt"/>
                             <constraint firstItem="t4x-48-zVq" firstAttribute="top" secondItem="Tru-Fc-14k" secondAttribute="bottom" id="8ml-8a-7xN"/>
@@ -51,12 +51,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard04" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Ay-PlF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard04" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Ay-PlF">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
                                 <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Kxg-Ay-PlF" secondAttribute="trailing" id="OC6-1u-1Mt"/>
                             <constraint firstItem="Kxg-Ay-PlF" firstAttribute="top" secondItem="WFK-wf-vk7" secondAttribute="bottom" id="Uv5-2t-nGB"/>
@@ -82,12 +82,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReportSS" translatesAutoresizingMaskIntoConstraints="NO" id="gFS-bh-O45">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReportSS" translatesAutoresizingMaskIntoConstraints="NO" id="gFS-bh-O45">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tkr-bG-MLi" firstAttribute="top" secondItem="gFS-bh-O45" secondAttribute="bottom" id="Oxg-bP-er4"/>
                             <constraint firstItem="gFS-bh-O45" firstAttribute="top" secondItem="IxN-IB-D0q" secondAttribute="bottom" id="dsR-Cd-Hoj"/>
@@ -113,12 +113,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dashboard01" translatesAutoresizingMaskIntoConstraints="NO" id="k55-Fv-vao">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dashboard01" translatesAutoresizingMaskIntoConstraints="NO" id="k55-Fv-vao">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EjT-v6-Pms"/>
                 </viewController>
@@ -203,11 +204,11 @@
             </objects>
             <point key="canvasLocation" x="657" y="516"/>
         </scene>
-        <!--Research-->
+        <!--Product-->
         <scene sceneID="ieo-YW-aOe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2c-sl-RHi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Research" image="padnote" id="yz2-HR-HE7"/>
+                    <tabBarItem key="tabBarItem" title="Product" image="padnote" id="yz2-HR-HE7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DSt-Ea-bDt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

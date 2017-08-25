@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RelationshipDetailViewController: ParentVC {
+class RelationshipDetailViewController: ParentRsp {
     @IBOutlet var addressView: UIView!
     @IBOutlet var chartView: UIView!
     @IBOutlet weak var containerView: UIView!

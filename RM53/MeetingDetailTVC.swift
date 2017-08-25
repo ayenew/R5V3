@@ -58,8 +58,8 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
         saveButton.isEnabled = false
         editButton.isEnabled = true
         callReportLbl.isEditable = false
-        editButton.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
-        saveButton.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        editButton.tintColor = UIColor.white
+        saveButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItems = [editButton,saveButton]
         self.tableView.tableFooterView = UIView()
         self.tableView.isScrollEnabled = true

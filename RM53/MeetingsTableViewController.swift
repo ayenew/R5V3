@@ -21,7 +21,7 @@ class MeetingsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         self.navigationItem.rightBarButtonItems = [addButton]
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
