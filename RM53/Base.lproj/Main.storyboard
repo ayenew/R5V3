@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,13 +28,22 @@
                                 <color key="backgroundColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Book Summary" id="OfW-wr-FcN">
-                                        <barButtonItem key="rightBarButtonItem" image="logout-2" id="5bg-o9-PEr">
-                                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-32" maxY="0.0"/>
-                                            <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="logOut:" destination="9pv-A4-QxB" id="URg-Hl-Jx8"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem image="logout-2" id="5bg-o9-PEr">
+                                                <inset key="imageInsets" minX="-50" minY="0.0" maxX="-50" maxY="0.0"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="logOut:" destination="9pv-A4-QxB" id="URg-Hl-Jx8"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem image="swap" id="V1a-7a-fA4">
+                                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-21" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="swap:" destination="9pv-A4-QxB" id="c8X-Dk-PAw"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem id="nhn-zA-q7k"/>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -578,5 +588,6 @@
     <resources>
         <image name="dashboard" width="25" height="25"/>
         <image name="logout-2" width="32" height="32"/>
+        <image name="swap" width="32" height="32"/>
     </resources>
 </document>

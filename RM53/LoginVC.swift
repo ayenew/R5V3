@@ -41,13 +41,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         userName.text = user
         password.text = pass
         if userName.text == user && password.text == pass {
-            activity.alpha = 1
-            activity.activityIndicatorViewStyle = .gray
-            activity.hidesWhenStopped = true
-            activity.startAnimating()
-            sleep(1)
-            activity.stopAnimating()
-            activity.alpha = 0
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let dashboard = sb.instantiateViewController(withIdentifier: "Main") as! UITabBarController
             UIApplication.shared.keyWindow?.rootViewController = dashboard

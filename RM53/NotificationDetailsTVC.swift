@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationDetailsTVC: UITableViewController {
+class NotificationDetailsTVC: ParentTVC {
     var catagorizedDetails = [String:Any]()
     var notifs = [String]()
     @IBOutlet weak var sectionTitle: UILabel!

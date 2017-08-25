@@ -11,7 +11,7 @@ import UIKit
 
 class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var opportunities = [[String:String]]()
-    
+    var selectedIndex = Int()
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier1 = "OpportunityCell2"
     override func viewDidLoad() {
@@ -26,8 +26,17 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)]
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
        // self.tableView.tableFooterView = UIView()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateOpportunity), name: NSNotification.Name.init(rawValue: "UpdateOpportunity"), object: nil)
     }
     
+    func updateOpportunity(_ notification: NSNotification) {
+        if let target = notification.userInfo as? [String:String] {
+            self.opportunities[selectedIndex]["targetDate"] = target["targetDate"]
+            self.opportunities[selectedIndex]["salesStage"] = target["salesTarget"]
+            self.opportunities[selectedIndex]["balance"] = target["balance"]
+        }
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return opportunities.count
@@ -45,11 +54,13 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 0 {
+            selectedIndex = indexPath.row
             let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
                 let editableItem1 = self.opportunities[indexPath.row]["targetDate"]
                 let editableItem2 = self.opportunities[indexPath.row]["salesStage"]
                 let editableItem3 = self.opportunities[indexPath.row]["balance"]
-                self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
+                //self.editButtonTapped(text1: editableItem1!,text2: editableItem2! ,text3: editableItem3!,index:indexPath.row)
+                self.openEditWindow(indexPath:indexPath, editableItem1: editableItem1!, editableItem2: editableItem2!, editableItem3: editableItem3!)
             }
             edit.backgroundColor = UIColor.orange
             
@@ -121,6 +132,26 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
         } else{
             return true
         }
+    }
+    
+    func openEditWindow(indexPath:IndexPath, editableItem1: String, editableItem2: String, editableItem3: String){
+        let fromRect:CGRect = self.tableView.rectForRow(at: indexPath)
+        let storyboard = UIStoryboard(name: "Opportunity", bundle: nil)
+        let popoverVC = storyboard.instantiateViewController(withIdentifier: "popover") as! OpportunityDataEntryVC
+        
+        popoverVC.targetDate = editableItem1
+        popoverVC.salesStage = editableItem2
+        popoverVC.balance = editableItem3
+        
+        popoverVC.modalPresentationStyle = .popover
+        popoverVC.modalTransitionStyle = .crossDissolve
+        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.6, height: 400)
+        present(popoverVC, animated: true, completion: nil)
+        let popoverController = popoverVC.popoverPresentationController
+        popoverController?.backgroundColor = UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)
+        popoverController!.sourceView = self.view
+        popoverController!.sourceRect = fromRect
+        popoverController!.permittedArrowDirections = .any
     }
     
 }

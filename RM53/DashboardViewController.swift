@@ -22,8 +22,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet var rmChartBookChart: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let logout = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
-        self.navigationItem.setRightBarButton(logout, animated: true)
+        //let logout = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
+        //let switchBtn = UIBarButtonItem(image: UIImage(named: "swap"), style: .done, target: self, action: #selector(exit))
+        //self.navigationItem.rightBarButtonItems = [logout,switchBtn]
+        //self.navigationItem.setRightBarButton(logout, animated: true)
         self.view.backgroundColor = UIColor.white
         //self.mainBar.barTintColor = UIColor(red: 33/255.0, green: 61/255.0, blue: 159/255.0, alpha: 1)
         self.mainBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
@@ -59,6 +61,20 @@ class DashboardViewController: UIViewController {
         UIApplication.shared.keyWindow?.rootViewController = login
     }
     
+    @IBAction func swap(_ sender: UIBarButtonItem) {
+        exit()
+    }
+    func exit() {
+        let sb = UIStoryboard(name: "Other", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Other") as! UITabBarController
+        UIApplication.shared.keyWindow?.rootViewController = vc
+    }
+    
+//    @IBAction func switchApp(_ sender: Any) {
+//        let sb = UIStoryboard(name: "Other", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "Other") as! UITabBarController
+//        UIApplication.shared.keyWindow?.rootViewController = vc
+//    }
     
     @IBAction func goToNotificationPressed(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

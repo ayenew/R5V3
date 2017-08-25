@@ -41,6 +41,14 @@
 		5395895E1F030D2F00F8ED56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5395895D1F030D2F00F8ED56 /* Assets.xcassets */; };
 		539589611F030D2F00F8ED56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395895F1F030D2F00F8ED56 /* LaunchScreen.storyboard */; };
 		539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD51C1F4F2E110059E309 /* Gradient.swift */; };
+		539DD5201F4F77230059E309 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539DD51F1F4F77230059E309 /* Other.storyboard */; };
+		539DD5221F4F7B890059E309 /* ODashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD5211F4F7B890059E309 /* ODashboardVC.swift */; };
+		539DD5241F4F7BA20059E309 /* OMeetingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD5231F4F7BA20059E309 /* OMeetingVC.swift */; };
+		539DD5261F4F7BC00059E309 /* ONotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD5251F4F7BC00059E309 /* ONotificationVC.swift */; };
+		539DD5281F4F7BD20059E309 /* OResearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD5271F4F7BD20059E309 /* OResearchVC.swift */; };
+		539DD52A1F4F7BFB0059E309 /* OParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD5291F4F7BFB0059E309 /* OParentVC.swift */; };
+		539DD52D1F4F83840059E309 /* ParentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD52C1F4F83840059E309 /* ParentTVC.swift */; };
+		539DD52F1F4F849D0059E309 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DD52E1F4F849D0059E309 /* ParentVC.swift */; };
 		53A4BDE81F41F888009063C0 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A4BDE61F41F888009063C0 /* Report.storyboard */; };
 		53A4BDEB1F41FB00009063C0 /* ReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEA1F41FB00009063C0 /* ReportTVC.swift */; };
 		53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */; };
@@ -102,6 +110,14 @@
 		539589601F030D2F00F8ED56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539589621F030D2F00F8ED56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539DD51C1F4F2E110059E309 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		539DD51F1F4F77230059E309 /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
+		539DD5211F4F7B890059E309 /* ODashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODashboardVC.swift; sourceTree = "<group>"; };
+		539DD5231F4F7BA20059E309 /* OMeetingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMeetingVC.swift; sourceTree = "<group>"; };
+		539DD5251F4F7BC00059E309 /* ONotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONotificationVC.swift; sourceTree = "<group>"; };
+		539DD5271F4F7BD20059E309 /* OResearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OResearchVC.swift; sourceTree = "<group>"; };
+		539DD5291F4F7BFB0059E309 /* OParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OParentVC.swift; sourceTree = "<group>"; };
+		539DD52C1F4F83840059E309 /* ParentTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTVC.swift; sourceTree = "<group>"; };
+		539DD52E1F4F849D0059E309 /* ParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		53A4BDE71F41F888009063C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Report.storyboard; sourceTree = "<group>"; };
 		53A4BDEA1F41FB00009063C0 /* ReportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
 		53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDetailVC.swift; sourceTree = "<group>"; };
@@ -185,6 +201,8 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
+				539DD52B1F4F836D0059E309 /* General */,
+				539DD51E1F4F76B60059E309 /* SpecificCompany */,
 				53ADBBBD1F4D1451002925FA /* Login */,
 				53A4BDE91F41FA33009063C0 /* Reports */,
 				532CEA2E1F3DE0B70081F9E4 /* Notifications */,
@@ -204,6 +222,28 @@
 				5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */,
 			);
 			path = RM53;
+			sourceTree = "<group>";
+		};
+		539DD51E1F4F76B60059E309 /* SpecificCompany */ = {
+			isa = PBXGroup;
+			children = (
+				539DD51F1F4F77230059E309 /* Other.storyboard */,
+				539DD5211F4F7B890059E309 /* ODashboardVC.swift */,
+				539DD5231F4F7BA20059E309 /* OMeetingVC.swift */,
+				539DD5251F4F7BC00059E309 /* ONotificationVC.swift */,
+				539DD5271F4F7BD20059E309 /* OResearchVC.swift */,
+				539DD5291F4F7BFB0059E309 /* OParentVC.swift */,
+			);
+			name = SpecificCompany;
+			sourceTree = "<group>";
+		};
+		539DD52B1F4F836D0059E309 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				539DD52C1F4F83840059E309 /* ParentTVC.swift */,
+				539DD52E1F4F849D0059E309 /* ParentVC.swift */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 		53A4BDE91F41FA33009063C0 /* Reports */ = {
@@ -408,6 +448,7 @@
 				532CEA2C1F3DC3520081F9E4 /* OpportunityCell2.xib in Resources */,
 				53FAA6C51F3CB03E005669F1 /* Notification.storyboard in Resources */,
 				53A4BDE81F41F888009063C0 /* Report.storyboard in Resources */,
+				539DD5201F4F77230059E309 /* Other.storyboard in Resources */,
 				53A4BDF11F425EBF009063C0 /* Report.json in Resources */,
 				534401701F44DA9D00725B10 /* Opportunity.storyboard in Resources */,
 			);
@@ -482,6 +523,7 @@
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
 				538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */,
+				539DD52D1F4F83840059E309 /* ParentTVC.swift in Sources */,
 				538E8BFA1F0313010003D939 /* ChartView.swift in Sources */,
 				530A902B1F2E816200876A58 /* ContactCell.swift in Sources */,
 				538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */,
@@ -497,11 +539,17 @@
 				536983011F3F7BE200FF8309 /* NotifCell.swift in Sources */,
 				53F3A97C1F2CFE1600B8C5CD /* CompanyOpportunityViewController.swift in Sources */,
 				53ADBBC31F4D2125002925FA /* ParentViewController.swift in Sources */,
+				539DD5241F4F7BA20059E309 /* OMeetingVC.swift in Sources */,
 				53ADBBC11F4D150F002925FA /* LoginVC.swift in Sources */,
 				536982DD1F3DE67800FF8309 /* NotificationDetailsTVC.swift in Sources */,
 				532CEA2D1F3DC3520081F9E4 /* OpportunityCell2.swift in Sources */,
+				539DD5261F4F7BC00059E309 /* ONotificationVC.swift in Sources */,
 				53A4BDEB1F41FB00009063C0 /* ReportTVC.swift in Sources */,
 				533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */,
+				539DD52A1F4F7BFB0059E309 /* OParentVC.swift in Sources */,
+				539DD52F1F4F849D0059E309 /* ParentVC.swift in Sources */,
+				539DD5281F4F7BD20059E309 /* OResearchVC.swift in Sources */,
+				539DD5221F4F7B890059E309 /* ODashboardVC.swift in Sources */,
 				53FAA6C81F3D0667005669F1 /* RelationshipCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,7 +694,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V3;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -661,7 +709,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V3;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53.V4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

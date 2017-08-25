@@ -9,7 +9,7 @@
 import UIKit
 import Speech
 
-class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
+class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
     
     @IBOutlet weak var companyIcon: UIImageView!
     
@@ -58,7 +58,9 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         saveButton.isEnabled = false
         editButton.isEnabled = true
         callReportLbl.isEditable = false
-        self.navigationItem.rightBarButtonItems = [editButton,saveButton]
+        editButton.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        saveButton.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        self.navigationItem.leftBarButtonItems = [editButton,saveButton]
         self.tableView.tableFooterView = UIView()
         self.tableView.isScrollEnabled = true
         companyIcon.tintColor = tintColor
@@ -130,11 +132,11 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
             //recordButton.setTitle("Stopping", for: .disabled)
-            self.recordButton.setImage(UIImage(named: "microphone1"), for: .disabled)
+            self.recordButton.setImage(UIImage(named: "mute1"), for: .disabled)
         } else {
             try! startRecording()
             //recordButton.setTitle("Stop recording", for: [])
-            self.recordButton.setImage(UIImage(named: "mute1"), for: [])
+            self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
             self.recordButton.tintColor = UIColor.red
         }
     }
@@ -180,7 +182,9 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
                 self.recognitionTask = nil
                 
                 self.recordButton.isEnabled = true
-                self.recordButton.setImage(UIImage(named: "microphone1"), for: .normal)
+                self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
+                self.recordButton.tintColor = UIColor(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+                self.recordButton.layer.removeAllAnimations()
                // self.recordButton.setTitle("Start Recording", for: [])
             }
         }
@@ -195,7 +199,19 @@ class MeetingDetailTVC: UITableViewController, UITextViewDelegate {
         try audioEngine.start()
         if callReportLbl.text == "" {
             callReportLbl.text = "(Started recording)"
+            animate()
         }
+    }
+    
+    func animate(){
+        let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+        pulseAnimation.duration = 1
+        pulseAnimation.fromValue = 0
+        pulseAnimation.toValue = 1
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = .greatestFiniteMagnitude
+        self.recordButton.layer.add(pulseAnimation, forKey: "animateOpacity")
     }
 
 }
@@ -204,10 +220,10 @@ extension  MeetingDetailTVC: SFSpeechRecognizerDelegate {
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             recordButton.isEnabled = true
-            recordButton.setTitle("Start Recording", for: [])
+            //recordButton.setTitle("Start Recording", for: [])
         } else {
             recordButton.isEnabled = false
-            recordButton.setTitle("Recognition not available", for: .disabled)
+            //recordButton.setTitle("Recognition not available", for: .disabled)
         }
     }
 }
