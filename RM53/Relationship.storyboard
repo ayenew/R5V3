@@ -79,24 +79,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-if-aGx">
-                                <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                                <rect key="frame" x="0.0" y="64" width="702.5" height="704"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEv-On-9sa">
-                                        <rect key="frame" x="352" y="-1" width="351" height="291"/>
+                                        <rect key="frame" x="352" y="-1" width="351.5" height="291"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="rkE-FL-vlP" kind="embed" identifier="chartVC" id="sjF-Qf-JXw"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzi-zI-z5v">
-                                        <rect key="frame" x="0.0" y="293" width="703" height="204"/>
+                                        <rect key="frame" x="0.0" y="293" width="702.5" height="204"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="fEb-Rk-GDd" kind="embed" identifier="ProductVC" id="rRD-Kp-UUz"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7u-rc-pGw">
-                                        <rect key="frame" x="0.0" y="500" width="703" height="204"/>
+                                        <rect key="frame" x="0.0" y="500" width="702.5" height="204"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="OzL-0W-8Wo" kind="embed" identifier="OpportunityVC" id="0zN-bM-Wbn"/>
@@ -310,20 +310,20 @@
             <objects>
                 <tableViewController id="ryU-hn-q5F" customClass="OverViewTVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iiW-AW-awc">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="204"/>
+                        <rect key="frame" x="0.0" y="0.0" width="702.5" height="204"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ptN-q8-0nU">
-                            <rect key="frame" x="0.0" y="0.0" width="703" height="2"/>
+                            <rect key="frame" x="0.0" y="0.0" width="702.5" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="cpT-g6-gQx">
-                                <rect key="frame" x="0.0" y="30" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="30" width="702.5" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpT-g6-gQx" id="meF-iL-c56">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="702.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -348,7 +348,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZFi-Ta-iPt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UEz-Hy-k3i">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="204"/>
+                        <rect key="frame" x="0.0" y="0.0" width="702.5" height="204"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CmD-RY-VNs">
@@ -356,10 +356,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OpportunityCell2" id="Ia9-az-fcy" customClass="OpportunityCell2" customModule="RM53" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="702" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="702.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ia9-az-fcy" id="VYy-bj-33F">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -392,7 +392,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KRl-Vh-hPN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WQa-PI-6Gx">
-                        <rect key="frame" x="0.0" y="0.0" width="351" height="291"/>
+                        <rect key="frame" x="0.0" y="0.0" width="351.5" height="291"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-Gz-uaN" customClass="PieChart" customModule="PieCharts">

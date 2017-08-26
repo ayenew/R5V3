@@ -29,32 +29,42 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-kr-wXl">
-                                <rect key="frame" x="333" y="241" width="358" height="115"/>
+                                <rect key="frame" x="333" y="241" width="358" height="100"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jBT-BO-5EJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="57"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jBT-BO-5EJ" customClass="CustomTF" customModule="RM53" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="49.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="8"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="avatar"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="     Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-Bp-kix">
-                                        <rect key="frame" x="0.0" y="58" width="358" height="57"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-Bp-kix" customClass="CustomTF" customModule="RM53" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50.5" width="358" height="49.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="8"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="padlock"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
@@ -67,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R8-9w-9q5">
-                                <rect key="frame" x="519" y="380" width="172" height="50"/>
+                                <rect key="frame" x="519" y="365" width="172" height="50"/>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.28235294117647058" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Rh2-Sm-J8y"/>
@@ -99,7 +109,7 @@
                                 <rect key="frame" x="333" y="52" width="358" height="117"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Pasword?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50r-fQ-CRo">
-                                <rect key="frame" x="333" y="393" width="128.5" height="25"/>
+                                <rect key="frame" x="333" y="378" width="128.5" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.094117647060000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +156,7 @@
                             <constraint firstItem="5R8-9w-9q5" firstAttribute="trailing" secondItem="7hM-Bp-kix" secondAttribute="trailing" id="d8E-gc-Eun"/>
                             <constraint firstItem="50r-fQ-CRo" firstAttribute="leading" secondItem="YfB-kr-wXl" secondAttribute="leading" id="eX6-I3-oGk"/>
                             <constraint firstItem="pFt-Cl-nMh" firstAttribute="top" secondItem="Vdt-Zu-t0p" secondAttribute="bottom" constant="-20" id="erO-aJ-HZg"/>
-                            <constraint firstItem="YfB-kr-wXl" firstAttribute="height" secondItem="ry2-qx-DQs" secondAttribute="height" multiplier="0.15" id="gsb-ME-Np7"/>
+                            <constraint firstItem="YfB-kr-wXl" firstAttribute="height" secondItem="ry2-qx-DQs" secondAttribute="height" multiplier="0.13" id="gsb-ME-Np7"/>
                             <constraint firstItem="50r-fQ-CRo" firstAttribute="baseline" secondItem="5R8-9w-9q5" secondAttribute="firstBaseline" id="jfJ-eJ-KWa"/>
                             <constraint firstItem="pFt-Cl-nMh" firstAttribute="leading" secondItem="ry2-qx-DQs" secondAttribute="leading" id="lQM-ga-v84"/>
                             <constraint firstAttribute="bottom" secondItem="f7o-cs-saX" secondAttribute="bottom" constant="20" symbolic="YES" id="oYn-n6-88g"/>
@@ -189,6 +199,8 @@
     </scenes>
     <resources>
         <image name="53bg" width="125" height="84"/>
+        <image name="avatar" width="32" height="32"/>
         <image name="fifth-third-logo-white" width="89" height="25"/>
+        <image name="padlock" width="32" height="32"/>
     </resources>
 </document>

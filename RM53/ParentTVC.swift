@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ParentVC: UIViewController {
-    
+class ParentTVC: UITableViewController {
+
     override func viewDidLoad() {
         let logout = UIBarButtonItem(image: UIImage(named: "logout-2"), style: .done, target: self, action: #selector(logOut))
         logout.tintColor = UIColor.white
@@ -22,4 +22,5 @@ class ParentVC: UIViewController {
         let login = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         UIApplication.shared.keyWindow?.rootViewController = login
     }
+    
 }

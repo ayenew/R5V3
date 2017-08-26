@@ -13,6 +13,9 @@
 		532CEA2C1F3DC3520081F9E4 /* OpportunityCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532CEA2A1F3DC3520081F9E4 /* OpportunityCell2.xib */; };
 		532CEA2D1F3DC3520081F9E4 /* OpportunityCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532CEA2B1F3DC3520081F9E4 /* OpportunityCell2.swift */; };
 		532CEA301F3DE0FC0081F9E4 /* NotificationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532CEA2F1F3DE0FC0081F9E4 /* NotificationTVC.swift */; };
+		5337F8051F51BB3500C6DCD8 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337F8041F51BB3400C6DCD8 /* Swift+Gif.swift */; };
+		5337F8071F51D3DE00C6DCD8 /* recording.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5337F8061F51D3DE00C6DCD8 /* recording.gif */; };
+		5337F8091F51EE1500C6DCD8 /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337F8081F51EE1500C6DCD8 /* CustomTF.swift */; };
 		5338AF981F1A637900A27EF3 /* Relationship.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5338AF971F1A637900A27EF3 /* Relationship.storyboard */; };
 		533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA931F1A68F2004EC44F /* RelationshipTableViewController.swift */; };
 		533DFA961F1A6924004EC44F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DFA951F1A6924004EC44F /* Repo.swift */; };
@@ -81,6 +84,9 @@
 		532CEA2A1F3DC3520081F9E4 /* OpportunityCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityCell2.xib; sourceTree = "<group>"; };
 		532CEA2B1F3DC3520081F9E4 /* OpportunityCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityCell2.swift; sourceTree = "<group>"; };
 		532CEA2F1F3DE0FC0081F9E4 /* NotificationTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTVC.swift; sourceTree = "<group>"; };
+		5337F8041F51BB3400C6DCD8 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		5337F8061F51D3DE00C6DCD8 /* recording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recording.gif; sourceTree = "<group>"; };
+		5337F8081F51EE1500C6DCD8 /* CustomTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		5338AF971F1A637900A27EF3 /* Relationship.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Relationship.storyboard; sourceTree = "<group>"; };
 		533DFA931F1A68F2004EC44F /* RelationshipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTableViewController.swift; sourceTree = "<group>"; };
 		533DFA951F1A6924004EC44F /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
+				5337F8061F51D3DE00C6DCD8 /* recording.gif */,
 				539DD52B1F4F836D0059E309 /* General */,
 				539DD51E1F4F76B60059E309 /* SpecificCompany */,
 				53ADBBBD1F4D1451002925FA /* Login */,
@@ -245,6 +252,8 @@
 				539DD52C1F4F83840059E309 /* ParentTVC.swift */,
 				539DD52E1F4F849D0059E309 /* ParentVC.swift */,
 				53590B6C1F50976100A0552C /* ParentRsp.swift */,
+				5337F8041F51BB3400C6DCD8 /* Swift+Gif.swift */,
+				5337F8081F51EE1500C6DCD8 /* CustomTF.swift */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -453,6 +462,7 @@
 				53A4BDE81F41F888009063C0 /* Report.storyboard in Resources */,
 				539DD5201F4F77230059E309 /* Other.storyboard in Resources */,
 				53A4BDF11F425EBF009063C0 /* Report.json in Resources */,
+				5337F8071F51D3DE00C6DCD8 /* recording.gif in Resources */,
 				534401701F44DA9D00725B10 /* Opportunity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +530,8 @@
 				5344016E1F44D99A00725B10 /* OpportunityDataEntryVC.swift in Sources */,
 				5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */,
 				53F3A9761F2CFA6E00B8C5CD /* ProductViewController.swift in Sources */,
+				5337F8091F51EE1500C6DCD8 /* CustomTF.swift in Sources */,
+				5337F8051F51BB3500C6DCD8 /* Swift+Gif.swift in Sources */,
 				534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */,
 				53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */,
 				539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */,

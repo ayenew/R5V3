@@ -9,7 +9,7 @@
 import UIKit
 
 class ParentRsp: UIViewController {
-
+    var selectedCompanyName = String()
     override func viewDidLoad() {
         let switchBtn = UIBarButtonItem(image: UIImage(named: "swap"), style: .done, target: self, action: #selector(swap))
          switchBtn.tintColor = UIColor.white
@@ -25,6 +25,11 @@ class ParentRsp: UIViewController {
         let sb = UIStoryboard(name: "Other", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Other") as! UITabBarController
         vc.view.frame = (rootVC?.view.bounds)!
+        vc.selectedIndex = 0
+        let vcs = vc.viewControllers
+        let nav = vcs?[0] as! UINavigationController
+        let selectedVC = nav.topViewController as! ODashboardVC
+        selectedVC.pageTitle = selectedCompanyName
         window?.rootViewController = vc
         UIView.transition(with: window!, duration: 0.4, options: .transitionFlipFromLeft, animations: {
            // window?.rootViewController = vc

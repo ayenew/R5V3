@@ -15,8 +15,9 @@ class OResearchVC: OParentVC {
 
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
-        self.navigationItem.title = "Product"
+        self.navigationItem.title = specificPagesTitle
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 00/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]    }
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    }
 
 }

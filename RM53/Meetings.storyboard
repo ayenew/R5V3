@@ -73,7 +73,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EtY-YQ-zaQ" id="88M-PL-brT">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MPW Industrial Services Group Inc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y33-gG-0hi">
@@ -103,7 +103,7 @@
                                         <rect key="frame" x="0.0" y="81" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fe3-xS-OyH" id="VfQ-eG-ogq">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="06/30/2017 MPW Industrial Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-Uw-FVk">
@@ -133,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="162" width="703" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DsU-iw-zWM" id="G3S-q8-lkD">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbj-Rm-RQb">
@@ -162,11 +162,11 @@
                                         <rect key="frame" x="0.0" y="243" width="703" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O4R-8M-kyN" id="u9p-yC-51o">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-zv-qYN">
-                                                    <rect key="frame" x="80" y="41" width="542" height="92"/>
+                                                    <rect key="frame" x="80" y="41" width="542.5" height="92"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -185,7 +185,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-N1-FQS">
-                                                    <rect key="frame" x="630.5" y="41" width="51" height="82"/>
+                                                    <rect key="frame" x="605" y="41" width="77" height="82"/>
                                                     <state key="normal" image="microphone1">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -204,7 +204,7 @@
                                                 <constraint firstItem="LZH-RA-yTu" firstAttribute="leading" secondItem="Zrt-aR-FBJ" secondAttribute="trailing" constant="11" id="TYI-4S-gow"/>
                                                 <constraint firstItem="MbS-zv-qYN" firstAttribute="leading" secondItem="u9p-yC-51o" secondAttribute="leading" constant="80" id="Vqb-n1-KQO"/>
                                                 <constraint firstItem="LZH-RA-yTu" firstAttribute="top" secondItem="u9p-yC-51o" secondAttribute="top" constant="7" id="hVD-O9-3WK"/>
-                                                <constraint firstItem="lO6-N1-FQS" firstAttribute="leading" secondItem="MbS-zv-qYN" secondAttribute="trailing" constant="8" symbolic="YES" id="nRz-Bk-jkU"/>
+                                                <constraint firstItem="lO6-N1-FQS" firstAttribute="leading" secondItem="MbS-zv-qYN" secondAttribute="trailing" constant="-18" id="nRz-Bk-jkU"/>
                                                 <constraint firstItem="MbS-zv-qYN" firstAttribute="top" secondItem="LZH-RA-yTu" secondAttribute="bottom" constant="9" id="pif-7T-TGU"/>
                                                 <constraint firstItem="MbS-zv-qYN" firstAttribute="top" secondItem="Zrt-aR-FBJ" secondAttribute="bottom" constant="6" id="tF4-PN-gxq"/>
                                                 <constraint firstAttribute="bottom" secondItem="MbS-zv-qYN" secondAttribute="bottom" id="vgj-yL-5to"/>

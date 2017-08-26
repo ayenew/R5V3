@@ -145,7 +145,7 @@ class CompanyOpportunityViewController: UIViewController ,UITableViewDataSource,
         
         popoverVC.modalPresentationStyle = .popover
         popoverVC.modalTransitionStyle = .crossDissolve
-        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.6, height: 400)
+        popoverVC.preferredContentSize = CGSize(width: self.view.frame.width * 0.6, height: 450)
         present(popoverVC, animated: true, completion: nil)
         let popoverController = popoverVC.popoverPresentationController
         popoverController?.backgroundColor = UIColor(red: 85/255.0, green: 86/255.0, blue: 90/255.0, alpha: 0.5)

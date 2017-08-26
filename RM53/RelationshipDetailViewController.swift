@@ -36,6 +36,7 @@ class RelationshipDetailViewController: ParentRsp {
         chartView.dropShadow()
         addressIcon.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         navigationItem.title = (relationship["name"] as! String)
+        selectedCompanyName = (relationship["name"] as! String)
         primaryContact.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
         let contact = relationship["contact"] as! [[String:String]]
         let mainContact = contact[0]

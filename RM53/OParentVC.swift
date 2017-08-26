@@ -9,21 +9,40 @@
 import UIKit
 
 class OParentVC: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let switchBtn = UIBarButtonItem(image: UIImage(named: "swap"), style: .done, target: self, action: #selector(swap))
-         switchBtn.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        switchBtn.tintColor = UIColor.white
         let logout = UIBarButtonItem(image: UIImage(named: "logout-2"), style: .done, target: self, action: #selector(logOut))
-        logout.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1)
+        logout.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItems = [logout,switchBtn]
         
     }
     
     func swap() {
+        let window = UIApplication.shared.keyWindow
+        let rootVC = window?.rootViewController
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Main") as! UITabBarController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        let alertController = UIAlertController(title: "Switch Mode?", message: "Are you sure, you would like to switch to detail mode?", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            DispatchQueue.main.async {
+                vc.view.frame = (rootVC?.view.bounds)!
+                vc.selectedIndex = 1
+                window?.rootViewController = vc
+            }
+            UIView.transition(with: window!, duration: 0.4, options: .transitionFlipFromLeft, animations: {
+                // window?.rootViewController = vc
+            }) { (success) in
+                //
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancel)
+        alertController.addAction(ok)
+        present(alertController, animated: true, completion: nil)
+        
     }
     
     func logOut(_ sender: UIBarButtonItem) {

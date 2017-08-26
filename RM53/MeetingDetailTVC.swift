@@ -128,11 +128,11 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
     
     @IBAction func recordCallReport(_ sender: UIButton) {
         if audioEngine.isRunning {
+            self.recordButton.setImage(UIImage(named: "mute1"), for: .disabled)
             audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
             //recordButton.setTitle("Stopping", for: .disabled)
-            self.recordButton.setImage(UIImage(named: "mute1"), for: .disabled)
         } else {
             try! startRecording()
             //recordButton.setTitle("Stop recording", for: [])
@@ -182,9 +182,9 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
                 self.recognitionTask = nil
                 
                 self.recordButton.isEnabled = true
-                self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
                 self.recordButton.tintColor = UIColor(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1)
                 self.recordButton.layer.removeAllAnimations()
+                self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
                // self.recordButton.setTitle("Start Recording", for: [])
             }
         }
@@ -195,12 +195,13 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
         }
         
         audioEngine.prepare()
-        
+        animate()
+        callReportLbl.text = "(Started recording)"
         try audioEngine.start()
-        if callReportLbl.text == "" {
-            callReportLbl.text = "(Started recording)"
-            animate()
-        }
+        //if callReportLbl.text == "" {
+        //    callReportLbl.text = "(Started recording)"
+            //animate()
+       // }
     }
     
     func animate(){
@@ -213,17 +214,16 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
         pulseAnimation.repeatCount = .greatestFiniteMagnitude
         self.recordButton.layer.add(pulseAnimation, forKey: "animateOpacity")
     }
-
 }
 
 extension  MeetingDetailTVC: SFSpeechRecognizerDelegate {
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             recordButton.isEnabled = true
-            //recordButton.setTitle("Start Recording", for: [])
+            recordButton.setTitle("Start Recording", for: [])
         } else {
             recordButton.isEnabled = false
-            //recordButton.setTitle("Recognition not available", for: .disabled)
+            recordButton.setTitle("Recognition not available", for: .disabled)
         }
     }
 }

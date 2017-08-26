@@ -94,6 +94,7 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
             textField.placeholder = "Cell Phone"
             textField.textColor = UIColor.blue
             textField.borderStyle = .roundedRect
+            textField.keyboardType = UIKeyboardType.numberPad
             textField.delegate = self
             textField.tag = 3000
         }
@@ -133,7 +134,9 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
         } else {
             let item = contacts[indexPath.row]
             cell.lastName.text = "\(item["firstName"]!) \(item["lastName"]!)"
+            cell.lastName.textColor = UIColor.black
             cell.cellPhone.text = "Cell: \(item["cellPhone"]!)   Work: \(item["secondPhone"]!)"
+            cell.cellPhone.textColor = UIColor.darkGray
         }
         
         
@@ -173,6 +176,7 @@ class OverViewTVC: UITableViewController, UITextFieldDelegate {
             cell.lastName.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
             cell.cellPhone.textColor = UIColor(red: 0/255.0, green: 24/255.0, blue: 168/255.0, alpha: 1)
         }
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
