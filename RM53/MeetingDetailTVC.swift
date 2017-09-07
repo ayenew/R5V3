@@ -184,7 +184,10 @@ class MeetingDetailTVC: ParentTVC, UITextViewDelegate {
                 self.recordButton.isEnabled = true
                 self.recordButton.tintColor = UIColor(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1)
                 self.recordButton.layer.removeAllAnimations()
-                self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
+                DispatchQueue.main.async {
+                    self.recordButton.setImage(UIImage(named: "microphone1"), for: [])
+                }
+                
                // self.recordButton.setTitle("Start Recording", for: [])
             }
         }

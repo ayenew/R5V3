@@ -58,12 +58,14 @@ class RelationshipDetailViewController: ParentRsp {
             smallNotif.isHidden = false
             smallBellValue.text = "\(meeting) meeting(s)"
             smallNotifValue.text = "\(notification) notification(s)"
+            addGesture(meeting: meeting,notification: notification)
         } else if meeting > 0 && notification == 0 {
             smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallBell.isHidden = false
             smallBellValue.text = "\(meeting) meetings(s)"
             smallNotif.isHidden = true
             smallNotifValue.isHidden = true
+            addGesture(meeting: meeting,notification: notification)
         } else if meeting == 0 && notification > 0 {
             smallBell.image = UIImage(named: "smallbell")
             smallBell.isHidden = false
@@ -72,16 +74,18 @@ class RelationshipDetailViewController: ParentRsp {
             smallBell.tintColor = UIColor(red: 101/255.0, green: 143/255.0, blue: 25/255.0, alpha: 1)
             smallNotif.isHidden = true
             smallNotifValue.isHidden = true
+            addGesture(meeting: meeting,notification: notification)
         } else {
             smallBell.isHidden = true
             smallNotif.isHidden = true
             smallNotifValue.isHidden = true
             smallBellValue.isHidden = true
+            addGesture(meeting: meeting,notification: notification)
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(updatePrimaryContact), name: NSNotification.Name.init(rawValue: "UpdatePrimaryContact"), object: nil)
         
-        addGesture()
+       // addGesture()
         
     }
     
@@ -112,19 +116,53 @@ class RelationshipDetailViewController: ParentRsp {
         }
     }
     
-    func addGesture(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
-        let tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
-        let tap3 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
-        let tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+    func addGesture(meeting: Int,notification: Int){
         smallBell.isUserInteractionEnabled = true
-        smallNotif.isUserInteractionEnabled = true
         smallBellValue.isUserInteractionEnabled = true
+        smallNotif.isUserInteractionEnabled = true
         smallNotifValue.isUserInteractionEnabled = true
-        smallBell.addGestureRecognizer(tap)
-        smallNotif.addGestureRecognizer(tap2)
-        smallBellValue.addGestureRecognizer(tap3)
-        smallNotifValue.addGestureRecognizer(tap4)
+        
+        var tap1: UITapGestureRecognizer?
+        var tap2: UITapGestureRecognizer?
+        var tap3: UITapGestureRecognizer?
+        var tap4: UITapGestureRecognizer?
+        
+        switch (meeting,notification) {
+        case (0,_):
+            tap1 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+            tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+            smallBell.addGestureRecognizer(tap1!)
+            smallBellValue.addGestureRecognizer(tap2!)
+        case (_,0):
+            tap1 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+            tap2 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+            smallBell.addGestureRecognizer(tap1!)
+            smallBellValue.addGestureRecognizer(tap2!)
+        case (0,0):
+            break
+        default:
+            tap1 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+            tap2 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+            tap3 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+            tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+            smallBell.addGestureRecognizer(tap1!)
+            smallBellValue.addGestureRecognizer(tap2!)
+            smallNotif.addGestureRecognizer(tap3!)
+            smallNotifValue.addGestureRecognizer(tap4!)
+        }
+        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+//        let tap2 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+//        let tap3 = UITapGestureRecognizer(target: self, action: #selector(goToMeeting))
+//        let tap4 = UITapGestureRecognizer(target: self, action: #selector(goToNotif))
+//        smallBell.isUserInteractionEnabled = true
+//        smallNotif.isUserInteractionEnabled = true
+//        smallBellValue.isUserInteractionEnabled = true
+//        smallNotifValue.isUserInteractionEnabled = true
+//        smallBell.addGestureRecognizer()
+//        smallNotif.addGestureRecognizer(tap2)
+//        smallBellValue.addGestureRecognizer(tap3)
+//        smallNotifValue.addGestureRecognizer(tap4)
     }
     
     func goToNotif(){

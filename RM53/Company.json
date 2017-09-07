@@ -27,8 +27,8 @@
                      "crExposure": 40.6e3,
                      "deExposure": 30.6e3
                      },
-                     "meeting": 1,
-                     "notification": 1,
+                     "meeting": 0,
+                     "notification": 8,
                      "opportunity": [{
                                      "name": "ODW Logistic",
                                      "salesStage": "Opportunity",
@@ -46,6 +46,210 @@
                                      "salesStage": "Opportunity",
                                      "targetDate": "09/30/17",
                                      "balance": "$6500.00"
+                                     }
+                                     
+                                     ]
+                     },
+                     {
+                     "name": "MPW Industrial Services Group, Inc.",
+                     "address": "250 E Broad Street, Columbus, OH 43215",
+                     "contact": [{
+                                 "firstName": "Mathew",
+                                 "lastName": "Nolan",
+                                 "cellPhone": "614-220-5207",
+                                 "secondPhone": "614-220-5200"
+                                 },
+                                 {
+                                 "firstName": "Phelps",
+                                 "lastName": "Brian",
+                                 "cellPhone": "513-546-8899",
+                                 "secondPhone": "513-546-8899"
+                                 },
+                                 {
+                                 "firstName": "Scott",
+                                 "lastName": "Cottrill",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 }
+                                 ],
+                     "product": {
+                     "tmExposure": 60.6e3,
+                     "cmExposure": 25.6e3,
+                     "crExposure": 30.6e3,
+                     "deExposure": 40.6e3
+                     },
+                     "meeting": 2,
+                     "notification": 10,
+                     "opportunity": [{
+                                     "name": "ODW Logistic",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "07/30/17",
+                                     "balance": "$7500.00"
+                                     },
+                                     {
+                                     "name": "Advanced Drainage System Inc",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "08/30/17",
+                                     "balance": "$19,500.00"
+                                     },
+                                     {
+                                     "name": "BankInsurance Corporation",
+                                     "salesStage": "Pending Action",
+                                     "targetDate": "09/30/17",
+                                     "balance": "$15,500.00"
+                                     }
+                                     
+                                     ]
+                     },
+                     {
+                     "name": "Premier Health Partners",
+                     "address": "250 E Broad Street, Columbus, OH 43215",
+                     "contact": [{
+                                 "firstName": "Biegler",
+                                 "lastName": "Cortney",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "242-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Scott",
+                                 "lastName": "Cottrill",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Mathew",
+                                 "lastName": "Nolan",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 }
+                                 ],
+                     "product": {
+                     "tmExposure": 60.6e3,
+                     "cmExposure": 25.6e3,
+                     "crExposure": 30.6e3,
+                     "deExposure": 40.6e3
+                     },
+                     "meeting": 1,
+                     "notification": 7,
+                     "opportunity": [{
+                                     "name": "ODW Logistic",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "07/30/17",
+                                     "balance": "$7500.00"
+                                     },
+                                     {
+                                     "name": "Advanced Drainage System Inc",
+                                     "salesStage": "Pending Action",
+                                     "targetDate": "08/30/17",
+                                     "balance": "$9500.00"
+                                     },
+                                     {
+                                     "name": "BankInsurance Corporation",
+                                     "salesStage": "Pending Action",
+                                     "targetDate": "09/30/17",
+                                     "balance": "$5500.00"
+                                     }
+                                     
+                                     ]
+                     },
+                     {
+                     "name": "KALI R NANDI",
+                     "address": "250 E Broad Street, Columbus, OH 43215",
+                     "contact": [{
+                                 "firstName": "Biegler",
+                                 "lastName": "Cortney",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "242-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Scott",
+                                 "lastName": "Cottrill",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Mathew",
+                                 "lastName": "Nolan",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 }
+                                 ],
+                     "product": {
+                     "tmExposure": 60.6e3,
+                     "cmExposure": 25.6e3,
+                     "crExposure": 30.6e3,
+                     "deExposure": 40.6e3
+                     },
+                     "meeting": 1,
+                     "notification": 2,
+                     "opportunity": [{
+                                     "name": "ODW Logistic",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "07/30/17",
+                                     "balance": "$7500.00"
+                                     },
+                                     {
+                                     "name": "Advanced Drainage System Inc",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "08/30/17",
+                                     "balance": "$9500.00"
+                                     },
+                                     {
+                                     "name": "BankInsurance Corporation",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "09/30/17",
+                                     "balance": "$5500.00"
+                                     }
+                                     
+                                     ]
+                     },
+                     {
+                     "name": "McCall Holdings LLC",
+                     "address": "250 E Broad Street, Columbus, OH 43215",
+                     "contact": [{
+                                 "firstName": "Biegler",
+                                 "lastName": "Cortney",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "242-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Scott",
+                                 "lastName": "Cottrill",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 },
+                                 {
+                                 "firstName": "Mathew",
+                                 "lastName": "Nolan",
+                                 "cellPhone": "425-202-2000",
+                                 "secondPhone": "424-202-2001"
+                                 }
+                                 ],
+                     "product": {
+                     "tmExposure": 60.6e3,
+                     "cmExposure": 25.6e3,
+                     "crExposure": 30.6e3,
+                     "deExposure": 40.6e3
+                     },
+                     "meeting": 0,
+                     "notification": 0,
+                     "opportunity": [{
+                                     "name": "ODW Logistic",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "07/30/17",
+                                     "balance": "$7500.00"
+                                     },
+                                     {
+                                     "name": "Advanced Drainage System Inc",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "08/30/17",
+                                     "balance": "$9500.00"
+                                     },
+                                     {
+                                     "name": "BankInsurance Corporation",
+                                     "salesStage": "Opportunity",
+                                     "targetDate": "09/30/17",
+                                     "balance": "$5500.00"
                                      }
                                      
                                      ]
@@ -78,8 +282,8 @@
                      "crExposure": 30.6e3,
                      "deExposure": 10.6e3
                      },
-                     "meeting": 1,
-                     "notification": 1,
+                     "meeting": 0,
+                     "notification": 0,
                      "opportunity": [{
                                      "name": "ODW Logistic",
                                      "salesStage": "Opportunity",
@@ -102,211 +306,7 @@
                                      ]
                      },
                      {
-                     "name": "Bancinsurance Corporation",
-                     "address": "250 E Broad Street, Columbus, OH 43215",
-                     "contact": [{
-                                 "firstName": "Mathew",
-                                 "lastName": "Nolan",
-                                 "cellPhone": "614-220-5207",
-                                 "secondPhone": "614-220-5200"
-                                 },
-                                 {
-                                 "firstName": "Phelps",
-                                 "lastName": "Brian",
-                                 "cellPhone": "513-546-8899",
-                                 "secondPhone": "513-546-8899"
-                                 },
-                                 {
-                                 "firstName": "Scott",
-                                 "lastName": "Cottrill",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 }
-                                 ],
-                     "product": {
-                     "tmExposure": 60.6e3,
-                     "cmExposure": 25.6e3,
-                     "crExposure": 30.6e3,
-                     "deExposure": 40.6e3
-                     },
-                     "meeting": 1,
-                     "notification": 0,
-                     "opportunity": [{
-                                     "name": "ODW Logistic",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "07/30/17",
-                                     "balance": "$7500.00"
-                                     },
-                                     {
-                                     "name": "Advanced Drainage System Inc",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "08/30/17",
-                                     "balance": "$19,500.00"
-                                     },
-                                     {
-                                     "name": "BankInsurance Corporation",
-                                     "salesStage": "Pending Action",
-                                     "targetDate": "09/30/17",
-                                     "balance": "$15,500.00"
-                                     }
-                                     
-                                     ]
-                     },
-                     {
-                     "name": "Omega Marble & Granite",
-                     "address": "250 E Broad Street, Columbus, OH 43215",
-                     "contact": [{
-                                 "firstName": "Biegler",
-                                 "lastName": "Cortney",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "242-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Scott",
-                                 "lastName": "Cottrill",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Mathew",
-                                 "lastName": "Nolan",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 }
-                                 ],
-                     "product": {
-                     "tmExposure": 60.6e3,
-                     "cmExposure": 25.6e3,
-                     "crExposure": 30.6e3,
-                     "deExposure": 40.6e3
-                     },
-                     "meeting": 1,
-                     "notification": 0,
-                     "opportunity": [{
-                                     "name": "ODW Logistic",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "07/30/17",
-                                     "balance": "$7500.00"
-                                     },
-                                     {
-                                     "name": "Advanced Drainage System Inc",
-                                     "salesStage": "Pending Action",
-                                     "targetDate": "08/30/17",
-                                     "balance": "$9500.00"
-                                     },
-                                     {
-                                     "name": "BankInsurance Corporation",
-                                     "salesStage": "Pending Action",
-                                     "targetDate": "09/30/17",
-                                     "balance": "$5500.00"
-                                     }
-                                     
-                                     ]
-                     },
-                     {
-                     "name": "Willimas & Moor, P.A.",
-                     "address": "250 E Broad Street, Columbus, OH 43215",
-                     "contact": [{
-                                 "firstName": "Biegler",
-                                 "lastName": "Cortney",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "242-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Scott",
-                                 "lastName": "Cottrill",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Mathew",
-                                 "lastName": "Nolan",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 }
-                                 ],
-                     "product": {
-                     "tmExposure": 60.6e3,
-                     "cmExposure": 25.6e3,
-                     "crExposure": 30.6e3,
-                     "deExposure": 40.6e3
-                     },
-                     "meeting": 0,
-                     "notification": 1,
-                     "opportunity": [{
-                                     "name": "ODW Logistic",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "07/30/17",
-                                     "balance": "$7500.00"
-                                     },
-                                     {
-                                     "name": "Advanced Drainage System Inc",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "08/30/17",
-                                     "balance": "$9500.00"
-                                     },
-                                     {
-                                     "name": "BankInsurance Corporation",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "09/30/17",
-                                     "balance": "$5500.00"
-                                     }
-                                     
-                                     ]
-                     },
-                     {
-                     "name": "Kevin & Sons Roofing Corp.",
-                     "address": "250 E Broad Street, Columbus, OH 43215",
-                     "contact": [{
-                                 "firstName": "Biegler",
-                                 "lastName": "Cortney",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "242-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Scott",
-                                 "lastName": "Cottrill",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 },
-                                 {
-                                 "firstName": "Mathew",
-                                 "lastName": "Nolan",
-                                 "cellPhone": "425-202-2000",
-                                 "secondPhone": "424-202-2001"
-                                 }
-                                 ],
-                     "product": {
-                     "tmExposure": 60.6e3,
-                     "cmExposure": 25.6e3,
-                     "crExposure": 30.6e3,
-                     "deExposure": 40.6e3
-                     },
-                     "meeting": 0,
-                     "notification": 0,
-                     "opportunity": [{
-                                     "name": "ODW Logistic",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "07/30/17",
-                                     "balance": "$7500.00"
-                                     },
-                                     {
-                                     "name": "Advanced Drainage System Inc",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "08/30/17",
-                                     "balance": "$9500.00"
-                                     },
-                                     {
-                                     "name": "BankInsurance Corporation",
-                                     "salesStage": "Opportunity",
-                                     "targetDate": "09/30/17",
-                                     "balance": "$5500.00"
-                                     }
-                                     
-                                     ]
-                     },
-                     {
-                     "name": "McCall Holdings LLC",
+                     "name": "Builders Plus, Inc.",
                      "address": "250 E Broad Street, Columbus, OH 43215",
                      "contact": [{
                                  "firstName": "Biegler",

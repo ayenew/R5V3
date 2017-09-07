@@ -10,11 +10,12 @@ import UIKit
 
 class ParentRsp: UIViewController {
     var selectedCompanyName = String()
+    let tColor = UIColor.white
     override func viewDidLoad() {
         let switchBtn = UIBarButtonItem(image: UIImage(named: "swap"), style: .done, target: self, action: #selector(swap))
-         switchBtn.tintColor = UIColor.white
+         switchBtn.tintColor = tColor
         let logout = UIBarButtonItem(image: UIImage(named: "logout-2"), style: .done, target: self, action: #selector(logOut))
-        logout.tintColor = UIColor.white
+        logout.tintColor = tColor
         self.navigationItem.rightBarButtonItems = [logout, switchBtn]
         
     }

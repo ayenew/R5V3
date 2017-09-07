@@ -9,12 +9,13 @@
 import UIKit
 
 class OParentVC: UIViewController {
+    let tColor = UIColor.white
     override func viewDidLoad() {
         super.viewDidLoad()
         let switchBtn = UIBarButtonItem(image: UIImage(named: "swap"), style: .done, target: self, action: #selector(swap))
-        switchBtn.tintColor = UIColor.white
+        switchBtn.tintColor = tColor
         let logout = UIBarButtonItem(image: UIImage(named: "logout-2"), style: .done, target: self, action: #selector(logOut))
-        logout.tintColor = UIColor.white
+        logout.tintColor = tColor
         self.navigationItem.rightBarButtonItems = [logout,switchBtn]
         
     }
@@ -24,7 +25,7 @@ class OParentVC: UIViewController {
         let rootVC = window?.rootViewController
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Main") as! UITabBarController
-        let alertController = UIAlertController(title: "Switch Mode?", message: "Are you sure, you would like to switch to detail mode?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Switch Mode", message: "Switch to full mode?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default) { (action) in
             DispatchQueue.main.async {
                 vc.view.frame = (rootVC?.view.bounds)!

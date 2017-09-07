@@ -9,10 +9,10 @@
 import UIKit
 
 class ParentVC: UIViewController {
-    
+    let tColor = UIColor.white
     override func viewDidLoad() {
         let logout = UIBarButtonItem(image: UIImage(named: "logout-2"), style: .done, target: self, action: #selector(logOut))
-        logout.tintColor = UIColor.white
+        logout.tintColor = tColor
         self.navigationItem.rightBarButtonItems = [logout]
         
     }

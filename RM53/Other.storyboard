@@ -17,20 +17,20 @@
                         <viewControllerLayoutGuide type="top" id="J5T-0q-dLa"/>
                         <viewControllerLayoutGuide type="bottom" id="t4x-48-zVq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zcr-mO-uNS">
+                    <view key="view" contentMode="scaleAspectFill" id="zcr-mO-uNS">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard03" translatesAutoresizingMaskIntoConstraints="NO" id="Tru-Fc-14k">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="p002" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-b7-hP0">
+                                <rect key="frame" x="8" y="64" width="1008" height="655"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tru-Fc-14k" firstAttribute="leading" secondItem="zcr-mO-uNS" secondAttribute="leading" id="08l-Rx-fqt"/>
-                            <constraint firstItem="t4x-48-zVq" firstAttribute="top" secondItem="Tru-Fc-14k" secondAttribute="bottom" id="8ml-8a-7xN"/>
-                            <constraint firstItem="Tru-Fc-14k" firstAttribute="top" secondItem="J5T-0q-dLa" secondAttribute="bottom" id="dEP-Mv-Mje"/>
-                            <constraint firstAttribute="trailing" secondItem="Tru-Fc-14k" secondAttribute="trailing" id="eBf-8Y-nVV"/>
+                            <constraint firstItem="Odw-b7-hP0" firstAttribute="leading" secondItem="zcr-mO-uNS" secondAttribute="leading" constant="8" id="Pb1-TU-fLc"/>
+                            <constraint firstItem="t4x-48-zVq" firstAttribute="top" secondItem="Odw-b7-hP0" secondAttribute="bottom" id="ogQ-Os-1EE"/>
+                            <constraint firstAttribute="trailing" secondItem="Odw-b7-hP0" secondAttribute="trailing" constant="8" id="rCZ-67-8io"/>
+                            <constraint firstItem="Odw-b7-hP0" firstAttribute="top" secondItem="J5T-0q-dLa" secondAttribute="bottom" id="wFW-3T-ciR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vsH-RM-NGv"/>
@@ -39,67 +39,34 @@
             </objects>
             <point key="canvasLocation" x="1757.8125" y="-259.375"/>
         </scene>
-        <!--NotificationVC-->
-        <scene sceneID="JM9-vN-klP">
+        <!--View Controller-->
+        <scene sceneID="Trd-gk-SC2">
             <objects>
-                <viewController id="sl4-W2-9Q9" customClass="ONotificationVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yOC-FJ-jpA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WFK-wf-vk7"/>
-                        <viewControllerLayoutGuide type="bottom" id="tnb-i7-7zx"/>
+                        <viewControllerLayoutGuide type="top" id="hln-vz-T8o"/>
+                        <viewControllerLayoutGuide type="bottom" id="ros-mO-Mtm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gYb-BP-UmX">
+                    <view key="view" contentMode="scaleToFill" id="y6e-RH-hMd" customClass="GradientView" customModule="RM53" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard04" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Ay-PlF">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.78039215689999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Kxg-Ay-PlF" secondAttribute="trailing" id="OC6-1u-1Mt"/>
-                            <constraint firstItem="Kxg-Ay-PlF" firstAttribute="top" secondItem="WFK-wf-vk7" secondAttribute="bottom" id="Uv5-2t-nGB"/>
-                            <constraint firstItem="Kxg-Ay-PlF" firstAttribute="leading" secondItem="gYb-BP-UmX" secondAttribute="leading" id="fwI-V1-Gkn"/>
-                            <constraint firstItem="tnb-i7-7zx" firstAttribute="top" secondItem="Kxg-Ay-PlF" secondAttribute="bottom" id="fzh-Gg-UaD"/>
-                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.83529411764705885" green="0.90196078431372551" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.83529411760000005" green="0.90196078430000004" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="y8f-ca-Sql"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d51-hT-4GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHk-MB-fax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757.8125" y="458.59375"/>
-        </scene>
-        <!--ResearchVC-->
-        <scene sceneID="7lb-2E-yVC">
-            <objects>
-                <viewController id="8o4-Os-7Gg" customClass="OResearchVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IxN-IB-D0q"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tkr-bG-MLi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="12f-2Z-mUa">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReportSS" translatesAutoresizingMaskIntoConstraints="NO" id="gFS-bh-O45">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Tkr-bG-MLi" firstAttribute="top" secondItem="gFS-bh-O45" secondAttribute="bottom" id="Oxg-bP-er4"/>
-                            <constraint firstItem="gFS-bh-O45" firstAttribute="top" secondItem="IxN-IB-D0q" secondAttribute="bottom" id="dsR-Cd-Hoj"/>
-                            <constraint firstItem="gFS-bh-O45" firstAttribute="leading" secondItem="12f-2Z-mUa" secondAttribute="leading" id="j35-qH-qAm"/>
-                            <constraint firstAttribute="trailing" secondItem="gFS-bh-O45" secondAttribute="trailing" id="piD-es-Qtv"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="a1z-88-cZX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="htv-Ti-vpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="887.69531249999989" y="1336.71875"/>
+            <point key="canvasLocation" x="2118" y="1294"/>
         </scene>
         <!--DashboardVC-->
         <scene sceneID="laC-sF-a5q">
@@ -113,13 +80,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dashboard01" translatesAutoresizingMaskIntoConstraints="NO" id="k55-Fv-vao">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="db1" translatesAutoresizingMaskIntoConstraints="NO" id="tL3-Yk-Uj0">
+                                <rect key="frame" x="8" y="64" width="1008" height="655"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LvP-g2-ETM" firstAttribute="top" secondItem="tL3-Yk-Uj0" secondAttribute="bottom" id="5wS-vP-RZ8"/>
+                            <constraint firstAttribute="trailing" secondItem="tL3-Yk-Uj0" secondAttribute="trailing" constant="8" id="8sP-ry-VZ7"/>
+                            <constraint firstItem="tL3-Yk-Uj0" firstAttribute="top" secondItem="qJc-bD-Pvl" secondAttribute="bottom" id="hfS-SG-k0U"/>
+                            <constraint firstItem="tL3-Yk-Uj0" firstAttribute="leading" secondItem="qoV-OC-iv6" secondAttribute="leading" constant="8" id="kNU-tY-AgC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EjT-v6-Pms"/>
                 </viewController>
@@ -139,8 +110,6 @@
                     <connections>
                         <segue destination="Syc-Hd-9fl" kind="relationship" relationship="viewControllers" id="pAu-9p-KjD"/>
                         <segue destination="7fD-Q0-VtE" kind="relationship" relationship="viewControllers" id="gJe-mj-sXT"/>
-                        <segue destination="VD2-K9-XF5" kind="relationship" relationship="viewControllers" id="YpR-Q1-K08"/>
-                        <segue destination="c2c-sl-RHi" kind="relationship" relationship="viewControllers" id="pJF-ZE-hbH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRz-eA-SPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,11 +135,11 @@
             </objects>
             <point key="canvasLocation" x="1033.59375" y="-923.4375"/>
         </scene>
-        <!--Meetings-->
+        <!--Products-->
         <scene sceneID="acf-m5-rKv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7fD-Q0-VtE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meetings" image="meeting" id="cV6-bd-DNs"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="padnote" id="cV6-bd-DNs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6sC-BL-Hsh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -185,53 +154,11 @@
             </objects>
             <point key="canvasLocation" x="1033.59375" y="-259.375"/>
         </scene>
-        <!--Notification-->
-        <scene sceneID="1UN-cH-ZQn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VD2-K9-XF5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notification" image="notifIcon" id="lKv-Ne-4Wb"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AhZ-kb-EpC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="sl4-W2-9Q9" kind="relationship" relationship="rootViewController" id="TcA-m2-fOP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E8O-fH-m84" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="657" y="516"/>
-        </scene>
-        <!--Product-->
-        <scene sceneID="ieo-YW-aOe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2c-sl-RHi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Product" image="padnote" id="yz2-HR-HE7"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DSt-Ea-bDt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8o4-Os-7Gg" kind="relationship" relationship="rootViewController" id="G3Y-hr-oXi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JDt-7b-hrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="150" y="1337"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Dashboard01" width="301" height="207"/>
-        <image name="Dashboard03" width="954" height="497"/>
-        <image name="Dashboard04" width="300" height="244"/>
-        <image name="ReportSS" width="512" height="327"/>
         <image name="dashboard" width="25" height="25"/>
-        <image name="meeting" width="25" height="25"/>
-        <image name="notifIcon" width="25" height="25"/>
+        <image name="db1" width="600" height="343"/>
+        <image name="p002" width="640" height="329"/>
         <image name="padnote" width="32" height="32"/>
     </resources>
 </document>

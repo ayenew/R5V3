@@ -39,7 +39,7 @@ class CalendarVC: UIViewController {
     
     fileprivate func generateEvents() -> [SSEvent] {
         var events: [SSEvent] = []
-        var year = 2017; var month = 08; var day = 30
+        var year = 2017; var month = 09; var day = 08
         var event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "11:00"
@@ -50,15 +50,15 @@ class CalendarVC: UIViewController {
         event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
         event.startTime = "3:00"
-        event.name = "06/30/2017 MPW Industrial Service"
+        event.name = "09/09/2017 MPW Industrial Service"
         event.desc = "Meet with Dana to reciew account set ups. Need to change signers and close two accounts. The BCBS activity will grow quickly.Follow up in November to review to see if should change to analyzed account type. alos discussed CC for T & E and how can automate and streamline the process."
         events.append(event)
         
-        year = 2017; month = 09; day = 07
+        year = 2017; month = 09; day = 12
         event = SSEvent()
         event.startDate = SSCalendarUtils.date(withYear: year, month: month, day: day)
-        event.startTime = "11:00"
-        event.name = "06/14/2017 Specialized Service"
+        event.startTime = "03:00"
+        event.name = "09/12/2017 Specialized Service"
         event.desc = "KALI R NANDI - Strategic"
         events.append(event)
         return events

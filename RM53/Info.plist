@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>RM53_V4</string>
+	<string>RM53</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,8 +24,6 @@
 	<true/>
 	<key>NSLocationUsageDescription</key>
 	<string>"Use Location?"</string>
-	<key>NSMainNibFile~ipad</key>
-	<string>Login</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>"Your microphone will be used to record your speech when you press the "Start Recording" button."</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
