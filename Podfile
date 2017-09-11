@@ -6,6 +6,7 @@ target 'RM53' do
   use_frameworks!
   pod 'PieCharts'
   pod 'SSCalendar'
+  pod 'jot'
 
   # Pods for RM53
 

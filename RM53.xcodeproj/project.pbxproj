@@ -58,10 +58,15 @@
 		53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */; };
 		53A4BDEF1F424FF3009063C0 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BDEE1F424FF3009063C0 /* ReportCell.swift */; };
 		53A4BDF11F425EBF009063C0 /* Report.json in Resources */ = {isa = PBXBuildFile; fileRef = 53A4BDF01F425EBF009063C0 /* Report.json */; };
+		53A4BEC91F62CD33008D33E8 /* ScribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BEC71F62CD33008D33E8 /* ScribeView.swift */; };
+		53A4BECA1F62CD33008D33E8 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BEC81F62CD33008D33E8 /* Patterns.swift */; };
+		53A4BECC1F62CD5C008D33E8 /* NoteTakerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4BECB1F62CD5C008D33E8 /* NoteTakerVC.swift */; };
 		53ADBBBF1F4D14E8002925FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ADBBBE1F4D14E7002925FA /* Login.storyboard */; };
 		53ADBBC11F4D150F002925FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC01F4D150F002925FA /* LoginVC.swift */; };
 		53ADBBC31F4D2125002925FA /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC21F4D2125002925FA /* ParentViewController.swift */; };
 		53ADBBC51F4DB0B5002925FA /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ADBBC41F4DB0B5002925FA /* TextField.swift */; };
+		53B92FEA1F65DC03007FF3BF /* ColorSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B92FE91F65DC03007FF3BF /* ColorSelectionVC.swift */; };
+		53B92FEC1F65DC56007FF3BF /* FontSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B92FEB1F65DC56007FF3BF /* FontSelectionVC.swift */; };
 		53C11A9C1F3A6E4000B2F246 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 53C11A9B1F3A6E4000B2F246 /* Meetings.json */; };
 		53E555D41F31294C00963DBB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E555D31F31294C00963DBB /* MapKit.framework */; };
 		53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */; };
@@ -131,10 +136,15 @@
 		53A4BDEC1F41FBDB009063C0 /* ReportDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDetailVC.swift; sourceTree = "<group>"; };
 		53A4BDEE1F424FF3009063C0 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		53A4BDF01F425EBF009063C0 /* Report.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Report.json; sourceTree = "<group>"; };
+		53A4BEC71F62CD33008D33E8 /* ScribeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeView.swift; sourceTree = "<group>"; };
+		53A4BEC81F62CD33008D33E8 /* Patterns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
+		53A4BECB1F62CD5C008D33E8 /* NoteTakerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakerVC.swift; sourceTree = "<group>"; };
 		53ADBBBE1F4D14E7002925FA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		53ADBBC01F4D150F002925FA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		53ADBBC21F4D2125002925FA /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		53ADBBC41F4DB0B5002925FA /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		53B92FE91F65DC03007FF3BF /* ColorSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSelectionVC.swift; sourceTree = "<group>"; };
+		53B92FEB1F65DC56007FF3BF /* FontSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSelectionVC.swift; sourceTree = "<group>"; };
 		53C11A9B1F3A6E4000B2F246 /* Meetings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
 		53E555D31F31294C00963DBB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		53E8CB2C1F3FE37800DCA002 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -209,6 +219,7 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
+				53A4BEC61F62CCC8008D33E8 /* Scribe */,
 				5337F8061F51D3DE00C6DCD8 /* recording.gif */,
 				539DD52B1F4F836D0059E309 /* General */,
 				539DD51E1F4F76B60059E309 /* SpecificCompany */,
@@ -268,6 +279,18 @@
 				53A4BDF01F425EBF009063C0 /* Report.json */,
 			);
 			name = Reports;
+			sourceTree = "<group>";
+		};
+		53A4BEC61F62CCC8008D33E8 /* Scribe */ = {
+			isa = PBXGroup;
+			children = (
+				53A4BEC71F62CD33008D33E8 /* ScribeView.swift */,
+				53A4BEC81F62CD33008D33E8 /* Patterns.swift */,
+				53A4BECB1F62CD5C008D33E8 /* NoteTakerVC.swift */,
+				53B92FE91F65DC03007FF3BF /* ColorSelectionVC.swift */,
+				53B92FEB1F65DC56007FF3BF /* FontSelectionVC.swift */,
+			);
+			name = Scribe;
 			sourceTree = "<group>";
 		};
 		53ADBBBD1F4D1451002925FA /* Login */ = {
@@ -525,6 +548,7 @@
 				532CEA301F3DE0FC0081F9E4 /* NotificationTVC.swift in Sources */,
 				539589551F030D2E00F8ED56 /* AppDelegate.swift in Sources */,
 				53E8CB2D1F3FE37800DCA002 /* DetailCell.swift in Sources */,
+				53A4BECA1F62CD33008D33E8 /* Patterns.swift in Sources */,
 				538E8C061F0323470003D939 /* CalendarVC.swift in Sources */,
 				539589571F030D2E00F8ED56 /* DashboardViewController.swift in Sources */,
 				5344016E1F44D99A00725B10 /* OpportunityDataEntryVC.swift in Sources */,
@@ -535,10 +559,13 @@
 				534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */,
 				53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */,
 				539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */,
+				53B92FEC1F65DC56007FF3BF /* FontSelectionVC.swift in Sources */,
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
 				538E8C121F03E8F40003D939 /* OpportunityVC.swift in Sources */,
 				539DD52D1F4F83840059E309 /* ParentTVC.swift in Sources */,
+				53B92FEA1F65DC03007FF3BF /* ColorSelectionVC.swift in Sources */,
+				53A4BECC1F62CD5C008D33E8 /* NoteTakerVC.swift in Sources */,
 				538E8BFA1F0313010003D939 /* ChartView.swift in Sources */,
 				530A902B1F2E816200876A58 /* ContactCell.swift in Sources */,
 				538E8BF71F03109B0003D939 /* ChartVC.swift in Sources */,
@@ -562,6 +589,7 @@
 				53A4BDEB1F41FB00009063C0 /* ReportTVC.swift in Sources */,
 				533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */,
 				539DD52A1F4F7BFB0059E309 /* OParentVC.swift in Sources */,
+				53A4BEC91F62CD33008D33E8 /* ScribeView.swift in Sources */,
 				539DD52F1F4F849D0059E309 /* ParentVC.swift in Sources */,
 				539DD5281F4F7BD20059E309 /* OResearchVC.swift in Sources */,
 				539DD5221F4F7B890059E309 /* ODashboardVC.swift in Sources */,
@@ -710,7 +738,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53V2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -725,7 +753,7 @@
 				INFOPLIST_FILE = RM53/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53;
+				PRODUCT_BUNDLE_IDENTIFIER = FT.RM53V2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
