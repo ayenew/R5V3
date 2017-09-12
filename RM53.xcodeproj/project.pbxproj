@@ -26,6 +26,9 @@
 		534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534401711F44EA8500725B10 /* DataEntryCell.swift */; };
 		5345460F1F3B91ED00855CFF /* ContactEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */; };
 		53590B6D1F50976100A0552C /* ParentRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53590B6C1F50976100A0552C /* ParentRsp.swift */; };
+		535A9CC61F66D98B0030962F /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A9CC51F66D98B0030962F /* PhotoVC.swift */; };
+		535A9CC81F67342B0030962F /* GalleryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A9CC71F67342B0030962F /* GalleryCVC.swift */; };
+		535A9CCC1F6738270030962F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A9CCB1F6738270030962F /* PhotoCell.swift */; };
 		536982DD1F3DE67800FF8309 /* NotificationDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536982DC1F3DE67800FF8309 /* NotificationDetailsTVC.swift */; };
 		536982DF1F3DEACD00FF8309 /* Notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = 536982DE1F3DEACD00FF8309 /* Notifications.json */; };
 		536983011F3F7BE200FF8309 /* NotifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536982FF1F3F7BE100FF8309 /* NotifCell.swift */; };
@@ -102,6 +105,9 @@
 		534401711F44EA8500725B10 /* DataEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCell.swift; sourceTree = "<group>"; };
 		5345460E1F3B91ED00855CFF /* ContactEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntryVC.swift; sourceTree = "<group>"; };
 		53590B6C1F50976100A0552C /* ParentRsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentRsp.swift; sourceTree = "<group>"; };
+		535A9CC51F66D98B0030962F /* PhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
+		535A9CC71F67342B0030962F /* GalleryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCVC.swift; sourceTree = "<group>"; };
+		535A9CCB1F6738270030962F /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		536982DC1F3DE67800FF8309 /* NotificationDetailsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsTVC.swift; sourceTree = "<group>"; };
 		536982DE1F3DEACD00FF8309 /* Notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notifications.json; sourceTree = "<group>"; };
 		536982FF1F3F7BE100FF8309 /* NotifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifCell.swift; sourceTree = "<group>"; };
@@ -187,6 +193,16 @@
 			name = Notifications;
 			sourceTree = "<group>";
 		};
+		535A9CC41F66D8E00030962F /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				535A9CC51F66D98B0030962F /* PhotoVC.swift */,
+				535A9CC71F67342B0030962F /* GalleryCVC.swift */,
+				535A9CCB1F6738270030962F /* PhotoCell.swift */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
 		53705B6E1F3A64BC00018B85 /* Meetings */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +235,7 @@
 		539589531F030D2E00F8ED56 /* RM53 */ = {
 			isa = PBXGroup;
 			children = (
+				535A9CC41F66D8E00030962F /* Photo */,
 				53A4BEC61F62CCC8008D33E8 /* Scribe */,
 				5337F8061F51D3DE00C6DCD8 /* recording.gif */,
 				539DD52B1F4F836D0059E309 /* General */,
@@ -559,6 +576,7 @@
 				534401721F44EA8500725B10 /* DataEntryCell.swift in Sources */,
 				53A4BDED1F41FBDB009063C0 /* ReportDetailVC.swift in Sources */,
 				539DD51D1F4F2E110059E309 /* Gradient.swift in Sources */,
+				535A9CC61F66D98B0030962F /* PhotoVC.swift in Sources */,
 				53B92FEC1F65DC56007FF3BF /* FontSelectionVC.swift in Sources */,
 				53F3A9851F2E69F700B8C5CD /* OverViewCell.swift in Sources */,
 				538E8C151F04A34B0003D939 /* OpportunityCell.swift in Sources */,
@@ -590,7 +608,9 @@
 				533DFA941F1A68F2004EC44F /* RelationshipTableViewController.swift in Sources */,
 				539DD52A1F4F7BFB0059E309 /* OParentVC.swift in Sources */,
 				53A4BEC91F62CD33008D33E8 /* ScribeView.swift in Sources */,
+				535A9CCC1F6738270030962F /* PhotoCell.swift in Sources */,
 				539DD52F1F4F849D0059E309 /* ParentVC.swift in Sources */,
+				535A9CC81F67342B0030962F /* GalleryCVC.swift in Sources */,
 				539DD5281F4F7BD20059E309 /* OResearchVC.swift in Sources */,
 				539DD5221F4F7B890059E309 /* ODashboardVC.swift in Sources */,
 				53FAA6C81F3D0667005669F1 /* RelationshipCell.swift in Sources */,

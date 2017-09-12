@@ -82,22 +82,22 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
         self.jotViewController.clearAll()
     }
     
-    @IBAction func edit(_ sender: Any) {
-        if self.jotViewController.state == JotViewState.drawing {
-            if self.jotViewController.textString.characters.count == 0 {
-                self.jotViewController.state = JotViewState.editingText
-                self.jotViewController.textColor = drawColor
-            } else {
-                self.jotViewController.state = JotViewState.text
-                self.jotViewController.textColor = drawColor
-            }
-            
-        }
-        //        else if (self.jotViewController.state == JotViewState.text) {
-        //            self.jotViewController.state = JotViewState.drawing
-        //            self.jotViewController.drawingColor = drawColor
-        //        }
-    }
+//    @IBAction func edit(_ sender: Any) {
+//        if self.jotViewController.state == JotViewState.drawing {
+//            if self.jotViewController.textString.characters.count == 0 {
+//                self.jotViewController.state = JotViewState.editingText
+//                self.jotViewController.textColor = drawColor
+//            } else {
+//                self.jotViewController.state = JotViewState.text
+//                self.jotViewController.textColor = drawColor
+//            }
+//            
+//        }
+//        //        else if (self.jotViewController.state == JotViewState.text) {
+//        //            self.jotViewController.state = JotViewState.drawing
+//        //            self.jotViewController.drawingColor = drawColor
+//        //        }
+//    }
     
     @IBAction func switchToDrawMode(_ sender: UIBarButtonItem) {
         if (self.jotViewController.state == JotViewState.text) {
