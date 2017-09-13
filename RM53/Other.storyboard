@@ -67,9 +67,15 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="USP-tS-rva"/>
-                                    <barButtonItem title="Draw" id="hQK-1g-nUw">
+                                    <barButtonItem title="Draw" id="Kq2-k3-ytl">
                                         <connections>
-                                            <action selector="switchToDrawMode:" destination="hQK-7a-8qs" id="DSp-3T-cII"/>
+                                            <action selector="switchToDrawMode:" destination="hQK-7a-8qs" id="act-Iu-ziO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nlh-Ot-qIi"/>
+                                    <barButtonItem title="Erase" id="hQK-1g-nUw">
+                                        <connections>
+                                            <action selector="erase:" destination="hQK-7a-8qs" id="d5J-KA-QIU"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -113,7 +119,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note" id="Lzf-Vv-Tn0">
-                        <barButtonItem key="rightBarButtonItem" title="Color" id="ObB-QM-Q4Q">
+                        <barButtonItem key="leftBarButtonItem" title="Color" id="ObB-QM-Q4Q">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="changeColor:" destination="hQK-7a-8qs" id="gCh-mF-1ZG"/>
@@ -133,7 +139,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ColorSelectionVC" id="FwG-az-R7o" customClass="ColorSelectionVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wdf-8Z-WLq">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -153,7 +159,7 @@
                     </tableView>
                     <value key="contentSizeForViewInPopover" type="size" width="100" height="220"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="100" height="250"/>
+                    <size key="freeformSize" width="100" height="300"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chr-ns-OA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +238,7 @@
                     <connections>
                         <segue destination="Syc-Hd-9fl" kind="relationship" relationship="viewControllers" id="pAu-9p-KjD"/>
                         <segue destination="7fD-Q0-VtE" kind="relationship" relationship="viewControllers" id="gJe-mj-sXT"/>
+                        <segue destination="7xU-ku-cEQ" kind="relationship" relationship="viewControllers" id="1A7-v8-7PO"/>
                         <segue destination="ZuN-nu-O5U" kind="relationship" relationship="viewControllers" id="Np9-3X-fmq"/>
                     </connections>
                 </tabBarController>
@@ -331,7 +338,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Gallery" id="wPR-fR-cXg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="kYi-N1-gj4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="kYi-N1-gj4">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="takePicture:" destination="A8h-zo-tbA" id="6d4-O1-5kz"/>
@@ -350,7 +357,7 @@
         <scene sceneID="QJI-bo-egw">
             <objects>
                 <collectionViewController id="vaV-ew-142" customClass="GalleryCVC" customModule="RM53" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="RAC-Dy-bVB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RAC-Dy-bVB">
                         <rect key="frame" x="0.0" y="0.0" width="824" height="122"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

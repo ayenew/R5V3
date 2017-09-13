@@ -14,7 +14,7 @@ protocol PassDelegate {
     func setColor(color : UIColor)
 }
 
-class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresentationControllerDelegate, PassDelegate {
+class NoteTakerVC: OParentVC,JotViewControllerDelegate, UIPopoverPresentationControllerDelegate, PassDelegate {
     var fontSize : CGFloat = 11
     var drawColor : UIColor = UIColor.red
     let jotViewController = JotViewController()
@@ -39,7 +39,7 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
         self.jotViewController.fitOriginalFontSizeToViewWidth = false
         self.jotViewController.textAlignment = .left
         self.jotViewController.drawingColor = drawColor
-        
+        self.jotViewController.drawingStrokeWidth = 15
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,14 +73,20 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
         // self.toggleDrawingButton.isHidden = isEditing
     }
     
+    @IBAction func erase(_ sender: UIBarButtonItem) {
+        self.jotViewController.drawingColor = UIColor.white
+        self.jotViewController.drawingStrokeWidth = 200
+    }
+    
     @IBAction func save(_ sender: Any) {
         let drawnImage = self.jotViewController.renderImage(withScale: 2, on: self.view.backgroundColor)
         self.jotViewController.clearAll()
         UIImageWriteToSavedPhotosAlbum(drawnImage!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     @IBAction func clear(_ sender: Any) {
-        self.jotViewController.clearAll()
+       self.jotViewController.clearDrawing()
     }
+
     
 //    @IBAction func edit(_ sender: Any) {
 //        if self.jotViewController.state == JotViewState.drawing {
@@ -100,10 +106,15 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
 //    }
     
     @IBAction func switchToDrawMode(_ sender: UIBarButtonItem) {
-        if (self.jotViewController.state == JotViewState.text) {
-            self.jotViewController.state = JotViewState.drawing
-            self.jotViewController.drawingColor = drawColor
-        }
+//        if drawColor == UIColor.white {
+//            self.jotViewController.drawingStrokeWidth = 50
+//        }
+//        self.undoManager?.prepare(withInvocationTarget: self)
+//        if (self.jotViewController.state == JotViewState.text) {
+    self.jotViewController.state = JotViewState.drawing
+    self.jotViewController.drawingStrokeWidth = 15
+    self.jotViewController.drawingColor = drawColor
+//        }
     }
     
     
@@ -113,7 +124,7 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
         popover.delegate = self
         popover.modalPresentationStyle = .popover
         if let presentation = popover.popoverPresentationController {
-            presentation.barButtonItem = navigationItem.rightBarButtonItem
+            presentation.barButtonItem = navigationItem.leftBarButtonItem
             presentation.delegate = self
         }
         present(popover, animated: true, completion: nil)
@@ -159,6 +170,7 @@ class NoteTakerVC: UIViewController,JotViewControllerDelegate, UIPopoverPresenta
         changeDrawColor()
     }
     func changeDrawColor(){
+        self.jotViewController.drawingStrokeWidth = 15
         self.jotViewController.drawingColor = drawColor
     }
     

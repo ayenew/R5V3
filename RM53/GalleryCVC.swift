@@ -14,6 +14,7 @@ class GalleryCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         imageArray = listFilesFromDocumentsFolder()!
         NotificationCenter.default.addObserver(self, selector: #selector(reloadGallery), name: NSNotification.Name.init(rawValue: "ReloadGallery"), object: nil)
     }
@@ -74,4 +75,5 @@ class GalleryCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
          imageArray = listFilesFromDocumentsFolder()!
          collectionView?.reloadData()
     }
+    
 }

@@ -18,7 +18,7 @@ func fileIndocumentDirectory(fileName: String) -> String {
     return file!.path
 }
 
-class PhotoVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoVC: OParentVC, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     let picker = UIImagePickerController()
